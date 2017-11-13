@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03E09ACC1FB938C100DC65AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E09ACB1FB938C100DC65AA /* AppDelegate.swift */; };
+		03E09ACE1FB938C100DC65AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E09ACD1FB938C100DC65AA /* ViewController.swift */; };
+		03E09AD11FB938C100DC65AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03E09ACF1FB938C100DC65AA /* Main.storyboard */; };
+		03E09AD31FB938C100DC65AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03E09AD21FB938C100DC65AA /* Assets.xcassets */; };
+		03E09AD61FB938C100DC65AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03E09AD41FB938C100DC65AA /* LaunchScreen.storyboard */; };
+		03E09AE11FB938C200DC65AA /* carpo_driverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E09AE01FB938C200DC65AA /* carpo_driverTests.swift */; };
+		03E09AEC1FB938C200DC65AA /* carpo_driverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E09AEB1FB938C200DC65AA /* carpo_driverUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		03E09ADD1FB938C200DC65AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03E09AC01FB938C100DC65AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03E09AC71FB938C100DC65AA;
+			remoteInfo = carpo_driver;
+		};
+		03E09AE81FB938C200DC65AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03E09AC01FB938C100DC65AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03E09AC71FB938C100DC65AA;
+			remoteInfo = carpo_driver;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03E09AC81FB938C100DC65AA /* carpo_driver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = carpo_driver.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		03E09ACB1FB938C100DC65AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		03E09ACD1FB938C100DC65AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		03E09AD01FB938C100DC65AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		03E09AD21FB938C100DC65AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		03E09AD51FB938C100DC65AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		03E09AD71FB938C200DC65AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03E09ADC1FB938C200DC65AA /* carpo_driverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = carpo_driverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		03E09AE01FB938C200DC65AA /* carpo_driverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carpo_driverTests.swift; sourceTree = "<group>"; };
+		03E09AE21FB938C200DC65AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03E09AE71FB938C200DC65AA /* carpo_driverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = carpo_driverUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		03E09AEB1FB938C200DC65AA /* carpo_driverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carpo_driverUITests.swift; sourceTree = "<group>"; };
+		03E09AED1FB938C200DC65AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		03E09AC51FB938C100DC65AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03E09AD91FB938C200DC65AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03E09AE41FB938C200DC65AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03E09ABF1FB938C100DC65AA = {
+			isa = PBXGroup;
+			children = (
+				03E09ACA1FB938C100DC65AA /* carpo_driver */,
+				03E09ADF1FB938C200DC65AA /* carpo_driverTests */,
+				03E09AEA1FB938C200DC65AA /* carpo_driverUITests */,
+				03E09AC91FB938C100DC65AA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		03E09AC91FB938C100DC65AA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				03E09AC81FB938C100DC65AA /* carpo_driver.app */,
+				03E09ADC1FB938C200DC65AA /* carpo_driverTests.xctest */,
+				03E09AE71FB938C200DC65AA /* carpo_driverUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		03E09ACA1FB938C100DC65AA /* carpo_driver */ = {
+			isa = PBXGroup;
+			children = (
+				03E09ACB1FB938C100DC65AA /* AppDelegate.swift */,
+				03E09ACD1FB938C100DC65AA /* ViewController.swift */,
+				03E09ACF1FB938C100DC65AA /* Main.storyboard */,
+				03E09AD21FB938C100DC65AA /* Assets.xcassets */,
+				03E09AD41FB938C100DC65AA /* LaunchScreen.storyboard */,
+				03E09AD71FB938C200DC65AA /* Info.plist */,
+			);
+			path = carpo_driver;
+			sourceTree = "<group>";
+		};
+		03E09ADF1FB938C200DC65AA /* carpo_driverTests */ = {
+			isa = PBXGroup;
+			children = (
+				03E09AE01FB938C200DC65AA /* carpo_driverTests.swift */,
+				03E09AE21FB938C200DC65AA /* Info.plist */,
+			);
+			path = carpo_driverTests;
+			sourceTree = "<group>";
+		};
+		03E09AEA1FB938C200DC65AA /* carpo_driverUITests */ = {
+			isa = PBXGroup;
+			children = (
+				03E09AEB1FB938C200DC65AA /* carpo_driverUITests.swift */,
+				03E09AED1FB938C200DC65AA /* Info.plist */,
+			);
+			path = carpo_driverUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		03E09AC71FB938C100DC65AA /* carpo_driver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03E09AF01FB938C200DC65AA /* Build configuration list for PBXNativeTarget "carpo_driver" */;
+			buildPhases = (
+				03E09AC41FB938C100DC65AA /* Sources */,
+				03E09AC51FB938C100DC65AA /* Frameworks */,
+				03E09AC61FB938C100DC65AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = carpo_driver;
+			productName = carpo_driver;
+			productReference = 03E09AC81FB938C100DC65AA /* carpo_driver.app */;
+			productType = "com.apple.product-type.application";
+		};
+		03E09ADB1FB938C200DC65AA /* carpo_driverTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03E09AF31FB938C200DC65AA /* Build configuration list for PBXNativeTarget "carpo_driverTests" */;
+			buildPhases = (
+				03E09AD81FB938C200DC65AA /* Sources */,
+				03E09AD91FB938C200DC65AA /* Frameworks */,
+				03E09ADA1FB938C200DC65AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				03E09ADE1FB938C200DC65AA /* PBXTargetDependency */,
+			);
+			name = carpo_driverTests;
+			productName = carpo_driverTests;
+			productReference = 03E09ADC1FB938C200DC65AA /* carpo_driverTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		03E09AE61FB938C200DC65AA /* carpo_driverUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03E09AF61FB938C200DC65AA /* Build configuration list for PBXNativeTarget "carpo_driverUITests" */;
+			buildPhases = (
+				03E09AE31FB938C200DC65AA /* Sources */,
+				03E09AE41FB938C200DC65AA /* Frameworks */,
+				03E09AE51FB938C200DC65AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				03E09AE91FB938C200DC65AA /* PBXTargetDependency */,
+			);
+			name = carpo_driverUITests;
+			productName = carpo_driverUITests;
+			productReference = 03E09AE71FB938C200DC65AA /* carpo_driverUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		03E09AC01FB938C100DC65AA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "Tien Dat";
+				TargetAttributes = {
+					03E09AC71FB938C100DC65AA = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					03E09ADB1FB938C200DC65AA = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 03E09AC71FB938C100DC65AA;
+					};
+					03E09AE61FB938C200DC65AA = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 03E09AC71FB938C100DC65AA;
+					};
+				};
+			};
+			buildConfigurationList = 03E09AC31FB938C100DC65AA /* Build configuration list for PBXProject "carpo_driver" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 03E09ABF1FB938C100DC65AA;
+			productRefGroup = 03E09AC91FB938C100DC65AA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				03E09AC71FB938C100DC65AA /* carpo_driver */,
+				03E09ADB1FB938C200DC65AA /* carpo_driverTests */,
+				03E09AE61FB938C200DC65AA /* carpo_driverUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		03E09AC61FB938C100DC65AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03E09AD61FB938C100DC65AA /* LaunchScreen.storyboard in Resources */,
+				03E09AD31FB938C100DC65AA /* Assets.xcassets in Resources */,
+				03E09AD11FB938C100DC65AA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03E09ADA1FB938C200DC65AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03E09AE51FB938C200DC65AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		03E09AC41FB938C100DC65AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03E09ACE1FB938C100DC65AA /* ViewController.swift in Sources */,
+				03E09ACC1FB938C100DC65AA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03E09AD81FB938C200DC65AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03E09AE11FB938C200DC65AA /* carpo_driverTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03E09AE31FB938C200DC65AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03E09AEC1FB938C200DC65AA /* carpo_driverUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		03E09ADE1FB938C200DC65AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 03E09AC71FB938C100DC65AA /* carpo_driver */;
+			targetProxy = 03E09ADD1FB938C200DC65AA /* PBXContainerItemProxy */;
+		};
+		03E09AE91FB938C200DC65AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 03E09AC71FB938C100DC65AA /* carpo_driver */;
+			targetProxy = 03E09AE81FB938C200DC65AA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		03E09ACF1FB938C100DC65AA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				03E09AD01FB938C100DC65AA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		03E09AD41FB938C100DC65AA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				03E09AD51FB938C100DC65AA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		03E09AEE1FB938C200DC65AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		03E09AEF1FB938C200DC65AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		03E09AF11FB938C200DC65AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = carpo_driver/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ngocdung.carpo-driver";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		03E09AF21FB938C200DC65AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = carpo_driver/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ngocdung.carpo-driver";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		03E09AF41FB938C200DC65AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = carpo_driverTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ngocdung.carpo-driverTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/carpo_driver.app/carpo_driver";
+			};
+			name = Debug;
+		};
+		03E09AF51FB938C200DC65AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = carpo_driverTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ngocdung.carpo-driverTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/carpo_driver.app/carpo_driver";
+			};
+			name = Release;
+		};
+		03E09AF71FB938C200DC65AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = carpo_driverUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ngocdung.carpo-driverUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = carpo_driver;
+			};
+			name = Debug;
+		};
+		03E09AF81FB938C200DC65AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = carpo_driverUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ngocdung.carpo-driverUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = carpo_driver;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		03E09AC31FB938C100DC65AA /* Build configuration list for PBXProject "carpo_driver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03E09AEE1FB938C200DC65AA /* Debug */,
+				03E09AEF1FB938C200DC65AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03E09AF01FB938C200DC65AA /* Build configuration list for PBXNativeTarget "carpo_driver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03E09AF11FB938C200DC65AA /* Debug */,
+				03E09AF21FB938C200DC65AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03E09AF31FB938C200DC65AA /* Build configuration list for PBXNativeTarget "carpo_driverTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03E09AF41FB938C200DC65AA /* Debug */,
+				03E09AF51FB938C200DC65AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03E09AF61FB938C200DC65AA /* Build configuration list for PBXNativeTarget "carpo_driverUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03E09AF71FB938C200DC65AA /* Debug */,
+				03E09AF81FB938C200DC65AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 03E09AC01FB938C100DC65AA /* Project object */;
+}
