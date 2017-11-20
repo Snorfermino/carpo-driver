@@ -7,15 +7,29 @@
 //
 
 import UIKit
-
+import SlideMenuControllerSwift
+import GoogleMaps
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    fileprivate func createMenuView() {
+        let storyboard = UIStoryboard.main
+        let mainViewController = storyboard.viewController(HomeViewController.self)
+        let leftViewController = storyboard.viewController(LeftMenuViewController.self)
+        let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
+        UINavigationBar.appearance().tintColor = UIColor(hex: "689F38")
+        let slideMenuController = ExSlideMenuController(mainViewController:nvc, leftMenuViewController: leftViewController)
+        slideMenuController.automaticallyAdjustsScrollViewInsets = true
+        self.window?.backgroundColor = UIColor(red: 236.0, green: 238.0, blue: 241.0, alpha: 1.0)
+        self.window?.rootViewController = slideMenuController
+        self.window?.makeKeyAndVisible()
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+         GMSServices.provideAPIKey(Config.shareInstance.googleMapKey)
+        createMenuView()
         return true
     }
 

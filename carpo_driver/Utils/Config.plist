@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ApiURL</key>
+	<string>http://dev.appp.vn/</string>
+	<key>SocketURL</key>
+	<string>http://node.APPP.com:5050</string>
+	<key>GoogleMap</key>
+	<dict>
+		<key>GoogleMapAPI-Key</key>
+		<string>AIzaSyAK_Z5Y1ATCNCRTabZb9yLpGrKsuzox04o</string>
+		<key>GoolgeMap-BundleId</key>
+		<string>ngocdung.carpo-driver</string>
+		<key>GoolgeMap-Key</key>
+		<string>AIzaSyAK_Z5Y1ATCNCRTabZb9yLpGrKsuzox04o</string>
+	</dict>
+	<key>UserInterface</key>
+	<dict>
+		<key>bookingDuration</key>
+		<integer>30</integer>
+		<key>googleMapJsonStyle</key>
+		<string>[{&quot;featureType&quot;:&quot;administrative&quot;,&quot;elementType&quot;:&quot;labels.text.fill&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#444444&quot;}]},{&quot;featureType&quot;:&quot;landscape&quot;,&quot;elementType&quot;:&quot;all&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#f2f2f2&quot;}]},{&quot;featureType&quot;:&quot;poi&quot;,&quot;elementType&quot;:&quot;all&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;off&quot;}]},{&quot;featureType&quot;:&quot;road&quot;,&quot;elementType&quot;:&quot;all&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;lightness&quot;:45}]},{&quot;featureType&quot;:&quot;road.highway&quot;,&quot;elementType&quot;:&quot;all&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;simplified&quot;}]},{&quot;featureType&quot;:&quot;road.highway&quot;,&quot;elementType&quot;:&quot;geometry.fill&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#ffffff&quot;}]},{&quot;featureType&quot;:&quot;road.arterial&quot;,&quot;elementType&quot;:&quot;labels.icon&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;off&quot;}]},{&quot;featureType&quot;:&quot;transit&quot;,&quot;elementType&quot;:&quot;all&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;off&quot;}]},{&quot;featureType&quot;:&quot;water&quot;,&quot;elementType&quot;:&quot;all&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#dde6e8&quot;},{&quot;visibility&quot;:&quot;on&quot;}]}]</string>
+		<key>zoomLevel</key>
+		<integer>16</integer>
+		<key>defaultWidth</key>
+		<integer>375</integer>
+		<key>defaultHeight</key>
+		<integer>667</integer>
+		<key>animateDuration</key>
+		<real>0.5</real>
+		<key>updateLocationTimeDuration </key>
+		<integer>10</integer>
+		<key>socketDelayDuration</key>
+		<integer>2</integer>
+	</dict>
+</dict>
+</plist>

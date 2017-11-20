@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SanFranciscoText-Regular.otf">
+            <string>SanFranciscoText-Regular</string>
+        </array>
+        <array key="SanFranciscoText-Semibold.otf">
+            <string>SanFranciscoText-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChartModePicker" customModule="carpo_driver" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="4pr-Fa-BSF"/>
+                <outlet property="lbTitle" destination="rz4-pP-hb9" id="8qf-xL-Cxs"/>
+                <outlet property="modePicker" destination="o3o-tL-uWv" id="Glq-gB-vOU"/>
+                <outlet property="viewCenter" destination="Vd9-fT-HQa" id="rmg-VF-5be"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x7j-xt-jUR" customClass="AnimatableView" customModule="IBAnimatable">
+                    <rect key="frame" x="7.5" y="164" width="360" height="339"/>
+                    <subviews>
+                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o3o-tL-uWv">
+                            <rect key="frame" x="20" y="44" width="320" height="216"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="i4B-VT-mwz"/>
+                                <outlet property="delegate" destination="-1" id="30t-Um-nKQ"/>
+                            </connections>
+                        </pickerView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thống kê theo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rz4-pP-hb9">
+                            <rect key="frame" x="125.5" y="12" width="109" height="20"/>
+                            <fontDescription key="fontDescription" name="SanFranciscoText-Regular" family="San Francisco Text" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q60-PB-A4x" customClass="AnimatableButton" customModule="IBAnimatable">
+                            <rect key="frame" x="19.5" y="268" width="320" height="50.5"/>
+                            <color key="backgroundColor" red="0.94173574449999997" green="0.59836840629999999" blue="0.2154669911" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="Q60-PB-A4x" secondAttribute="height" multiplier="158:25" id="N2Y-gP-3a8"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SanFranciscoText-Semibold" family="San Francisco Text" pointSize="17"/>
+                            <state key="normal" title="Xác Nhận">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="confirmPressed:" destination="-1" eventType="touchUpInside" id="5sH-50-Itk"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vd9-fT-HQa">
+                            <rect key="frame" x="19.5" y="44" width="320" height="216"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="Vd9-fT-HQa" secondAttribute="height" multiplier="40:27" id="YoM-Gh-gPa"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="j5e-CT-4Jk" firstAttribute="bottom" secondItem="Q60-PB-A4x" secondAttribute="bottom" constant="20" id="1YF-qv-QQK"/>
+                        <constraint firstItem="Q60-PB-A4x" firstAttribute="width" secondItem="o3o-tL-uWv" secondAttribute="width" id="2LW-Um-z8w"/>
+                        <constraint firstItem="rz4-pP-hb9" firstAttribute="centerX" secondItem="x7j-xt-jUR" secondAttribute="centerX" id="6e2-Cn-DSp"/>
+                        <constraint firstItem="rz4-pP-hb9" firstAttribute="top" secondItem="j5e-CT-4Jk" secondAttribute="top" constant="12" id="CGJ-GR-PxQ"/>
+                        <constraint firstItem="Q60-PB-A4x" firstAttribute="centerX" secondItem="x7j-xt-jUR" secondAttribute="centerX" id="Dbj-Ep-u1E"/>
+                        <constraint firstItem="Vd9-fT-HQa" firstAttribute="centerX" secondItem="x7j-xt-jUR" secondAttribute="centerX" id="GVm-19-4tr"/>
+                        <constraint firstItem="Q60-PB-A4x" firstAttribute="top" secondItem="o3o-tL-uWv" secondAttribute="bottom" constant="8" id="Jch-2C-Hx2"/>
+                        <constraint firstItem="Vd9-fT-HQa" firstAttribute="top" secondItem="rz4-pP-hb9" secondAttribute="bottom" constant="12" id="LGJ-Og-qv3"/>
+                        <constraint firstItem="j5e-CT-4Jk" firstAttribute="trailing" secondItem="o3o-tL-uWv" secondAttribute="trailing" constant="20" id="QFW-kt-VQc"/>
+                        <constraint firstItem="o3o-tL-uWv" firstAttribute="top" secondItem="rz4-pP-hb9" secondAttribute="bottom" constant="12" id="ef5-ml-1X5"/>
+                        <constraint firstItem="o3o-tL-uWv" firstAttribute="leading" secondItem="j5e-CT-4Jk" secondAttribute="leading" constant="20" id="s6N-vK-xj8"/>
+                        <constraint firstItem="Vd9-fT-HQa" firstAttribute="leading" secondItem="x7j-xt-jUR" secondAttribute="leading" constant="20" id="uZm-QX-de8"/>
+                        <constraint firstAttribute="trailing" secondItem="Vd9-fT-HQa" secondAttribute="trailing" constant="20" id="vYa-VH-a2S"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="j5e-CT-4Jk"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="x7j-xt-jUR" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="aY4-h1-4yi"/>
+                <constraint firstItem="x7j-xt-jUR" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ct6-Fi-b9X"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="18.5" y="-184.5"/>
+        </view>
+    </objects>
+</document>

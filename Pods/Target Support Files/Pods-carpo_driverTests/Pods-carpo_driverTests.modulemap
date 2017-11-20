@@ -1,0 +1,6 @@
+framework module Pods_carpo_driverTests {
+  umbrella header "Pods-carpo_driverTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

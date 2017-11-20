@@ -7,13 +7,79 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0341A3D21FB952DE00EC73A1 /* SanFranciscoText-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3BD1FB952DC00EC73A1 /* SanFranciscoText-Bold.otf */; };
+		0341A3D31FB952DE00EC73A1 /* SanFranciscoDisplay-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3BE1FB952DC00EC73A1 /* SanFranciscoDisplay-Medium.otf */; };
+		0341A3D41FB952DE00EC73A1 /* SanFranciscoText-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3BF1FB952DC00EC73A1 /* SanFranciscoText-LightItalic.otf */; };
+		0341A3D51FB952DE00EC73A1 /* SanFranciscoDisplay-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3C01FB952DC00EC73A1 /* SanFranciscoDisplay-Black.otf */; };
+		0341A3D61FB952DE00EC73A1 /* SanFranciscoText-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3C11FB952DC00EC73A1 /* SanFranciscoText-Heavy.otf */; };
+		0341A3D71FB952DE00EC73A1 /* SanFranciscoDisplay-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3C21FB952DC00EC73A1 /* SanFranciscoDisplay-Semibold.otf */; };
+		0341A3D81FB952DE00EC73A1 /* SanFranciscoDisplay-Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3C31FB952DC00EC73A1 /* SanFranciscoDisplay-Ultralight.otf */; };
+		0341A3D91FB952DE00EC73A1 /* SanFranciscoText-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3C41FB952DD00EC73A1 /* SanFranciscoText-Regular.otf */; };
+		0341A3DA1FB952DE00EC73A1 /* SanFranciscoDisplay-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3C51FB952DD00EC73A1 /* SanFranciscoDisplay-Thin.otf */; };
+		0341A3DB1FB952DE00EC73A1 /* SanFranciscoDisplay-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3C61FB952DD00EC73A1 /* SanFranciscoDisplay-Bold.otf */; };
+		0341A3DC1FB952DE00EC73A1 /* SanFranciscoDisplay-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3C71FB952DD00EC73A1 /* SanFranciscoDisplay-Regular.otf */; };
+		0341A3DD1FB952DE00EC73A1 /* SanFranciscoText-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3C81FB952DD00EC73A1 /* SanFranciscoText-BoldItalic.otf */; };
+		0341A3DE1FB952DE00EC73A1 /* SanFranciscoText-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3C91FB952DD00EC73A1 /* SanFranciscoText-HeavyItalic.otf */; };
+		0341A3DF1FB952DE00EC73A1 /* SanFranciscoText-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3CA1FB952DD00EC73A1 /* SanFranciscoText-Light.otf */; };
+		0341A3E01FB952DE00EC73A1 /* SanFranciscoText-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3CB1FB952DD00EC73A1 /* SanFranciscoText-Medium.otf */; };
+		0341A3E11FB952DE00EC73A1 /* SanFranciscoText-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3CC1FB952DD00EC73A1 /* SanFranciscoText-MediumItalic.otf */; };
+		0341A3E21FB952DE00EC73A1 /* SanFranciscoText-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3CD1FB952DD00EC73A1 /* SanFranciscoText-Semibold.otf */; };
+		0341A3E31FB952DE00EC73A1 /* SanFranciscoDisplay-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3CE1FB952DD00EC73A1 /* SanFranciscoDisplay-Heavy.otf */; };
+		0341A3E41FB952DE00EC73A1 /* SanFranciscoDisplay-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3CF1FB952DE00EC73A1 /* SanFranciscoDisplay-Light.otf */; };
+		0341A3E51FB952DE00EC73A1 /* SanFranciscoText-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3D01FB952DE00EC73A1 /* SanFranciscoText-RegularItalic.otf */; };
+		0341A3E61FB952DE00EC73A1 /* SanFranciscoText-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3D11FB952DE00EC73A1 /* SanFranciscoText-SemiboldItalic.otf */; };
+		0341A3E91FB9555E00EC73A1 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341A3E81FB9555E00EC73A1 /* SignInViewController.swift */; };
+		0341A3EE1FB956A700EC73A1 /* ForgotPasswordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3ED1FB956A700EC73A1 /* ForgotPasswordView.xib */; };
+		0341A3F01FB959A500EC73A1 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341A3EF1FB959A500EC73A1 /* ForgotPasswordView.swift */; };
+		0341A3F21FB9918F00EC73A1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341A3F11FB9918F00EC73A1 /* ProfileViewController.swift */; };
+		0341A3F51FB9981600EC73A1 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341A3F31FB9981600EC73A1 /* ProfileCell.swift */; };
+		0341A3F61FB9981600EC73A1 /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3F41FB9981600EC73A1 /* ProfileCell.xib */; };
+		0341A3F81FB9A91D00EC73A1 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341A3F71FB9A91D00EC73A1 /* BaseViewController.swift */; };
+		0341A3FA1FBA7C3D00EC73A1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341A3F91FBA7C3D00EC73A1 /* HomeViewController.swift */; };
+		0341A3FC1FBA95B800EC73A1 /* ChartModePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3FB1FBA95B800EC73A1 /* ChartModePicker.xib */; };
+		0341A3FE1FBA95D100EC73A1 /* ChartModePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341A3FD1FBA95D100EC73A1 /* ChartModePicker.swift */; };
+		0341A4011FBAA99A00EC73A1 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341A4001FBAA99A00EC73A1 /* HistoryViewController.swift */; };
+		0341A4081FBAE83700EC73A1 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341A4061FBAE83700EC73A1 /* MenuCell.swift */; };
+		0341A4091FBAE83700EC73A1 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0341A4071FBAE83700EC73A1 /* MenuCell.xib */; };
+		0341A40B1FBAF97C00EC73A1 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341A40A1FBAF97C00EC73A1 /* UIColorExtension.swift */; };
+		0341A40D1FBAF9B600EC73A1 /* ExSlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341A40C1FBAF9B600EC73A1 /* ExSlideMenuController.swift */; };
+		0341A40F1FBAF9FD00EC73A1 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341A40E1FBAF9FC00EC73A1 /* UIApplication.swift */; };
+		0341A4111FBAFD7A00EC73A1 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341A4101FBAFD7A00EC73A1 /* UIViewController.swift */; };
+		0341A4141FBAFDD000EC73A1 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341A4131FBAFDD000EC73A1 /* Global.swift */; };
+		0341A4161FBAFE0E00EC73A1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341A4151FBAFE0E00EC73A1 /* User.swift */; };
+		0341A4181FBBE79D00EC73A1 /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341A4171FBBE79D00EC73A1 /* SupportViewController.swift */; };
+		0341A41A1FBBEBB100EC73A1 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341A4191FBBEBB100EC73A1 /* MapViewController.swift */; };
+		0341A42E1FBBEF0800EC73A1 /* CGLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341A4291FBBEF0700EC73A1 /* CGLocation.swift */; };
+		0341A42F1FBBEF0800EC73A1 /* CGDriverMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341A42A1FBBEF0700EC73A1 /* CGDriverMarker.swift */; };
+		0341A4301FBBEF0800EC73A1 /* CGRiderMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341A42B1FBBEF0700EC73A1 /* CGRiderMarker.swift */; };
+		0341A4311FBBEF0800EC73A1 /* CGMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341A42C1FBBEF0700EC73A1 /* CGMapView.swift */; };
+		0341A4321FBBEF0800EC73A1 /* CGMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341A42D1FBBEF0700EC73A1 /* CGMarker.swift */; };
+		0341A4341FBBEF1400EC73A1 /* DriverGoogleMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341A4331FBBEF1400EC73A1 /* DriverGoogleMap.swift */; };
+		0341A4361FBBF16000EC73A1 /* GetDirectionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341A4351FBBF16000EC73A1 /* GetDirectionResult.swift */; };
+		0341A4381FBBF1B300EC73A1 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341A4371FBBF1B300EC73A1 /* UIImageExtension.swift */; };
+		0341A43A1FBBF25C00EC73A1 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341A4391FBBF25C00EC73A1 /* UIViewExtension.swift */; };
+		0341A43C1FBBF2B700EC73A1 /* ConstraintExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341A43B1FBBF2B700EC73A1 /* ConstraintExtension.swift */; };
+		0341A4401FBBF31C00EC73A1 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0341A43E1FBBF31B00EC73A1 /* Config.plist */; };
+		0341A4411FBBF31C00EC73A1 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341A43F1FBBF31C00EC73A1 /* Config.swift */; };
+		0341A4441FBBF38100EC73A1 /* GoogleMapAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341A4431FBBF38100EC73A1 /* GoogleMapAPI.swift */; };
+		0341A4481FBBF6BE00EC73A1 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341A4471FBBF6BE00EC73A1 /* APIManager.swift */; };
+		0341A44A1FBBF74600EC73A1 /* MyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341A4491FBBF74600EC73A1 /* MyAPI.swift */; };
+		0341A44C1FBBF7E000EC73A1 /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341A44B1FBBF7E000EC73A1 /* APIConfig.swift */; };
+		0341A44F1FBBF85400EC73A1 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341A44E1FBBF85400EC73A1 /* ErrorResponse.swift */; };
+		0341A4511FBC163100EC73A1 /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341A4501FBC163100EC73A1 /* GroupViewController.swift */; };
+		0341A4551FBC182400EC73A1 /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341A4541FBC182400EC73A1 /* Driver.swift */; };
 		03E09ACC1FB938C100DC65AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E09ACB1FB938C100DC65AA /* AppDelegate.swift */; };
-		03E09ACE1FB938C100DC65AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E09ACD1FB938C100DC65AA /* ViewController.swift */; };
 		03E09AD11FB938C100DC65AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03E09ACF1FB938C100DC65AA /* Main.storyboard */; };
 		03E09AD31FB938C100DC65AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03E09AD21FB938C100DC65AA /* Assets.xcassets */; };
 		03E09AD61FB938C100DC65AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03E09AD41FB938C100DC65AA /* LaunchScreen.storyboard */; };
 		03E09AE11FB938C200DC65AA /* carpo_driverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E09AE01FB938C200DC65AA /* carpo_driverTests.swift */; };
 		03E09AEC1FB938C200DC65AA /* carpo_driverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E09AEB1FB938C200DC65AA /* carpo_driverUITests.swift */; };
+		03E09AFB1FB93B7500DC65AA /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E09AFA1FB93B7500DC65AA /* SideMenu.swift */; };
+		03E09AFE1FB93C1A00DC65AA /* StoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E09AFD1FB93C1A00DC65AA /* StoryboardExtension.swift */; };
+		03E09B001FB93C7B00DC65AA /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E09AFF1FB93C7B00DC65AA /* StringExtension.swift */; };
+		13B42E7B9F2D65DCBD93F6B5 /* Pods_carpo_driverUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C52838263102FC22B8EC92 /* Pods_carpo_driverUITests.framework */; };
+		1E9DA95FBE780EFB45079C74 /* Pods_carpo_driverTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C0175D10E554E8F39651C59 /* Pods_carpo_driverTests.framework */; };
+		4775BFF4F605DF41DE7360D3 /* Pods_carpo_driver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 138BA7E948A50C1E284BCCC4 /* Pods_carpo_driver.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +100,69 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0341A3BD1FB952DC00EC73A1 /* SanFranciscoText-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-Bold.otf"; sourceTree = "<group>"; };
+		0341A3BE1FB952DC00EC73A1 /* SanFranciscoDisplay-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Medium.otf"; sourceTree = "<group>"; };
+		0341A3BF1FB952DC00EC73A1 /* SanFranciscoText-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-LightItalic.otf"; sourceTree = "<group>"; };
+		0341A3C01FB952DC00EC73A1 /* SanFranciscoDisplay-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Black.otf"; sourceTree = "<group>"; };
+		0341A3C11FB952DC00EC73A1 /* SanFranciscoText-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-Heavy.otf"; sourceTree = "<group>"; };
+		0341A3C21FB952DC00EC73A1 /* SanFranciscoDisplay-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Semibold.otf"; sourceTree = "<group>"; };
+		0341A3C31FB952DC00EC73A1 /* SanFranciscoDisplay-Ultralight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Ultralight.otf"; sourceTree = "<group>"; };
+		0341A3C41FB952DD00EC73A1 /* SanFranciscoText-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-Regular.otf"; sourceTree = "<group>"; };
+		0341A3C51FB952DD00EC73A1 /* SanFranciscoDisplay-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Thin.otf"; sourceTree = "<group>"; };
+		0341A3C61FB952DD00EC73A1 /* SanFranciscoDisplay-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Bold.otf"; sourceTree = "<group>"; };
+		0341A3C71FB952DD00EC73A1 /* SanFranciscoDisplay-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Regular.otf"; sourceTree = "<group>"; };
+		0341A3C81FB952DD00EC73A1 /* SanFranciscoText-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-BoldItalic.otf"; sourceTree = "<group>"; };
+		0341A3C91FB952DD00EC73A1 /* SanFranciscoText-HeavyItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-HeavyItalic.otf"; sourceTree = "<group>"; };
+		0341A3CA1FB952DD00EC73A1 /* SanFranciscoText-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-Light.otf"; sourceTree = "<group>"; };
+		0341A3CB1FB952DD00EC73A1 /* SanFranciscoText-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-Medium.otf"; sourceTree = "<group>"; };
+		0341A3CC1FB952DD00EC73A1 /* SanFranciscoText-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-MediumItalic.otf"; sourceTree = "<group>"; };
+		0341A3CD1FB952DD00EC73A1 /* SanFranciscoText-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-Semibold.otf"; sourceTree = "<group>"; };
+		0341A3CE1FB952DD00EC73A1 /* SanFranciscoDisplay-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Heavy.otf"; sourceTree = "<group>"; };
+		0341A3CF1FB952DE00EC73A1 /* SanFranciscoDisplay-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Light.otf"; sourceTree = "<group>"; };
+		0341A3D01FB952DE00EC73A1 /* SanFranciscoText-RegularItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-RegularItalic.otf"; sourceTree = "<group>"; };
+		0341A3D11FB952DE00EC73A1 /* SanFranciscoText-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-SemiboldItalic.otf"; sourceTree = "<group>"; };
+		0341A3E81FB9555E00EC73A1 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		0341A3ED1FB956A700EC73A1 /* ForgotPasswordView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordView.xib; sourceTree = "<group>"; };
+		0341A3EF1FB959A500EC73A1 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		0341A3F11FB9918F00EC73A1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		0341A3F31FB9981600EC73A1 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		0341A3F41FB9981600EC73A1 /* ProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCell.xib; sourceTree = "<group>"; };
+		0341A3F71FB9A91D00EC73A1 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		0341A3F91FBA7C3D00EC73A1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0341A3FB1FBA95B800EC73A1 /* ChartModePicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartModePicker.xib; sourceTree = "<group>"; };
+		0341A3FD1FBA95D100EC73A1 /* ChartModePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartModePicker.swift; sourceTree = "<group>"; };
+		0341A4001FBAA99A00EC73A1 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		0341A4061FBAE83700EC73A1 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		0341A4071FBAE83700EC73A1 /* MenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
+		0341A40A1FBAF97C00EC73A1 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		0341A40C1FBAF9B600EC73A1 /* ExSlideMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExSlideMenuController.swift; sourceTree = "<group>"; };
+		0341A40E1FBAF9FC00EC73A1 /* UIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		0341A4101FBAFD7A00EC73A1 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		0341A4131FBAFDD000EC73A1 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		0341A4151FBAFE0E00EC73A1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0341A4171FBBE79D00EC73A1 /* SupportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportViewController.swift; sourceTree = "<group>"; };
+		0341A4191FBBEBB100EC73A1 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		0341A4291FBBEF0700EC73A1 /* CGLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGLocation.swift; sourceTree = "<group>"; };
+		0341A42A1FBBEF0700EC73A1 /* CGDriverMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGDriverMarker.swift; sourceTree = "<group>"; };
+		0341A42B1FBBEF0700EC73A1 /* CGRiderMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRiderMarker.swift; sourceTree = "<group>"; };
+		0341A42C1FBBEF0700EC73A1 /* CGMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGMapView.swift; sourceTree = "<group>"; };
+		0341A42D1FBBEF0700EC73A1 /* CGMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGMarker.swift; sourceTree = "<group>"; };
+		0341A4331FBBEF1400EC73A1 /* DriverGoogleMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverGoogleMap.swift; sourceTree = "<group>"; };
+		0341A4351FBBF16000EC73A1 /* GetDirectionResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDirectionResult.swift; sourceTree = "<group>"; };
+		0341A4371FBBF1B300EC73A1 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		0341A4391FBBF25C00EC73A1 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		0341A43B1FBBF2B700EC73A1 /* ConstraintExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintExtension.swift; sourceTree = "<group>"; };
+		0341A43E1FBBF31B00EC73A1 /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		0341A43F1FBBF31C00EC73A1 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		0341A4431FBBF38100EC73A1 /* GoogleMapAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapAPI.swift; sourceTree = "<group>"; };
+		0341A4471FBBF6BE00EC73A1 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		0341A4491FBBF74600EC73A1 /* MyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAPI.swift; sourceTree = "<group>"; };
+		0341A44B1FBBF7E000EC73A1 /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
+		0341A44E1FBBF85400EC73A1 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		0341A4501FBC163100EC73A1 /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
+		0341A4541FBC182400EC73A1 /* Driver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
 		03E09AC81FB938C100DC65AA /* carpo_driver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = carpo_driver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03E09ACB1FB938C100DC65AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		03E09ACD1FB938C100DC65AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		03E09AD01FB938C100DC65AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		03E09AD21FB938C100DC65AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03E09AD51FB938C100DC65AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +173,18 @@
 		03E09AE71FB938C200DC65AA /* carpo_driverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = carpo_driverUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03E09AEB1FB938C200DC65AA /* carpo_driverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carpo_driverUITests.swift; sourceTree = "<group>"; };
 		03E09AED1FB938C200DC65AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03E09AFA1FB93B7500DC65AA /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
+		03E09AFD1FB93C1A00DC65AA /* StoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardExtension.swift; sourceTree = "<group>"; };
+		03E09AFF1FB93C7B00DC65AA /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		09FB14240F163663CE103D12 /* Pods-carpo_driver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carpo_driver.release.xcconfig"; path = "Pods/Target Support Files/Pods-carpo_driver/Pods-carpo_driver.release.xcconfig"; sourceTree = "<group>"; };
+		12352E8A831D95801AD95674 /* Pods-carpo_driverUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carpo_driverUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-carpo_driverUITests/Pods-carpo_driverUITests.release.xcconfig"; sourceTree = "<group>"; };
+		138BA7E948A50C1E284BCCC4 /* Pods_carpo_driver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_carpo_driver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C0175D10E554E8F39651C59 /* Pods_carpo_driverTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_carpo_driverTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		67C52838263102FC22B8EC92 /* Pods_carpo_driverUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_carpo_driverUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C250D2D41A5947325FD094F /* Pods-carpo_driverTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carpo_driverTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-carpo_driverTests/Pods-carpo_driverTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8B66ED3A272B4499EA2DFC5C /* Pods-carpo_driverUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carpo_driverUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-carpo_driverUITests/Pods-carpo_driverUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		93DEC67ADD9B7FCEA873EED8 /* Pods-carpo_driverTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carpo_driverTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-carpo_driverTests/Pods-carpo_driverTests.release.xcconfig"; sourceTree = "<group>"; };
+		EDF2FE58E7E7BCD9E86A99DE /* Pods-carpo_driver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carpo_driver.debug.xcconfig"; path = "Pods/Target Support Files/Pods-carpo_driver/Pods-carpo_driver.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +192,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4775BFF4F605DF41DE7360D3 /* Pods_carpo_driver.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +200,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E9DA95FBE780EFB45079C74 /* Pods_carpo_driverTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +208,155 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13B42E7B9F2D65DCBD93F6B5 /* Pods_carpo_driverUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00A4CE05E8F54A90E9756857 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EDF2FE58E7E7BCD9E86A99DE /* Pods-carpo_driver.debug.xcconfig */,
+				09FB14240F163663CE103D12 /* Pods-carpo_driver.release.xcconfig */,
+				7C250D2D41A5947325FD094F /* Pods-carpo_driverTests.debug.xcconfig */,
+				93DEC67ADD9B7FCEA873EED8 /* Pods-carpo_driverTests.release.xcconfig */,
+				8B66ED3A272B4499EA2DFC5C /* Pods-carpo_driverUITests.debug.xcconfig */,
+				12352E8A831D95801AD95674 /* Pods-carpo_driverUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		0341A3BC1FB952A700EC73A1 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0341A3C01FB952DC00EC73A1 /* SanFranciscoDisplay-Black.otf */,
+				0341A3C61FB952DD00EC73A1 /* SanFranciscoDisplay-Bold.otf */,
+				0341A3CE1FB952DD00EC73A1 /* SanFranciscoDisplay-Heavy.otf */,
+				0341A3CF1FB952DE00EC73A1 /* SanFranciscoDisplay-Light.otf */,
+				0341A3BE1FB952DC00EC73A1 /* SanFranciscoDisplay-Medium.otf */,
+				0341A3C71FB952DD00EC73A1 /* SanFranciscoDisplay-Regular.otf */,
+				0341A3C21FB952DC00EC73A1 /* SanFranciscoDisplay-Semibold.otf */,
+				0341A3C51FB952DD00EC73A1 /* SanFranciscoDisplay-Thin.otf */,
+				0341A3C31FB952DC00EC73A1 /* SanFranciscoDisplay-Ultralight.otf */,
+				0341A3BD1FB952DC00EC73A1 /* SanFranciscoText-Bold.otf */,
+				0341A3C81FB952DD00EC73A1 /* SanFranciscoText-BoldItalic.otf */,
+				0341A3C11FB952DC00EC73A1 /* SanFranciscoText-Heavy.otf */,
+				0341A3C91FB952DD00EC73A1 /* SanFranciscoText-HeavyItalic.otf */,
+				0341A3CA1FB952DD00EC73A1 /* SanFranciscoText-Light.otf */,
+				0341A3BF1FB952DC00EC73A1 /* SanFranciscoText-LightItalic.otf */,
+				0341A3CB1FB952DD00EC73A1 /* SanFranciscoText-Medium.otf */,
+				0341A3CC1FB952DD00EC73A1 /* SanFranciscoText-MediumItalic.otf */,
+				0341A3C41FB952DD00EC73A1 /* SanFranciscoText-Regular.otf */,
+				0341A3D01FB952DE00EC73A1 /* SanFranciscoText-RegularItalic.otf */,
+				0341A3CD1FB952DD00EC73A1 /* SanFranciscoText-Semibold.otf */,
+				0341A3D11FB952DE00EC73A1 /* SanFranciscoText-SemiboldItalic.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		0341A3E71FB9554100EC73A1 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0341A3E81FB9555E00EC73A1 /* SignInViewController.swift */,
+				0341A3F11FB9918F00EC73A1 /* ProfileViewController.swift */,
+				0341A3F71FB9A91D00EC73A1 /* BaseViewController.swift */,
+				0341A3F91FBA7C3D00EC73A1 /* HomeViewController.swift */,
+				0341A4001FBAA99A00EC73A1 /* HistoryViewController.swift */,
+				0341A4171FBBE79D00EC73A1 /* SupportViewController.swift */,
+				0341A4191FBBEBB100EC73A1 /* MapViewController.swift */,
+				0341A4501FBC163100EC73A1 /* GroupViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		0341A3EA1FB9564F00EC73A1 /* XIB	 */ = {
+			isa = PBXGroup;
+			children = (
+				0341A3ED1FB956A700EC73A1 /* ForgotPasswordView.xib */,
+				0341A3EF1FB959A500EC73A1 /* ForgotPasswordView.swift */,
+				0341A3F31FB9981600EC73A1 /* ProfileCell.swift */,
+				0341A3F41FB9981600EC73A1 /* ProfileCell.xib */,
+				0341A3FB1FBA95B800EC73A1 /* ChartModePicker.xib */,
+				0341A3FD1FBA95D100EC73A1 /* ChartModePicker.swift */,
+				0341A4061FBAE83700EC73A1 /* MenuCell.swift */,
+				0341A4071FBAE83700EC73A1 /* MenuCell.xib */,
+			);
+			path = "XIB\t";
+			sourceTree = "<group>";
+		};
+		0341A3FF1FBAA97700EC73A1 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				03E09ACF1FB938C100DC65AA /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		0341A4121FBAFDC400EC73A1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0341A44D1FBBF84000EC73A1 /* Error */,
+				0341A4281FBBEEEC00EC73A1 /* MapView */,
+				0341A4131FBAFDD000EC73A1 /* Global.swift */,
+				0341A4151FBAFE0E00EC73A1 /* User.swift */,
+				0341A4541FBC182400EC73A1 /* Driver.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0341A4281FBBEEEC00EC73A1 /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				0341A4421FBBF37200EC73A1 /* GoogleMap */,
+				0341A42A1FBBEF0700EC73A1 /* CGDriverMarker.swift */,
+				0341A4291FBBEF0700EC73A1 /* CGLocation.swift */,
+				0341A42C1FBBEF0700EC73A1 /* CGMapView.swift */,
+				0341A42D1FBBEF0700EC73A1 /* CGMarker.swift */,
+				0341A42B1FBBEF0700EC73A1 /* CGRiderMarker.swift */,
+				0341A4331FBBEF1400EC73A1 /* DriverGoogleMap.swift */,
+				0341A4351FBBF16000EC73A1 /* GetDirectionResult.swift */,
+			);
+			path = MapView;
+			sourceTree = "<group>";
+		};
+		0341A43D1FBBF30F00EC73A1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0341A4461FBBF6B200EC73A1 /* API */,
+				0341A43E1FBBF31B00EC73A1 /* Config.plist */,
+				0341A43F1FBBF31C00EC73A1 /* Config.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		0341A4421FBBF37200EC73A1 /* GoogleMap */ = {
+			isa = PBXGroup;
+			children = (
+				0341A4431FBBF38100EC73A1 /* GoogleMapAPI.swift */,
+			);
+			path = GoogleMap;
+			sourceTree = "<group>";
+		};
+		0341A4461FBBF6B200EC73A1 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				0341A4471FBBF6BE00EC73A1 /* APIManager.swift */,
+				0341A4491FBBF74600EC73A1 /* MyAPI.swift */,
+				0341A44B1FBBF7E000EC73A1 /* APIConfig.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		0341A44D1FBBF84000EC73A1 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				0341A44E1FBBF85400EC73A1 /* ErrorResponse.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
 		03E09ABF1FB938C100DC65AA = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +364,8 @@
 				03E09ADF1FB938C200DC65AA /* carpo_driverTests */,
 				03E09AEA1FB938C200DC65AA /* carpo_driverUITests */,
 				03E09AC91FB938C100DC65AA /* Products */,
+				00A4CE05E8F54A90E9756857 /* Pods */,
+				D1D1FFD2F277DDE6FE7C6CED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,9 +382,14 @@
 		03E09ACA1FB938C100DC65AA /* carpo_driver */ = {
 			isa = PBXGroup;
 			children = (
+				0341A43D1FBBF30F00EC73A1 /* Utils */,
+				0341A4121FBAFDC400EC73A1 /* Model */,
+				0341A3FF1FBAA97700EC73A1 /* Storyboard */,
+				0341A3EA1FB9564F00EC73A1 /* XIB	 */,
+				0341A3E71FB9554100EC73A1 /* View Controller */,
+				03E09AFC1FB93C0600DC65AA /* Extension */,
+				03E09AF91FB93A9D00DC65AA /* Menu */,
 				03E09ACB1FB938C100DC65AA /* AppDelegate.swift */,
-				03E09ACD1FB938C100DC65AA /* ViewController.swift */,
-				03E09ACF1FB938C100DC65AA /* Main.storyboard */,
 				03E09AD21FB938C100DC65AA /* Assets.xcassets */,
 				03E09AD41FB938C100DC65AA /* LaunchScreen.storyboard */,
 				03E09AD71FB938C200DC65AA /* Info.plist */,
@@ -125,6 +415,41 @@
 			path = carpo_driverUITests;
 			sourceTree = "<group>";
 		};
+		03E09AF91FB93A9D00DC65AA /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				03E09AFA1FB93B7500DC65AA /* SideMenu.swift */,
+				0341A40C1FBAF9B600EC73A1 /* ExSlideMenuController.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		03E09AFC1FB93C0600DC65AA /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0341A3BC1FB952A700EC73A1 /* Fonts */,
+				03E09AFD1FB93C1A00DC65AA /* StoryboardExtension.swift */,
+				0341A40E1FBAF9FC00EC73A1 /* UIApplication.swift */,
+				03E09AFF1FB93C7B00DC65AA /* StringExtension.swift */,
+				0341A40A1FBAF97C00EC73A1 /* UIColorExtension.swift */,
+				0341A4101FBAFD7A00EC73A1 /* UIViewController.swift */,
+				0341A4371FBBF1B300EC73A1 /* UIImageExtension.swift */,
+				0341A4391FBBF25C00EC73A1 /* UIViewExtension.swift */,
+				0341A43B1FBBF2B700EC73A1 /* ConstraintExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		D1D1FFD2F277DDE6FE7C6CED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				138BA7E948A50C1E284BCCC4 /* Pods_carpo_driver.framework */,
+				1C0175D10E554E8F39651C59 /* Pods_carpo_driverTests.framework */,
+				67C52838263102FC22B8EC92 /* Pods_carpo_driverUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +457,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 03E09AF01FB938C200DC65AA /* Build configuration list for PBXNativeTarget "carpo_driver" */;
 			buildPhases = (
+				F087E947BEA40322A81CD3BF /* [CP] Check Pods Manifest.lock */,
 				03E09AC41FB938C100DC65AA /* Sources */,
 				03E09AC51FB938C100DC65AA /* Frameworks */,
 				03E09AC61FB938C100DC65AA /* Resources */,
+				1733830575BE43FC963DECBA /* [CP] Embed Pods Frameworks */,
+				5B982EDE338A29874D688EAA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +477,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 03E09AF31FB938C200DC65AA /* Build configuration list for PBXNativeTarget "carpo_driverTests" */;
 			buildPhases = (
+				19B629DDFC13E2157A38F1F7 /* [CP] Check Pods Manifest.lock */,
 				03E09AD81FB938C200DC65AA /* Sources */,
 				03E09AD91FB938C200DC65AA /* Frameworks */,
 				03E09ADA1FB938C200DC65AA /* Resources */,
+				6C32845BD0842CF5CEAFE8FE /* [CP] Embed Pods Frameworks */,
+				CD278E1F67493633AD8E0B1C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +498,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 03E09AF61FB938C200DC65AA /* Build configuration list for PBXNativeTarget "carpo_driverUITests" */;
 			buildPhases = (
+				16341733C2F8A0E6D720F639 /* [CP] Check Pods Manifest.lock */,
 				03E09AE31FB938C200DC65AA /* Sources */,
 				03E09AE41FB938C200DC65AA /* Frameworks */,
 				03E09AE51FB938C200DC65AA /* Resources */,
+				2510DE199723D1BA919E926F /* [CP] Embed Pods Frameworks */,
+				42DE9273E00EF714CD0F1CF9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -232,8 +566,34 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0341A4401FBBF31C00EC73A1 /* Config.plist in Resources */,
+				0341A3D91FB952DE00EC73A1 /* SanFranciscoText-Regular.otf in Resources */,
+				0341A3EE1FB956A700EC73A1 /* ForgotPasswordView.xib in Resources */,
+				0341A4091FBAE83700EC73A1 /* MenuCell.xib in Resources */,
+				0341A3E31FB952DE00EC73A1 /* SanFranciscoDisplay-Heavy.otf in Resources */,
+				0341A3DF1FB952DE00EC73A1 /* SanFranciscoText-Light.otf in Resources */,
+				0341A3E11FB952DE00EC73A1 /* SanFranciscoText-MediumItalic.otf in Resources */,
+				0341A3DB1FB952DE00EC73A1 /* SanFranciscoDisplay-Bold.otf in Resources */,
+				0341A3D81FB952DE00EC73A1 /* SanFranciscoDisplay-Ultralight.otf in Resources */,
+				0341A3F61FB9981600EC73A1 /* ProfileCell.xib in Resources */,
 				03E09AD61FB938C100DC65AA /* LaunchScreen.storyboard in Resources */,
+				0341A3DA1FB952DE00EC73A1 /* SanFranciscoDisplay-Thin.otf in Resources */,
+				0341A3E51FB952DE00EC73A1 /* SanFranciscoText-RegularItalic.otf in Resources */,
+				0341A3E21FB952DE00EC73A1 /* SanFranciscoText-Semibold.otf in Resources */,
+				0341A3E41FB952DE00EC73A1 /* SanFranciscoDisplay-Light.otf in Resources */,
+				0341A3FC1FBA95B800EC73A1 /* ChartModePicker.xib in Resources */,
+				0341A3D21FB952DE00EC73A1 /* SanFranciscoText-Bold.otf in Resources */,
+				0341A3D61FB952DE00EC73A1 /* SanFranciscoText-Heavy.otf in Resources */,
+				0341A3DD1FB952DE00EC73A1 /* SanFranciscoText-BoldItalic.otf in Resources */,
 				03E09AD31FB938C100DC65AA /* Assets.xcassets in Resources */,
+				0341A3D31FB952DE00EC73A1 /* SanFranciscoDisplay-Medium.otf in Resources */,
+				0341A3DC1FB952DE00EC73A1 /* SanFranciscoDisplay-Regular.otf in Resources */,
+				0341A3D51FB952DE00EC73A1 /* SanFranciscoDisplay-Black.otf in Resources */,
+				0341A3E01FB952DE00EC73A1 /* SanFranciscoText-Medium.otf in Resources */,
+				0341A3E61FB952DE00EC73A1 /* SanFranciscoText-SemiboldItalic.otf in Resources */,
+				0341A3DE1FB952DE00EC73A1 /* SanFranciscoText-HeavyItalic.otf in Resources */,
+				0341A3D71FB952DE00EC73A1 /* SanFranciscoDisplay-Semibold.otf in Resources */,
+				0341A3D41FB952DE00EC73A1 /* SanFranciscoText-LightItalic.otf in Resources */,
 				03E09AD11FB938C100DC65AA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,13 +614,248 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		16341733C2F8A0E6D720F639 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-carpo_driverUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1733830575BE43FC963DECBA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-carpo_driver/Pods-carpo_driver-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/IBAnimatable/IBAnimatable.framework",
+				"${BUILT_PRODUCTS_DIR}/JTMaterialSwitch/JTMaterialSwitch.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya-ObjectMapper/Moya_ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/Pulsator/Pulsator.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/SlideMenuControllerSwift/SlideMenuControllerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IBAnimatable.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTMaterialSwitch.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pulsator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SlideMenuControllerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-carpo_driver/Pods-carpo_driver-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		19B629DDFC13E2157A38F1F7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-carpo_driverTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2510DE199723D1BA919E926F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-carpo_driverUITests/Pods-carpo_driverUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		42DE9273E00EF714CD0F1CF9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-carpo_driverUITests/Pods-carpo_driverUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5B982EDE338A29874D688EAA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-carpo_driver/Pods-carpo_driver-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-carpo_driver/Pods-carpo_driver-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C32845BD0842CF5CEAFE8FE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-carpo_driverTests/Pods-carpo_driverTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD278E1F67493633AD8E0B1C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-carpo_driverTests/Pods-carpo_driverTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F087E947BEA40322A81CD3BF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-carpo_driver-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		03E09AC41FB938C100DC65AA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03E09ACE1FB938C100DC65AA /* ViewController.swift in Sources */,
+				0341A43A1FBBF25C00EC73A1 /* UIViewExtension.swift in Sources */,
+				0341A4301FBBEF0800EC73A1 /* CGRiderMarker.swift in Sources */,
+				0341A42E1FBBEF0800EC73A1 /* CGLocation.swift in Sources */,
+				0341A4551FBC182400EC73A1 /* Driver.swift in Sources */,
+				0341A40F1FBAF9FD00EC73A1 /* UIApplication.swift in Sources */,
+				03E09AFB1FB93B7500DC65AA /* SideMenu.swift in Sources */,
+				0341A4311FBBEF0800EC73A1 /* CGMapView.swift in Sources */,
+				0341A40B1FBAF97C00EC73A1 /* UIColorExtension.swift in Sources */,
+				0341A3FE1FBA95D100EC73A1 /* ChartModePicker.swift in Sources */,
+				0341A3F01FB959A500EC73A1 /* ForgotPasswordView.swift in Sources */,
+				0341A42F1FBBEF0800EC73A1 /* CGDriverMarker.swift in Sources */,
+				0341A4011FBAA99A00EC73A1 /* HistoryViewController.swift in Sources */,
+				0341A40D1FBAF9B600EC73A1 /* ExSlideMenuController.swift in Sources */,
+				0341A44F1FBBF85400EC73A1 /* ErrorResponse.swift in Sources */,
+				0341A4481FBBF6BE00EC73A1 /* APIManager.swift in Sources */,
+				0341A4361FBBF16000EC73A1 /* GetDirectionResult.swift in Sources */,
+				0341A44C1FBBF7E000EC73A1 /* APIConfig.swift in Sources */,
+				0341A3E91FB9555E00EC73A1 /* SignInViewController.swift in Sources */,
+				0341A44A1FBBF74600EC73A1 /* MyAPI.swift in Sources */,
+				0341A4141FBAFDD000EC73A1 /* Global.swift in Sources */,
+				0341A4111FBAFD7A00EC73A1 /* UIViewController.swift in Sources */,
+				03E09B001FB93C7B00DC65AA /* StringExtension.swift in Sources */,
+				0341A3F81FB9A91D00EC73A1 /* BaseViewController.swift in Sources */,
+				03E09AFE1FB93C1A00DC65AA /* StoryboardExtension.swift in Sources */,
+				0341A41A1FBBEBB100EC73A1 /* MapViewController.swift in Sources */,
+				0341A4381FBBF1B300EC73A1 /* UIImageExtension.swift in Sources */,
+				0341A3FA1FBA7C3D00EC73A1 /* HomeViewController.swift in Sources */,
+				0341A3F51FB9981600EC73A1 /* ProfileCell.swift in Sources */,
+				0341A4341FBBEF1400EC73A1 /* DriverGoogleMap.swift in Sources */,
+				0341A3F21FB9918F00EC73A1 /* ProfileViewController.swift in Sources */,
+				0341A4081FBAE83700EC73A1 /* MenuCell.swift in Sources */,
 				03E09ACC1FB938C100DC65AA /* AppDelegate.swift in Sources */,
+				0341A43C1FBBF2B700EC73A1 /* ConstraintExtension.swift in Sources */,
+				0341A4511FBC163100EC73A1 /* GroupViewController.swift in Sources */,
+				0341A4321FBBEF0800EC73A1 /* CGMarker.swift in Sources */,
+				0341A4411FBBF31C00EC73A1 /* Config.swift in Sources */,
+				0341A4441FBBF38100EC73A1 /* GoogleMapAPI.swift in Sources */,
+				0341A4181FBBE79D00EC73A1 /* SupportViewController.swift in Sources */,
+				0341A4161FBAFE0E00EC73A1 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +1019,7 @@
 		};
 		03E09AF11FB938C200DC65AA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDF2FE58E7E7BCD9E86A99DE /* Pods-carpo_driver.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -432,12 +1028,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ngocdung.carpo-driver";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		03E09AF21FB938C200DC65AA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09FB14240F163663CE103D12 /* Pods-carpo_driver.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -446,12 +1043,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ngocdung.carpo-driver";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		03E09AF41FB938C200DC65AA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C250D2D41A5947325FD094F /* Pods-carpo_driverTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -468,6 +1066,7 @@
 		};
 		03E09AF51FB938C200DC65AA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93DEC67ADD9B7FCEA873EED8 /* Pods-carpo_driverTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -484,6 +1083,7 @@
 		};
 		03E09AF71FB938C200DC65AA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B66ED3A272B4499EA2DFC5C /* Pods-carpo_driverUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -499,6 +1099,7 @@
 		};
 		03E09AF81FB938C200DC65AA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12352E8A831D95801AD95674 /* Pods-carpo_driverUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
