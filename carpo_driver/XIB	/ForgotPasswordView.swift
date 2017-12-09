@@ -11,6 +11,7 @@ import UIKit
 protocol ForgotPasswordViewDelegate {
     func backPressed()
     func confirmPressed()
+    func missingParameter(_ title:String)
 }
 class ForgotPasswordView: UIView {
     @IBOutlet weak var contentView: UIView!
@@ -25,9 +26,17 @@ class ForgotPasswordView: UIView {
     @IBAction func backPressed(_ sender: Any){
         delegate?.backPressed()
     }
-    @IBAction func confirmPressed(_ sender: Any){
-        delegate?.confirmPressed()
-        moveToNewPassword()
+    @IBAction func confirmPressed(_ sender: UIButton){
+        
+        if sender.tag == 0 {
+            if tfPhoneNumber.text != nil || tfPhoneNumber.text != "" {
+                moveToNewPassword()
+            } else {
+                self.delegate?.missingParameter("Không tìm thấy số điện thoại")
+            }
+        } else {
+            delegate?.confirmPressed()
+        }
     }
     @IBAction func resendVeriCodePressed(_ sender: Any){
         
@@ -56,7 +65,23 @@ class ForgotPasswordView: UIView {
     }
     
     func moveToNewPassword() {
-        viewPhoneNumberPrompt.leftToRightAnimation(duration: 0.5, completionDelegate: self)
+        
+        let completion = {(otp: String?, error: String?) -> Void in
+            if let OTP = otp {
+                if ((OTP.rangeOfCharacter(from: CharacterSet.alphanumerics)) != nil) {
+                    print("OTP: \(otp)")
+                    self.viewPhoneNumberPrompt.leftToRightAnimation(duration: 0.5, completionDelegate: self)
+                }
+            } else {
+                self.delegate?.missingParameter("Không tìm thấy số điện thoại")
+            }
+        }
+        ApiManager.getOTP(phone: tfPhoneNumber.text! , completion: completion)
+        
+    }
+    
+    func backToPasswordPrompt(){
+        
     }
     
     func displayPhoneNumberPrompt(){
@@ -88,6 +113,22 @@ extension UIView {
         
         // Add the animation to the View's layer
         self.layer.add(leftToRightTransition, forKey: "leftToRightTransition")
+    }
+    
+    func rightToLeftAnimation(duration: TimeInterval = 0.5, completionDelegate: CAAnimationDelegate? = nil) {
+        // Create a CATransition object
+        let leftToRightTransition = CATransition()
+        
+        leftToRightTransition.delegate = completionDelegate
+        
+        leftToRightTransition.type = kCATransitionPush
+        leftToRightTransition.subtype = kCATransitionFromLeft
+        leftToRightTransition.duration = duration
+        leftToRightTransition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        leftToRightTransition.fillMode = kCAFillModeRemoved
+        
+        // Add the animation to the View's layer
+        self.layer.add(leftToRightTransition, forKey: "rightToLeftTransition")
     }
 }
 extension ForgotPasswordView: CAAnimationDelegate{

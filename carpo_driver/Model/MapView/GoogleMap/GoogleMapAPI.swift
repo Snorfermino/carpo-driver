@@ -38,7 +38,7 @@ extension GoogleMapAPI: TargetType {
     
     var headers: [String : String]? {
         var h = ["X-App-Token": "Ly93b25neWl1bmFtLXBocC5oZXJva3VhcHAuY29tL2FwaS9hdXRoL2xvZ2luIiwiaWF"]
-        guard let accessToken = Global.user?.token else {
+        guard let accessToken = Global.user?.data.token else {
             return h
         }
         h["X-Access-Token"] = accessToken

@@ -7,23 +7,26 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="SanFranciscoText-Regular.otf">
-            <string>SanFranciscoText-Regular</string>
+        <array key="Roboto-Light.ttf">
+            <string>Roboto-Light</string>
         </array>
-        <array key="SanFranciscoText-Semibold.otf">
-            <string>SanFranciscoText-Semibold</string>
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
         </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChartModePicker" customModule="carpo_driver" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="4pr-Fa-BSF"/>
+                <outlet property="imgViewClose" destination="iun-jj-NGh" id="ckq-2S-3ip"/>
                 <outlet property="lbTitle" destination="rz4-pP-hb9" id="8qf-xL-Cxs"/>
                 <outlet property="modePicker" destination="o3o-tL-uWv" id="Glq-gB-vOU"/>
+                <outlet property="testDatePicker" destination="O2m-Ma-MUr" id="jdK-j4-2Zu"/>
                 <outlet property="viewCenter" destination="Vd9-fT-HQa" id="rmg-VF-5be"/>
             </connections>
         </placeholder>
@@ -33,28 +36,40 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x7j-xt-jUR" customClass="AnimatableView" customModule="IBAnimatable">
-                    <rect key="frame" x="7.5" y="164" width="360" height="339"/>
+                    <rect key="frame" x="20" y="161" width="335" height="345"/>
                     <subviews>
+                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_close" translatesAutoresizingMaskIntoConstraints="NO" id="iun-jj-NGh">
+                            <rect key="frame" x="297" y="10" width="28" height="28"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="iun-jj-NGh" secondAttribute="height" id="0lU-co-QK0"/>
+                            </constraints>
+                        </imageView>
                         <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o3o-tL-uWv">
-                            <rect key="frame" x="20" y="44" width="320" height="216"/>
+                            <rect key="frame" x="20" y="52.5" width="295" height="216"/>
                             <connections>
                                 <outlet property="dataSource" destination="-1" id="i4B-VT-mwz"/>
                                 <outlet property="delegate" destination="-1" id="30t-Um-nKQ"/>
                             </connections>
                         </pickerView>
+                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="O2m-Ma-MUr">
+                            <rect key="frame" x="20" y="53" width="295" height="216"/>
+                            <date key="date" timeIntervalSinceReferenceDate="534072557.60950601">
+                                <!--2017-12-04 09:29:17 +0000-->
+                            </date>
+                        </datePicker>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thống kê theo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rz4-pP-hb9">
-                            <rect key="frame" x="125.5" y="12" width="109" height="20"/>
-                            <fontDescription key="fontDescription" name="SanFranciscoText-Regular" family="San Francisco Text" pointSize="17"/>
-                            <nil key="textColor"/>
+                            <rect key="frame" x="107" y="30" width="122" height="22.5"/>
+                            <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="19"/>
+                            <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q60-PB-A4x" customClass="AnimatableButton" customModule="IBAnimatable">
-                            <rect key="frame" x="19.5" y="268" width="320" height="50.5"/>
+                            <rect key="frame" x="19.5" y="268.5" width="295" height="46.5"/>
                             <color key="backgroundColor" red="0.94173574449999997" green="0.59836840629999999" blue="0.2154669911" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="Q60-PB-A4x" secondAttribute="height" multiplier="158:25" id="N2Y-gP-3a8"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="SanFranciscoText-Semibold" family="San Francisco Text" pointSize="17"/>
+                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
                             <state key="normal" title="Xác Nhận">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -68,28 +83,33 @@
                             </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vd9-fT-HQa">
-                            <rect key="frame" x="19.5" y="44" width="320" height="216"/>
+                            <rect key="frame" x="19.5" y="52.5" width="295" height="216"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstAttribute="width" secondItem="Vd9-fT-HQa" secondAttribute="height" multiplier="40:27" id="YoM-Gh-gPa"/>
-                            </constraints>
                         </view>
                     </subviews>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstItem="j5e-CT-4Jk" firstAttribute="bottom" secondItem="Q60-PB-A4x" secondAttribute="bottom" constant="20" id="1YF-qv-QQK"/>
+                        <constraint firstItem="iun-jj-NGh" firstAttribute="width" secondItem="x7j-xt-jUR" secondAttribute="width" multiplier="28:335" id="0p6-BI-gzD"/>
+                        <constraint firstItem="rz4-pP-hb9" firstAttribute="top" secondItem="x7j-xt-jUR" secondAttribute="top" constant="30" id="1gP-z6-XKf"/>
                         <constraint firstItem="Q60-PB-A4x" firstAttribute="width" secondItem="o3o-tL-uWv" secondAttribute="width" id="2LW-Um-z8w"/>
+                        <constraint firstItem="Vd9-fT-HQa" firstAttribute="width" secondItem="o3o-tL-uWv" secondAttribute="width" id="3Da-Ic-nFN"/>
+                        <constraint firstAttribute="trailing" secondItem="iun-jj-NGh" secondAttribute="trailing" constant="10" id="5cr-gL-nK0"/>
+                        <constraint firstItem="O2m-Ma-MUr" firstAttribute="centerX" secondItem="x7j-xt-jUR" secondAttribute="centerX" id="6Cm-DT-s3h"/>
                         <constraint firstItem="rz4-pP-hb9" firstAttribute="centerX" secondItem="x7j-xt-jUR" secondAttribute="centerX" id="6e2-Cn-DSp"/>
-                        <constraint firstItem="rz4-pP-hb9" firstAttribute="top" secondItem="j5e-CT-4Jk" secondAttribute="top" constant="12" id="CGJ-GR-PxQ"/>
+                        <constraint firstAttribute="bottom" secondItem="Q60-PB-A4x" secondAttribute="bottom" constant="30" id="9WY-UC-eWF"/>
                         <constraint firstItem="Q60-PB-A4x" firstAttribute="centerX" secondItem="x7j-xt-jUR" secondAttribute="centerX" id="Dbj-Ep-u1E"/>
                         <constraint firstItem="Vd9-fT-HQa" firstAttribute="centerX" secondItem="x7j-xt-jUR" secondAttribute="centerX" id="GVm-19-4tr"/>
-                        <constraint firstItem="Q60-PB-A4x" firstAttribute="top" secondItem="o3o-tL-uWv" secondAttribute="bottom" constant="8" id="Jch-2C-Hx2"/>
-                        <constraint firstItem="Vd9-fT-HQa" firstAttribute="top" secondItem="rz4-pP-hb9" secondAttribute="bottom" constant="12" id="LGJ-Og-qv3"/>
+                        <constraint firstItem="Q60-PB-A4x" firstAttribute="top" secondItem="o3o-tL-uWv" secondAttribute="bottom" id="Jch-2C-Hx2"/>
+                        <constraint firstItem="Q60-PB-A4x" firstAttribute="top" secondItem="O2m-Ma-MUr" secondAttribute="bottom" id="L2r-VS-YpC"/>
+                        <constraint firstItem="Vd9-fT-HQa" firstAttribute="top" secondItem="rz4-pP-hb9" secondAttribute="bottom" id="LGJ-Og-qv3"/>
                         <constraint firstItem="j5e-CT-4Jk" firstAttribute="trailing" secondItem="o3o-tL-uWv" secondAttribute="trailing" constant="20" id="QFW-kt-VQc"/>
-                        <constraint firstItem="o3o-tL-uWv" firstAttribute="top" secondItem="rz4-pP-hb9" secondAttribute="bottom" constant="12" id="ef5-ml-1X5"/>
+                        <constraint firstItem="O2m-Ma-MUr" firstAttribute="height" secondItem="o3o-tL-uWv" secondAttribute="height" id="XpF-hH-Aop"/>
+                        <constraint firstItem="iun-jj-NGh" firstAttribute="top" secondItem="x7j-xt-jUR" secondAttribute="top" constant="10" id="Ytt-HA-6S4"/>
+                        <constraint firstItem="O2m-Ma-MUr" firstAttribute="top" secondItem="rz4-pP-hb9" secondAttribute="bottom" id="ddg-GX-z6a"/>
+                        <constraint firstItem="o3o-tL-uWv" firstAttribute="top" secondItem="rz4-pP-hb9" secondAttribute="bottom" id="ef5-ml-1X5"/>
+                        <constraint firstItem="Vd9-fT-HQa" firstAttribute="height" secondItem="o3o-tL-uWv" secondAttribute="height" id="h4E-k7-gGG"/>
+                        <constraint firstItem="O2m-Ma-MUr" firstAttribute="width" secondItem="o3o-tL-uWv" secondAttribute="width" id="jRY-pf-bvl"/>
                         <constraint firstItem="o3o-tL-uWv" firstAttribute="leading" secondItem="j5e-CT-4Jk" secondAttribute="leading" constant="20" id="s6N-vK-xj8"/>
-                        <constraint firstItem="Vd9-fT-HQa" firstAttribute="leading" secondItem="x7j-xt-jUR" secondAttribute="leading" constant="20" id="uZm-QX-de8"/>
-                        <constraint firstAttribute="trailing" secondItem="Vd9-fT-HQa" secondAttribute="trailing" constant="20" id="vYa-VH-a2S"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="j5e-CT-4Jk"/>
                     <userDefinedRuntimeAttributes>
@@ -101,6 +121,8 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="x7j-xt-jUR" secondAttribute="trailing" constant="20" id="VSm-P4-q2b"/>
+                <constraint firstItem="x7j-xt-jUR" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="W38-6D-Qq2"/>
                 <constraint firstItem="x7j-xt-jUR" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="aY4-h1-4yi"/>
                 <constraint firstItem="x7j-xt-jUR" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ct6-Fi-b9X"/>
             </constraints>
@@ -109,4 +131,7 @@
             <point key="canvasLocation" x="18.5" y="-184.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="ic_close" width="80" height="80"/>
+    </resources>
 </document>

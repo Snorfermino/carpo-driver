@@ -1,7 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,7 +18,27 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_background" translatesAutoresizingMaskIntoConstraints="NO" id="Vbc-gj-7kd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_logo" translatesAutoresizingMaskIntoConstraints="NO" id="hHn-Y8-VTD">
+                                <rect key="frame" x="-0.5" y="200.5" width="375" height="266"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hHn-Y8-VTD" secondAttribute="height" multiplier="200:142" id="dpC-d6-zEb"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Vbc-gj-7kd" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="6Vh-IQ-wpy"/>
+                            <constraint firstItem="hHn-Y8-VTD" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="8cX-Og-hAh"/>
+                            <constraint firstItem="hHn-Y8-VTD" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="8qF-J5-Scr"/>
+                            <constraint firstAttribute="trailing" secondItem="Vbc-gj-7kd" secondAttribute="trailing" id="Rpw-jS-33W"/>
+                            <constraint firstAttribute="bottom" secondItem="Vbc-gj-7kd" secondAttribute="bottom" id="XdW-d4-aqR"/>
+                            <constraint firstItem="Vbc-gj-7kd" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Z6W-NY-42b"/>
+                            <constraint firstItem="hHn-Y8-VTD" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="t46-jF-ODg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -22,4 +47,8 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_logo" width="877" height="620"/>
+        <image name="img_background" width="1080" height="1920"/>
+    </resources>
 </document>

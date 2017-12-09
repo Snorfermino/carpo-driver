@@ -15,7 +15,13 @@ extension UIViewController {
             if(cnt > 1) {
                 setNavigationBarItemForBack()
             } else {
-                addLeftBarButtonWithImage(#imageLiteral(resourceName: "ic_menu").resizeImage(newWidth: 20)!)
+//                addLeftBarButtonWithImage(#imageLiteral(resourceName: "ic_menu").resizeImage(newWidth: 20)!)
+                let button = UIButton(type: .system)
+                button.setImage(#imageLiteral(resourceName: "ic_menu").resizeImage(newWidth: 20), for: .normal)
+                button.setTitle("  \(title ?? " ")", for: .normal)
+                button.addTarget(self, action: #selector(self.showLeftMenu), for: .touchUpInside)
+                button.sizeToFit()
+                self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: button)
             }
         }
         navigationController?.navigationBar.barTintColor = Global.navigationBarColor
@@ -23,15 +29,19 @@ extension UIViewController {
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
-        if let title = title {
-            navigationItem.titleView = nil
-            navigationItem.title = title
-        }
+//        if let title = title {
+//            navigationItem.titleView = nil
+//            navigationItem.title = title
+//        }
 //        else {
 //            addLogoToTitleView()
 //        }
         slideMenuController()?.removeLeftGestures()
         slideMenuController()?.addLeftGestures()
+    }
+    
+    @objc func showLeftMenu(){
+        slideMenuController()?.toggleLeft()
     }
     
     func setNavigationBarItemForBack() {

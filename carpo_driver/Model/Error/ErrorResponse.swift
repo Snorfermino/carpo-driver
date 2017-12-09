@@ -19,7 +19,7 @@ struct ErrorResponse: Mappable {
     }
     
     mutating func mapping(map: Map) {
-        errorCode <- map["error_code"]
+        errorCode <- map["code"]
         invalidFields <- map["invalid_fields"]
         message <- map["message"]
     }

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03128F161FCFEEEC0062317A /* HistoryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03128F151FCFEEEC0062317A /* HistoryResult.swift */; };
+		03128F181FCFEF0D0062317A /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03128F171FCFEF0D0062317A /* Location.swift */; };
+		03379FD41FC8248F0089B29C /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03379FD31FC8248F0089B29C /* SignInViewModel.swift */; };
+		03379FD61FC920170089B29C /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03379FD51FC920160089B29C /* BaseModel.swift */; };
+		03379FD81FCBF8250089B29C /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03379FD71FCBF8250089B29C /* DataManager.swift */; };
 		0341A3D21FB952DE00EC73A1 /* SanFranciscoText-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3BD1FB952DC00EC73A1 /* SanFranciscoText-Bold.otf */; };
 		0341A3D31FB952DE00EC73A1 /* SanFranciscoDisplay-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3BE1FB952DC00EC73A1 /* SanFranciscoDisplay-Medium.otf */; };
 		0341A3D41FB952DE00EC73A1 /* SanFranciscoText-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3BF1FB952DC00EC73A1 /* SanFranciscoText-LightItalic.otf */; };
@@ -68,6 +73,21 @@
 		0341A44F1FBBF85400EC73A1 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341A44E1FBBF85400EC73A1 /* ErrorResponse.swift */; };
 		0341A4511FBC163100EC73A1 /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341A4501FBC163100EC73A1 /* GroupViewController.swift */; };
 		0341A4551FBC182400EC73A1 /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341A4541FBC182400EC73A1 /* Driver.swift */; };
+		0349F3D91FC3E48C00F2BDBC /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0349F3D81FC3E48C00F2BDBC /* DateExtension.swift */; };
+		0349F3E41FC66F1200F2BDBC /* Roboto Mono Medium for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0349F3DA1FC66F1000F2BDBC /* Roboto Mono Medium for Powerline.ttf */; };
+		0349F3E51FC66F1200F2BDBC /* Roboto Mono Bold Italic for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0349F3DB1FC66F1000F2BDBC /* Roboto Mono Bold Italic for Powerline.ttf */; };
+		0349F3E61FC66F1200F2BDBC /* Roboto Mono Light Italic for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0349F3DC1FC66F1000F2BDBC /* Roboto Mono Light Italic for Powerline.ttf */; };
+		0349F3E71FC66F1200F2BDBC /* Roboto Mono for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0349F3DD1FC66F1000F2BDBC /* Roboto Mono for Powerline.ttf */; };
+		0349F3E81FC66F1200F2BDBC /* Roboto Mono Italic for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0349F3DE1FC66F1100F2BDBC /* Roboto Mono Italic for Powerline.ttf */; };
+		0349F3E91FC66F1200F2BDBC /* Roboto Mono Thin Italic for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0349F3DF1FC66F1100F2BDBC /* Roboto Mono Thin Italic for Powerline.ttf */; };
+		0349F3EA1FC66F1200F2BDBC /* Roboto Mono Bold for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0349F3E01FC66F1100F2BDBC /* Roboto Mono Bold for Powerline.ttf */; };
+		0349F3EB1FC66F1200F2BDBC /* Roboto Mono Light for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0349F3E11FC66F1100F2BDBC /* Roboto Mono Light for Powerline.ttf */; };
+		0349F3EC1FC66F1200F2BDBC /* Roboto Mono Medium Italic for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0349F3E21FC66F1100F2BDBC /* Roboto Mono Medium Italic for Powerline.ttf */; };
+		0349F3ED1FC66F1200F2BDBC /* Roboto Mono Thin for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0349F3E31FC66F1200F2BDBC /* Roboto Mono Thin for Powerline.ttf */; };
+		038AA5ED1FD1097100B17205 /* GroupResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038AA5EC1FD1097100B17205 /* GroupResult.swift */; };
+		038AA5EF1FD5023D00B17205 /* OTPResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038AA5EE1FD5023D00B17205 /* OTPResult.swift */; };
+		038AA5F21FD50BF200B17205 /* ChangePassword.xib in Resources */ = {isa = PBXBuildFile; fileRef = 038AA5F01FD50BF000B17205 /* ChangePassword.xib */; };
+		038AA5F31FD50BF200B17205 /* ChangePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038AA5F11FD50BF200B17205 /* ChangePassword.swift */; };
 		03E09ACC1FB938C100DC65AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E09ACB1FB938C100DC65AA /* AppDelegate.swift */; };
 		03E09AD11FB938C100DC65AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03E09ACF1FB938C100DC65AA /* Main.storyboard */; };
 		03E09AD31FB938C100DC65AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03E09AD21FB938C100DC65AA /* Assets.xcassets */; };
@@ -100,6 +120,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03128F151FCFEEEC0062317A /* HistoryResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryResult.swift; sourceTree = "<group>"; };
+		03128F171FCFEF0D0062317A /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		03379FD31FC8248F0089B29C /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		03379FD51FC920160089B29C /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		03379FD71FCBF8250089B29C /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		0341A3BD1FB952DC00EC73A1 /* SanFranciscoText-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-Bold.otf"; sourceTree = "<group>"; };
 		0341A3BE1FB952DC00EC73A1 /* SanFranciscoDisplay-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Medium.otf"; sourceTree = "<group>"; };
 		0341A3BF1FB952DC00EC73A1 /* SanFranciscoText-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-LightItalic.otf"; sourceTree = "<group>"; };
@@ -161,6 +186,21 @@
 		0341A44E1FBBF85400EC73A1 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		0341A4501FBC163100EC73A1 /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
 		0341A4541FBC182400EC73A1 /* Driver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
+		0349F3D81FC3E48C00F2BDBC /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		0349F3DA1FC66F1000F2BDBC /* Roboto Mono Medium for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto Mono Medium for Powerline.ttf"; sourceTree = "<group>"; };
+		0349F3DB1FC66F1000F2BDBC /* Roboto Mono Bold Italic for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto Mono Bold Italic for Powerline.ttf"; sourceTree = "<group>"; };
+		0349F3DC1FC66F1000F2BDBC /* Roboto Mono Light Italic for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto Mono Light Italic for Powerline.ttf"; sourceTree = "<group>"; };
+		0349F3DD1FC66F1000F2BDBC /* Roboto Mono for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto Mono for Powerline.ttf"; sourceTree = "<group>"; };
+		0349F3DE1FC66F1100F2BDBC /* Roboto Mono Italic for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto Mono Italic for Powerline.ttf"; sourceTree = "<group>"; };
+		0349F3DF1FC66F1100F2BDBC /* Roboto Mono Thin Italic for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto Mono Thin Italic for Powerline.ttf"; sourceTree = "<group>"; };
+		0349F3E01FC66F1100F2BDBC /* Roboto Mono Bold for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto Mono Bold for Powerline.ttf"; sourceTree = "<group>"; };
+		0349F3E11FC66F1100F2BDBC /* Roboto Mono Light for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto Mono Light for Powerline.ttf"; sourceTree = "<group>"; };
+		0349F3E21FC66F1100F2BDBC /* Roboto Mono Medium Italic for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto Mono Medium Italic for Powerline.ttf"; sourceTree = "<group>"; };
+		0349F3E31FC66F1200F2BDBC /* Roboto Mono Thin for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto Mono Thin for Powerline.ttf"; sourceTree = "<group>"; };
+		038AA5EC1FD1097100B17205 /* GroupResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupResult.swift; sourceTree = "<group>"; };
+		038AA5EE1FD5023D00B17205 /* OTPResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPResult.swift; sourceTree = "<group>"; };
+		038AA5F01FD50BF000B17205 /* ChangePassword.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangePassword.xib; sourceTree = "<group>"; };
+		038AA5F11FD50BF200B17205 /* ChangePassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePassword.swift; sourceTree = "<group>"; };
 		03E09AC81FB938C100DC65AA /* carpo_driver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = carpo_driver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03E09ACB1FB938C100DC65AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03E09AD01FB938C100DC65AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -228,9 +268,27 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		03379FD21FC8247A0089B29C /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				03379FD31FC8248F0089B29C /* SignInViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
 		0341A3BC1FB952A700EC73A1 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				0349F3E01FC66F1100F2BDBC /* Roboto Mono Bold for Powerline.ttf */,
+				0349F3DB1FC66F1000F2BDBC /* Roboto Mono Bold Italic for Powerline.ttf */,
+				0349F3DD1FC66F1000F2BDBC /* Roboto Mono for Powerline.ttf */,
+				0349F3DE1FC66F1100F2BDBC /* Roboto Mono Italic for Powerline.ttf */,
+				0349F3E11FC66F1100F2BDBC /* Roboto Mono Light for Powerline.ttf */,
+				0349F3DC1FC66F1000F2BDBC /* Roboto Mono Light Italic for Powerline.ttf */,
+				0349F3DA1FC66F1000F2BDBC /* Roboto Mono Medium for Powerline.ttf */,
+				0349F3E21FC66F1100F2BDBC /* Roboto Mono Medium Italic for Powerline.ttf */,
+				0349F3E31FC66F1200F2BDBC /* Roboto Mono Thin for Powerline.ttf */,
+				0349F3DF1FC66F1100F2BDBC /* Roboto Mono Thin Italic for Powerline.ttf */,
 				0341A3C01FB952DC00EC73A1 /* SanFranciscoDisplay-Black.otf */,
 				0341A3C61FB952DD00EC73A1 /* SanFranciscoDisplay-Bold.otf */,
 				0341A3CE1FB952DD00EC73A1 /* SanFranciscoDisplay-Heavy.otf */,
@@ -274,6 +332,8 @@
 		0341A3EA1FB9564F00EC73A1 /* XIB	 */ = {
 			isa = PBXGroup;
 			children = (
+				038AA5F01FD50BF000B17205 /* ChangePassword.xib */,
+				038AA5F11FD50BF200B17205 /* ChangePassword.swift */,
 				0341A3ED1FB956A700EC73A1 /* ForgotPasswordView.xib */,
 				0341A3EF1FB959A500EC73A1 /* ForgotPasswordView.swift */,
 				0341A3F31FB9981600EC73A1 /* ProfileCell.swift */,
@@ -302,6 +362,12 @@
 				0341A4131FBAFDD000EC73A1 /* Global.swift */,
 				0341A4151FBAFE0E00EC73A1 /* User.swift */,
 				0341A4541FBC182400EC73A1 /* Driver.swift */,
+				03379FD51FC920160089B29C /* BaseModel.swift */,
+				03379FD71FCBF8250089B29C /* DataManager.swift */,
+				03128F151FCFEEEC0062317A /* HistoryResult.swift */,
+				03128F171FCFEF0D0062317A /* Location.swift */,
+				038AA5EC1FD1097100B17205 /* GroupResult.swift */,
+				038AA5EE1FD5023D00B17205 /* OTPResult.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -382,6 +448,7 @@
 		03E09ACA1FB938C100DC65AA /* carpo_driver */ = {
 			isa = PBXGroup;
 			children = (
+				03379FD21FC8247A0089B29C /* View Model */,
 				0341A43D1FBBF30F00EC73A1 /* Utils */,
 				0341A4121FBAFDC400EC73A1 /* Model */,
 				0341A3FF1FBAA97700EC73A1 /* Storyboard */,
@@ -436,6 +503,7 @@
 				0341A4371FBBF1B300EC73A1 /* UIImageExtension.swift */,
 				0341A4391FBBF25C00EC73A1 /* UIViewExtension.swift */,
 				0341A43B1FBBF2B700EC73A1 /* ConstraintExtension.swift */,
+				0349F3D81FC3E48C00F2BDBC /* DateExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -567,18 +635,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				0341A4401FBBF31C00EC73A1 /* Config.plist in Resources */,
+				0349F3E71FC66F1200F2BDBC /* Roboto Mono for Powerline.ttf in Resources */,
 				0341A3D91FB952DE00EC73A1 /* SanFranciscoText-Regular.otf in Resources */,
 				0341A3EE1FB956A700EC73A1 /* ForgotPasswordView.xib in Resources */,
+				0349F3E81FC66F1200F2BDBC /* Roboto Mono Italic for Powerline.ttf in Resources */,
 				0341A4091FBAE83700EC73A1 /* MenuCell.xib in Resources */,
 				0341A3E31FB952DE00EC73A1 /* SanFranciscoDisplay-Heavy.otf in Resources */,
 				0341A3DF1FB952DE00EC73A1 /* SanFranciscoText-Light.otf in Resources */,
 				0341A3E11FB952DE00EC73A1 /* SanFranciscoText-MediumItalic.otf in Resources */,
+				0349F3E41FC66F1200F2BDBC /* Roboto Mono Medium for Powerline.ttf in Resources */,
+				0349F3E91FC66F1200F2BDBC /* Roboto Mono Thin Italic for Powerline.ttf in Resources */,
 				0341A3DB1FB952DE00EC73A1 /* SanFranciscoDisplay-Bold.otf in Resources */,
+				0349F3ED1FC66F1200F2BDBC /* Roboto Mono Thin for Powerline.ttf in Resources */,
 				0341A3D81FB952DE00EC73A1 /* SanFranciscoDisplay-Ultralight.otf in Resources */,
 				0341A3F61FB9981600EC73A1 /* ProfileCell.xib in Resources */,
 				03E09AD61FB938C100DC65AA /* LaunchScreen.storyboard in Resources */,
 				0341A3DA1FB952DE00EC73A1 /* SanFranciscoDisplay-Thin.otf in Resources */,
+				0349F3EC1FC66F1200F2BDBC /* Roboto Mono Medium Italic for Powerline.ttf in Resources */,
 				0341A3E51FB952DE00EC73A1 /* SanFranciscoText-RegularItalic.otf in Resources */,
+				0349F3EA1FC66F1200F2BDBC /* Roboto Mono Bold for Powerline.ttf in Resources */,
 				0341A3E21FB952DE00EC73A1 /* SanFranciscoText-Semibold.otf in Resources */,
 				0341A3E41FB952DE00EC73A1 /* SanFranciscoDisplay-Light.otf in Resources */,
 				0341A3FC1FBA95B800EC73A1 /* ChartModePicker.xib in Resources */,
@@ -587,6 +662,8 @@
 				0341A3DD1FB952DE00EC73A1 /* SanFranciscoText-BoldItalic.otf in Resources */,
 				03E09AD31FB938C100DC65AA /* Assets.xcassets in Resources */,
 				0341A3D31FB952DE00EC73A1 /* SanFranciscoDisplay-Medium.otf in Resources */,
+				038AA5F21FD50BF200B17205 /* ChangePassword.xib in Resources */,
+				0349F3E51FC66F1200F2BDBC /* Roboto Mono Bold Italic for Powerline.ttf in Resources */,
 				0341A3DC1FB952DE00EC73A1 /* SanFranciscoDisplay-Regular.otf in Resources */,
 				0341A3D51FB952DE00EC73A1 /* SanFranciscoDisplay-Black.otf in Resources */,
 				0341A3E01FB952DE00EC73A1 /* SanFranciscoText-Medium.otf in Resources */,
@@ -594,6 +671,8 @@
 				0341A3DE1FB952DE00EC73A1 /* SanFranciscoText-HeavyItalic.otf in Resources */,
 				0341A3D71FB952DE00EC73A1 /* SanFranciscoDisplay-Semibold.otf in Resources */,
 				0341A3D41FB952DE00EC73A1 /* SanFranciscoText-LightItalic.otf in Resources */,
+				0349F3EB1FC66F1200F2BDBC /* Roboto Mono Light for Powerline.ttf in Resources */,
+				0349F3E61FC66F1200F2BDBC /* Roboto Mono Light Italic for Powerline.ttf in Resources */,
 				03E09AD11FB938C100DC65AA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -657,6 +736,7 @@
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/Pulsator/Pulsator.framework",
+				"${BUILT_PRODUCTS_DIR}/RKPieChart/RKPieChart.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
@@ -683,6 +763,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pulsator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RKPieChart.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
@@ -751,6 +832,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-carpo_driver/Pods-carpo_driver-resources.sh",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Versions/A/Resources/GooglePlaces.bundle",
 				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -818,14 +900,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				0341A43A1FBBF25C00EC73A1 /* UIViewExtension.swift in Sources */,
+				038AA5EF1FD5023D00B17205 /* OTPResult.swift in Sources */,
+				0349F3D91FC3E48C00F2BDBC /* DateExtension.swift in Sources */,
 				0341A4301FBBEF0800EC73A1 /* CGRiderMarker.swift in Sources */,
 				0341A42E1FBBEF0800EC73A1 /* CGLocation.swift in Sources */,
 				0341A4551FBC182400EC73A1 /* Driver.swift in Sources */,
 				0341A40F1FBAF9FD00EC73A1 /* UIApplication.swift in Sources */,
+				03379FD41FC8248F0089B29C /* SignInViewModel.swift in Sources */,
 				03E09AFB1FB93B7500DC65AA /* SideMenu.swift in Sources */,
 				0341A4311FBBEF0800EC73A1 /* CGMapView.swift in Sources */,
 				0341A40B1FBAF97C00EC73A1 /* UIColorExtension.swift in Sources */,
 				0341A3FE1FBA95D100EC73A1 /* ChartModePicker.swift in Sources */,
+				03128F161FCFEEEC0062317A /* HistoryResult.swift in Sources */,
 				0341A3F01FB959A500EC73A1 /* ForgotPasswordView.swift in Sources */,
 				0341A42F1FBBEF0800EC73A1 /* CGDriverMarker.swift in Sources */,
 				0341A4011FBAA99A00EC73A1 /* HistoryViewController.swift in Sources */,
@@ -836,6 +922,7 @@
 				0341A44C1FBBF7E000EC73A1 /* APIConfig.swift in Sources */,
 				0341A3E91FB9555E00EC73A1 /* SignInViewController.swift in Sources */,
 				0341A44A1FBBF74600EC73A1 /* MyAPI.swift in Sources */,
+				03128F181FCFEF0D0062317A /* Location.swift in Sources */,
 				0341A4141FBAFDD000EC73A1 /* Global.swift in Sources */,
 				0341A4111FBAFD7A00EC73A1 /* UIViewController.swift in Sources */,
 				03E09B001FB93C7B00DC65AA /* StringExtension.swift in Sources */,
@@ -845,10 +932,14 @@
 				0341A4381FBBF1B300EC73A1 /* UIImageExtension.swift in Sources */,
 				0341A3FA1FBA7C3D00EC73A1 /* HomeViewController.swift in Sources */,
 				0341A3F51FB9981600EC73A1 /* ProfileCell.swift in Sources */,
+				03379FD61FC920170089B29C /* BaseModel.swift in Sources */,
 				0341A4341FBBEF1400EC73A1 /* DriverGoogleMap.swift in Sources */,
+				03379FD81FCBF8250089B29C /* DataManager.swift in Sources */,
 				0341A3F21FB9918F00EC73A1 /* ProfileViewController.swift in Sources */,
+				038AA5ED1FD1097100B17205 /* GroupResult.swift in Sources */,
 				0341A4081FBAE83700EC73A1 /* MenuCell.swift in Sources */,
 				03E09ACC1FB938C100DC65AA /* AppDelegate.swift in Sources */,
+				038AA5F31FD50BF200B17205 /* ChangePassword.swift in Sources */,
 				0341A43C1FBBF2B700EC73A1 /* ConstraintExtension.swift in Sources */,
 				0341A4511FBC163100EC73A1 /* GroupViewController.swift in Sources */,
 				0341A4321FBBEF0800EC73A1 /* CGMarker.swift in Sources */,
@@ -1023,6 +1114,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H89HCVG87V;
 				INFOPLIST_FILE = carpo_driver/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ngocdung.carpo-driver";
@@ -1038,6 +1130,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H89HCVG87V;
 				INFOPLIST_FILE = carpo_driver/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ngocdung.carpo-driver";

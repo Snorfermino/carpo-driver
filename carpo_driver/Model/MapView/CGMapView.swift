@@ -23,7 +23,7 @@ enum CGMapInputType: Int {
 }
 
 class CGMapView: GMSMapView {
-    var imgPin = UIImageView(image: #imageLiteral(resourceName: "ic_gender").resizeImage(newWidth: 20))
+    var imgPin = UIImageView(image: #imageLiteral(resourceName: "ic_markerActive").resizeImage(newWidth: 20))
     var startMarker = CGMarker()
     var endMarker = CGMarker()
     var drivers = [CGDriverMarker]()
@@ -31,11 +31,11 @@ class CGMapView: GMSMapView {
     var directionLine: GMSPolyline!
     var currentLocation = CGLocation()
 
-    var driverMarker = #imageLiteral(resourceName: "ic_gender")
+    var driverMarker = #imageLiteral(resourceName: "ic_markerActive")
 
     var isCurrentLocation = false
     //var markerSize:CGFloat = 50
-    var scale =  2.5
+    var scale =  10
     var currentLocationManager = CLLocationManager()
     
     func clearMarker() {
@@ -65,14 +65,14 @@ class CGMapView: GMSMapView {
         initControl()
     }
     
-//    override init(frame: CGRect) {
-//        super.init(frame: frame)
-////        initControl()
-//    }
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+//        initControl()
+    }
 
     func initControl() {
         //        mapView.mapStyle = try GMSMapStyle(contentsOfFileURL: styleURL)
-        mapStyle = try? GMSMapStyle(jsonString: Config.shareInstance.googleMapJsonStyle)
+//        mapStyle = try? GMSMapStyle(jsonString: Config.shareInstance.googleMapJsonStyle) 
         
         currentLocationManager.delegate = self
         currentLocationManager.startUpdatingLocation()

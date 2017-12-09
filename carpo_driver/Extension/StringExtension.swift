@@ -22,5 +22,12 @@ extension String {
     var length: Int {
         return self.characters.count
     }
+    
+    var floatValue: Float {
+        return (self as NSString).floatValue
+    }
+    var doubleValue: Double {
+        return (self as NSString).doubleValue
+    }
 }
 

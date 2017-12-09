@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SVProgressHUD
 class ProfileViewController: BaseViewController {
     @IBOutlet weak var imgViewProfilePicture: UIImageView!
     @IBOutlet weak var tableView: UITableView!
@@ -19,8 +19,8 @@ class ProfileViewController: BaseViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.setNavigationBarItem()
+//        super.viewWillAppear(animated)
+        self.setNavigationBarItem(title: "Thông tin tài khoản")
         
     }
     
@@ -33,9 +33,13 @@ class ProfileViewController: BaseViewController {
     
     func setupTableView(){
         tableView.register(UINib(nibName: "ProfileCell", bundle: nil), forCellReuseIdentifier: "ProfileCell")
-        tableView.estimatedRowHeight = 32
+        tableView.layer.addBorder(edge: .top, color: UIColor(hex: "808080"), thickness: 0.5)
+        tableView.estimatedRowHeight = 60
         tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.sizeToFit()
         
+        guard Global.user != nil else { return }
+        imgViewProfilePicture.sd_setImage(with: Global.user?.data.photo != "" ? URL(string: (Global.user?.data.photo)!)! : nil , placeholderImage: #imageLiteral(resourceName: "ic_logo"), options: [.retryFailed], completed: nil)
     }
     
     @objc func photoFromLibrary(_ sender: UITapGestureRecognizer) {
@@ -75,29 +79,29 @@ class ProfileViewController: BaseViewController {
     }
     
 }
-extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
+extension ProfileViewController: UITableViewDelegate, UITableViewDataSource, AlertPresenting {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell =  tableView.dequeueReusableCell(withIdentifier: "ProfileCell") as! ProfileCell
         switch indexPath.row {
         case 0:
-            cell.imageView?.image = #imageLiteral(resourceName: "ic_people")
-            cell.lbInfo.text = "Tên"
+            cell.imageView?.image = #imageLiteral(resourceName: "ic_people").resizeImage(newWidth: 20)
+            cell.lbInfo.text = Global.user?.data.fullname
         case 1:
-            cell.imageView?.image = #imageLiteral(resourceName: "ic_lock")
+            cell.imageView?.image = #imageLiteral(resourceName: "ic_lock").resizeImage(newWidth: 20)
             cell.lbInfo.text = "Đổi mật khẩu"
             cell.imgViewCaret.image = #imageLiteral(resourceName: "ic_arrowRight")
         case 2:
-            cell.imageView?.image = #imageLiteral(resourceName: "ic_calendar")
+            cell.imageView?.image = #imageLiteral(resourceName: "ic_calendar").resizeImage(newWidth: 20)
             cell.lbInfo.text = "11/07/1996"
         case 3:
-            cell.imageView?.image = #imageLiteral(resourceName: "ic_gender")
+            cell.imageView?.image = #imageLiteral(resourceName: "ic_gender").resizeImage(newWidth: 20)
             cell.lbInfo.text = "Nam"
         case 4:
-            cell.imageView?.image = #imageLiteral(resourceName: "ic_plate")
-            cell.lbInfo.text = "15kt14524"
+            cell.imageView?.image = #imageLiteral(resourceName: "ic_plate").resizeImage(newWidth: 20)
+            cell.lbInfo.text = Global.user?.data.licensePlate
         default:
             cell.lbInfo.text = "Đăng Xuất"
-            cell.imageView?.image = #imageLiteral(resourceName: "ic_logout")
+            cell.imageView?.image = #imageLiteral(resourceName: "ic_logout").resizeImage(newWidth: 20)
         }
         cell.selectionStyle = .none
         return cell
@@ -107,16 +111,55 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         return 6
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 1:
+            showChangePwd(self.view, delegate: self)
+        case 5:
+            DataManager.loggedOut()
+            let viewController = UINavigationController(rootViewController: UIStoryboard.main.viewController(SignInViewController.self))
+            slideMenuController()?.changeMainViewController(viewController, close: false)
+        default:
+            break
+        }
+    }
+    
 }
 extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage //2
         imgViewProfilePicture.contentMode = .scaleAspectFit //3
         imgViewProfilePicture.image = chosenImage //4
+        uploadAvatar(chosenImage)
         dismiss(animated:true, completion: nil) //5
+    }
+    
+    func uploadAvatar(_ image: UIImage){
+        let completion = {(status: Int?, error: String?) -> Void in
+            if status == 0 {
+                self.alert(title: "Lỗi", message: "Cập nhập hình ảnh thất bại")
+            } else {
+                self.alert(title: "Đã cập nhập", message: "")
+            }
+        }
+        ApiManager.changeAvatar(image, completion: completion)
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
+    }
+}
+extension ProfileViewController: ChangePasswordDelegate {
+    func newPwdNotMatch() {
+        
+    }
+    
+    func changePwd(isSuccess: Bool) {
+        print("")
+        if isSuccess {
+            alert(title: "Đổi mật khẩu", message: "Thành công")
+        } else {
+            alert(title: "Đổi mật khẩu", message: "Thất bại")
+        }
     }
 }

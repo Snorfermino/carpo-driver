@@ -16,7 +16,7 @@ class HistoryViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+
     }
 }
 extension HistoryViewController: AlertPresenting {
@@ -26,7 +26,11 @@ extension HistoryViewController: AlertPresenting {
 }
 extension HistoryViewController: ChartModePickerDelegate {
     func datePicked(date: Date) {
-        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        let dateString = dateFormatter.string(from:date as Date)
+        print(dateString)
+        lbDate.text = dateString
     }
     func chartMode(title: String, index: Int) {
         

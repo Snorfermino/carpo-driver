@@ -15,67 +15,220 @@ let provider = MoyaProvider<MyAPI>(plugins: [NetworkLoggerPlugin(verbose: true)]
 
 class ApiManager {
     
-
     
-    static func login(email: String, password: String, completion: @escaping ((User?, String?) -> Void)) {
-//        provider.request(.login(email: email, password: password)) { (result) in
-//            switch result {
-//            case .success(let response):
-//                print(response)
-//                if(response.statusCode == 200) {
-//                    do {
-//                        let userResponse = try response.mapObject(User.self)
-//                        completion(userResponse, nil)
-//                    } catch {
-//                        completion(nil, nil)
-//                    }
-//                } else {
-//                    completion(nil, self.parseError(response: response))
-//                }
-//            case .failure(let error):
-//                print(error)
-//                completion(nil, error.errorDescription)
-//            }
-//        }
+    
+    static func login(phone: String, password: String, completion: @escaping ((User?, String?) -> Void)) {
+        provider.request(.login(phone: phone, password: password)) { (result) in
+            switch result {
+            case .success(let response):
+                print(response)
+                if(response.statusCode == 200) {
+                    do {
+                        let userResponse = try response.mapObject(User.self)
+                        completion(userResponse, nil)
+                    } catch {
+                        completion(nil, nil)
+                    }
+                } else {
+                    completion(nil, self.parseError(response: response))
+                }
+            case .failure(let error):
+                print(error)
+                completion(nil, error.errorDescription)
+            }
+        }
     }
     
-
+    static func getOTP(phone: String, completion: @escaping ((String?, String?) -> Void)) {
+        provider.request(.getOTP(phone: phone)) { (result) in
+            switch result {
+            case .success(let response):
+                print(response)
+                if(response.statusCode == 200) {
+                    do {
+                        let result = try response.mapObject(OTPResult.self)
+                        completion(result.data, nil)
+                    } catch {
+                        completion(nil, nil)
+                    }
+                } else {
+                    completion(nil, self.parseError(response: response))
+                }
+            case .failure(let error):
+                print(error)
+                completion(nil, error.errorDescription)
+            }
+        }
+    }
+    
+    static func changePassword(oldPwd: String, newPwd: String, completion: @escaping ((Int?, String?) -> Void)) {
+        provider.request(.changePassword(oldPwd: oldPwd, newPwd: newPwd)) { (result) in
+            switch result {
+            case .success(let response):
+                print(response)
+                if(response.statusCode == 200) {
+                    do {
+                        let result = try response.mapObject(BaseModel.self)
+                        completion(result.status, nil)
+                    } catch {
+                        completion(nil, nil)
+                    }
+                } else {
+                    completion(nil, self.parseError(response: response))
+                }
+            case .failure(let error):
+                print(error)
+                completion(nil, error.errorDescription)
+            }
+        }
+    }
+    
+    
+    static func getGroup(_ leaderID: String, completion: @escaping ((GroupResult?, String?) -> Void)) {
+        provider.request(.group(id: leaderID)) { (result) in
+            switch result {
+            case .success(let response):
+                print(response)
+                if(response.statusCode == 200) {
+                    do {
+                        let result = try response.mapObject(GroupResult.self)
+                        completion(result, nil)
+                    } catch {
+                        completion(nil, nil)
+                    }
+                } else {
+                    completion(nil, self.parseError(response: response))
+                }
+            case .failure(let error):
+                print(error)
+                completion(nil, error.errorDescription)
+            }
+        }
+    }
+    
+    static func getUserInfo(_ userID: String, completion: @escaping ((String?,String?) -> Void)) {
+        provider.request(.getInfo(id: userID)) { (result) in
+            switch result {
+                
+            case .success(let response):
+                print(response)
+                completion(response.description, nil)
+                //                if(response.statusCode == 200) {
+                //                    do {
+                //                        let userResponse = try response.mapObject(User.self)
+                //                        completion(userResponse, nil)
+                //                    } catch {
+                //                        completion(nil, nil)
+                //                    }
+                //                } else {
+                //                    completion(nil, self.parseError(response: response))
+            //                }
+            case .failure(let error):
+                print(error)
+                completion(nil, error.errorDescription)
+            }
+        }
+    }
+    
+    static func getInfoCarByUserId(_ userID: String, completion: @escaping ((User?,String?) -> Void)) {
+        provider.request(.getCarInfoBy(userID: userID)) { (result) in
+            switch result {
+                
+            case .success(let response):
+                print(response)
+                if(response.statusCode == 200) {
+                    do {
+                        let userResponse = try response.mapObject(User.self)
+                        completion(userResponse, nil)
+                    } catch {
+                        completion(nil, nil)
+                    }
+                } else {
+                    completion(nil, self.parseError(response: response))
+                }
+            case .failure(let error):
+                print(error)
+                completion(nil, error.errorDescription)
+            }
+        }
+    }
+    static func getHistory(_ date: String, completion: @escaping ((HistoryResult?,String?) -> Void)) {
+        provider.request(.getHistory(date: date)) { (result) in
+            switch result {
+            case .success(let response):
+                print(response)
+                
+                if(response.statusCode == 200) {
+                    do {
+                        let result = try response.mapObject(HistoryResult.self)
+                        completion(result, nil)
+                    } catch {
+                        completion(nil, nil)
+                    }
+                } else {
+                    completion(nil, self.parseError(response: response))
+                }
+            case .failure(let error):
+                print(error)
+                completion(nil, error.errorDescription)
+            }
+        }
+    }
+    
     static func logout() {
-//        provider.request(.logout) { (result) in
-//            switch result {
-//            case .success(let response):
-//                print(response)
-//            case .failure(let error):
-//                print(error)
-//            }
-//        }
-    }
-
-    static func register(user: User, completion: @escaping ((User?, String?) -> Void)) {
-//        provider.request(.register(user: user)) { (result) in
-//            switch result {
-//            case .success(let response):
-//                print(response)
-//                if(response.statusCode == 200) {
-//                    do {
-//                        let userResponse = try response.mapObject(User.self)
-//                        completion(userResponse, nil)
-//                    } catch {
-//                        //
-//                    }
-//                } else {
-//                    completion(nil, self.parseError(response: response))
-//                }
-//                completion(nil, nil)
-//            case .failure(let error):
-//                print(error)
-//                completion(nil, error.errorDescription)
-//            }
-//        }
+        //        provider.request(.logout) { (result) in
+        //            switch result {
+        //            case .success(let response):
+        //                print(response)
+        //            case .failure(let error):
+        //                print(error)
+        //            }
+        //        }
     }
     
-    static func changePassword(oldPassword: String, newPassword: String, completion: @escaping ((String, String?) -> Void)) {
-
+    static func register(user: User, completion: @escaping ((User?, String?) -> Void)) {
+        //        provider.request(.register(user: user)) { (result) in
+        //            switch result {
+        //            case .success(let response):
+        //                print(response)
+        //                if(response.statusCode == 200) {
+        //                    do {
+        //                        let userResponse = try response.mapObject(User.self)
+        //                        completion(userResponse, nil)
+        //                    } catch {
+        //                        //
+        //                    }
+        //                } else {
+        //                    completion(nil, self.parseError(response: response))
+        //                }
+        //                completion(nil, nil)
+        //            case .failure(let error):
+        //                print(error)
+        //                completion(nil, error.errorDescription)
+        //            }
+        //        }
+    }
+    
+    static func changeAvatar(_ avatar: UIImage, completion: @escaping ((Int?, String?) -> Void)) {
+            provider.request(.changeAvatar(avatar: avatar)) { (result) in
+                switch result {
+                case .success(let response):
+                    print(response)
+                    if(response.statusCode == 200) {
+                        do {
+                            let result = try response.mapObject(BaseModel.self)
+                            completion(result.status, nil)
+                        } catch {
+                            completion(nil, nil)
+                        }
+                    } else {
+                        completion(nil, self.parseError(response: response))
+                    }
+                case .failure(let error):
+                    print(error)
+                    completion(nil, error.errorDescription)
+                }
+        }
     }
     
     static func parseError(response: Response) -> String? {

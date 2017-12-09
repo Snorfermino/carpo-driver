@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import SlideMenuControllerSwift
 import IBAnimatable
+import SDWebImage
 protocol LeftMenuProtocol : class {
     func changeViewController(_ menu: LeftMenu)
 }
@@ -42,12 +43,15 @@ enum LeftMenu: Int {
             let viewController = UINavigationController(rootViewController: mainStoryboard.viewController(HomeViewController.self))
             return LeftMenuItem(title: "Trang chủ", viewController: viewController, icon: #imageLiteral(resourceName: "ic_gender"))
         case .history:
+            Global.currentScreenTitle = "Lịch sử"
             let viewController = UINavigationController(rootViewController: mainStoryboard.viewController(MapViewController.self))
             return LeftMenuItem(title: "Lịch sử", viewController: viewController, icon: #imageLiteral(resourceName: "ic_gender"))
         case .support:
+            Global.currentScreenTitle = "Hỗ Trợ"
             let viewController = UINavigationController(rootViewController: mainStoryboard.viewController(SupportViewController.self))
             return LeftMenuItem(title: "Hỗ Trợ", viewController: viewController, icon: #imageLiteral(resourceName: "ic_gender"))
         case .group:
+            Global.currentScreenTitle = "Nhóm"
             let viewController = UINavigationController(rootViewController: mainStoryboard.viewController(GroupViewController.self))
             return LeftMenuItem(title: "Nhóm", viewController: viewController, icon: #imageLiteral(resourceName: "ic_gender"))
 
@@ -89,14 +93,15 @@ class LeftMenuViewController: BaseViewController,LeftMenuProtocol {
     @IBOutlet weak var topMenuLayoutConstraint: NSLayoutConstraint!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var imgViewProfilePicture: AnimatableImageView!
-    
+    @IBOutlet weak var lbUserName: UILabel!
+    @IBOutlet weak var lbUserPhone: UILabel!
     @IBOutlet weak var topMenu: UIView!
     var favoriteViewController: UIViewController!
     var userProfileViewController: UIViewController!
     var signInViewController: UIViewController!
     var myWalletViewController: UIViewController!
     var leftMenuItems = [[LeftMenuItem]]()
-
+    var menuTitle = ["Trang chủ","Lịch sử","Nhóm","Hỗ trợ"]
     var sub1: Bool = false
     var sub2: Bool = false
     
@@ -112,16 +117,9 @@ class LeftMenuViewController: BaseViewController,LeftMenuProtocol {
         tableView.backgroundColor = .clear
         tableView.separatorStyle = .none
         tableView.isOpaque = false
-//        updateUIByLogin()
-//        NotificationCenter.default.rx.notification(Notification.Name("UserLoginedNotification"))
-//            .subscribe(onNext: { [weak self] _ in
-//                if let menuItems = self?.leftMenuItems, let viewController = LeftMenu.home.viewController(from: menuItems) {
-//                    self?.slideMenuController()?.changeMainViewController(viewController, close: true)
-//                }
-//                self?.tableView.reloadData()
-//                self?.updateUIByLogin()
-//            })
-//            .disposed(by: disposeBag)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateUIByLogin), name: NSNotification.Name(rawValue: "UserLoggedInNotification"), object: nil)
+        updateUIByLogin()
+NotificationCenter.default.addObserver(self, selector: #selector(slideMenuAfterLoggedIn(_:)), name: NSNotification.Name(rawValue: "UserLoggedInNotification"), object: nil)
 //        NotificationCenter.default.rx.notification(.changeMenuTab)
 //            .subscribe(onNext: { notification in
 //                if let headerItem = notification.object as? HeaderMenuItem {
@@ -142,11 +140,32 @@ class LeftMenuViewController: BaseViewController,LeftMenuProtocol {
 //            .disposed(by: disposeBag)
     }
     
+    @objc func updateUIByLogin(){
+        guard Global.user != nil else { return }
+        imgViewProfilePicture.sd_setImage(with: Global.user?.data.photo != "" ? URL(string: (Global.user?.data.photo)!)! : nil , placeholderImage: #imageLiteral(resourceName: "ic_logo"), options: [.retryFailed], completed: nil)
+        lbUserName.text = Global.user?.data.fullname
+        lbUserPhone.text = Global.user?.data.phone
+    }
+    
+    @objc func slideMenuAfterLoggedIn(_ notification: NSNotification){
+        if let menuItems = self.leftMenuItems as? [[LeftMenuItem]], let viewController = LeftMenu.home.viewController(from: menuItems) {
+            self.slideMenuController()?.changeMainViewController(viewController, close: true)
+        }
+        self.tableView.reloadData()
+        self.updateUIByLogin()
+    }
+    
     @objc func toSignInVC(_ sender: UITapGestureRecognizer){
 //        self.navigationController?.pushViewController(UIStoryboard.main.instantiateViewController(withIdentifier: "SignInViewController"), animated: true)
-        print("say something")
-        let viewController = UINavigationController(rootViewController: UIStoryboard.main.viewController(SignInViewController.self))
-        slideMenuController()?.changeMainViewController(viewController, close: true)
+        if DataManager.isLogged() {
+            let viewController = UINavigationController(rootViewController: UIStoryboard.main.viewController(ProfileViewController.self))
+            slideMenuController()?.changeMainViewController(viewController, close: true)
+        } else {
+            print("say something")
+            let viewController = UINavigationController(rootViewController: UIStoryboard.main.viewController(SignInViewController.self))
+            slideMenuController()?.changeMainViewController(viewController, close: true)
+        }
+
     }
     
     func setUpLeftMenu() {
@@ -222,7 +241,7 @@ extension LeftMenuViewController : UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 11
+        return 0
     }
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
@@ -232,7 +251,7 @@ extension LeftMenuViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! MenuCell
         if let menu = LeftMenu(rawValue: getRawValue(indexPath)) {
-            if(getRawValue(indexPath) == 0 || getRawValue(indexPath) == 8) {
+//            if(getRawValue(indexPath) == 0 || getRawValue(indexPath) == 8) {
 //                if(getRawValue(indexPath) == 0) {
 //                    sub1 = !sub1
 //                    cell.updateMenuParentCorner(sub1)
@@ -240,12 +259,13 @@ extension LeftMenuViewController : UITableViewDelegate {
 //                    sub2 = !sub2
 //                    cell.updateMenuParentCorner(sub2)
 //                }
-                tableView.beginUpdates()
-                tableView.reloadRows(at: [IndexPath(row: 1, section: 0)], with: .automatic)
-                tableView.endUpdates()
-            } else {
+//                tableView.beginUpdates()
+//                tableView.reloadRows(at: [IndexPath(row: 1, section: 0)], with: .automatic)
+//                tableView.endUpdates()
+//            } else {
+            Global.currentScreenTitle = menuTitle[indexPath.row]
                 self.changeViewController(menu)
-            }
+//            }
         }
     }
     
@@ -271,7 +291,7 @@ extension LeftMenuViewController : UITableViewDataSource {
 //            }
             
             let item = leftMenuItems[indexPath.section][indexPath.row]
-            
+            cell.selectionStyle = .none
             cell.setData(string: item.title)
             cell.isOpaque = false
             cell.backgroundColor = UIColor.clear

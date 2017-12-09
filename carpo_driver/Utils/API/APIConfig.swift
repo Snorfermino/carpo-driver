@@ -14,7 +14,7 @@ extension Notification.Name {
 
 struct APIConfiguration {
     #if DEBUG
-    static let myServerAPIURL = URL(string: "https://wongyiunam-php.herokuapp.com/api")!
+    static let myServerAPIURL = URL(string: "http://192.168.1.184:8080/")!
     #else
     // TODO: change this url to deploy server
     static let myServerAPIURL = URL(string: "https://wongyiunam-php.herokuapp.com/api")!

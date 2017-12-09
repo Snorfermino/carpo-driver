@@ -16,12 +16,16 @@ class Global {
     static var user: User? {
         set {
             userInfo = newValue
-            NotificationCenter.default.post(name: Notification.Name("UserLoginedNotification"), object: nil)
-//            DataManager.saveUserInfo(user: newValue)
+            DataManager.saveUserInfo(user: newValue)
+            NotificationCenter.default.post(name: Notification.Name("UserLoggedInNotification"), object: nil)
+
         }
         get {
-            return userInfo
+            
+            return DataManager.getUserInfo()
         }
     }
+    
+    static var currentScreenTitle:String = "Lịch sử"
 }
 

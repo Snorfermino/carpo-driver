@@ -12,8 +12,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="SanFranciscoText-Regular.otf">
-            <string>SanFranciscoText-Regular</string>
+        <array key="Roboto-Light.ttf">
+            <string>Roboto-Light</string>
         </array>
     </customFonts>
     <objects>
@@ -26,16 +26,16 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="505-oY-uOM">
-                        <rect key="frame" x="16" y="9.5" width="25.5" height="25.5"/>
+                    <imageView userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="505-oY-uOM">
+                        <rect key="frame" x="16" y="13.5" width="17" height="17.5"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="505-oY-uOM" secondAttribute="height" multiplier="1:1" id="OVS-Bd-8cO"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NB2-9E-rL0">
-                        <rect key="frame" x="61.5" y="12.5" width="37" height="18"/>
-                        <fontDescription key="fontDescription" name="SanFranciscoText-Regular" family="San Francisco Text" pointSize="15"/>
-                        <nil key="textColor"/>
+                        <rect key="frame" x="53" y="12.5" width="35.5" height="18"/>
+                        <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="15"/>
+                        <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SLG-MW-pBb">
@@ -44,7 +44,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="NB2-9E-rL0" firstAttribute="leading" secondItem="505-oY-uOM" secondAttribute="trailing" constant="20" id="B3E-3e-KIF"/>
-                    <constraint firstItem="505-oY-uOM" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="30:375" id="CF6-HQ-5SX"/>
+                    <constraint firstItem="505-oY-uOM" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="20:375" id="CF6-HQ-5SX"/>
                     <constraint firstItem="SLG-MW-pBb" firstAttribute="width" secondItem="SLG-MW-pBb" secondAttribute="height" multiplier="8:12" id="COA-C7-uxB"/>
                     <constraint firstAttribute="trailing" secondItem="SLG-MW-pBb" secondAttribute="trailing" constant="20" id="Jmd-SB-7bG"/>
                     <constraint firstItem="NB2-9E-rL0" firstAttribute="centerY" secondItem="505-oY-uOM" secondAttribute="centerY" id="RPB-TF-HIN"/>

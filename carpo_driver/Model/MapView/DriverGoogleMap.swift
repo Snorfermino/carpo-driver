@@ -8,13 +8,14 @@
 
 import UIKit
 import GoogleMaps
+
 class PinMarker: GMSMarker {
     override init() {
         super.init()
         
         icon = UIImage(named: "icon_pin")?.resizeImage(newWidth: 35)?.imageWithColor(UIColor.blue)
         snippet = "StartLocation"
-        appearAnimation = kGMSMarkerAnimationPop
+        appearAnimation = GMSMarkerAnimation.pop
     }
     
     convenience init(color: UIColor) {
@@ -44,8 +45,10 @@ class DriverGoogleMap: CGMapView {
         let camera = GMSCameraPosition.camera(withLatitude: 0,
                                               longitude: 0,
                                               zoom: Config.shareInstance.zoomLevel)
+        
         isMyLocationEnabled = false
         self.camera = camera
+        self.moveCamera(location: CGLocation(lat: 10.776555, long: 106.6783891))
     }
     
     
