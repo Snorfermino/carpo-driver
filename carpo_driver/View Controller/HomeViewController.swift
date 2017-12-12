@@ -11,14 +11,17 @@ import Charts
 import SVProgressHUD
 import JTMaterialSwitch
 import RKPieChart
+import IBAnimatable
 class HomeViewController: BaseViewController {
     var lineChartEntry = [ChartDataEntry]()
     @IBOutlet weak var pieChart: RKPieChartView!
-    @IBOutlet weak var chart: LineChartView!
+    @IBOutlet weak var viewPieChart: AnimatableView!
     @IBOutlet weak var lbBtnChartMode: UILabel!
     @IBOutlet weak var lbChartMode: UILabel!
     @IBOutlet weak var viewSwitch: UIView!
     @IBOutlet weak var imgViewProof:UIImageView!
+    @IBOutlet var viewDistanceDisplay: [UIView]!
+    let pieChartView = PieChartView()
     var dataforPicker = ["Hôm nay", "Ngày trước","7 ngày gần nhất","30 ngày gần nhất","Tháng trước"]
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,16 +30,18 @@ class HomeViewController: BaseViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         self.setNavigationBarItem(title: "Trang chủ")
-        
+        pieChartView.frame = viewPieChart.bounds
 
     }
-    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        pieChartView.frame = viewPieChart.bounds
+    }
     func setupView(){
         if !DataManager.isLogged() {
             slideMenuController()?.changeMainViewController(UIStoryboard.main.instantiateViewController(withIdentifier: "SignInViewController"), close: true)
@@ -48,17 +53,33 @@ class HomeViewController: BaseViewController {
             lineChartEntry.append(value)
         }
         
-        setupPieChart()
-        setupLineChart()
+        for view in viewDistanceDisplay {
+            let roundedHeight = view.frame.height / 2 * 0.9
+            view.layer.cornerRadius = roundedHeight.rounded(.down)
+        }
+ 
+//        setupLineChart()
+         setupPieChart()
     }
     
     func setupPieChart(){
-        let firstItem: RKPieChartItem = RKPieChartItem(ratio: 50, color: .orange, title: "1st Item ")
-        let secondItem: RKPieChartItem = RKPieChartItem(ratio: 30, color: .gray, title: "2nd Item")
-        let thirdItem: RKPieChartItem = RKPieChartItem(ratio: 20, color: .yellow, title: "3th Item")
-        pieChart = RKPieChartView(items: [firstItem, secondItem, thirdItem])
-        pieChart.style = .round
-        pieChart.isIntensityActivated = true
+        viewPieChart.maskType = .circle
+        viewPieChart.borderWidth = 15
+        viewPieChart.borderType = .solid
+        viewPieChart.borderColor = UIColor(red: 90/255.0, green: 174.0/255.0, blue: 224.0/255.0, alpha: 1.0)
+        pieChartView.segments = [
+            Segment(color: UIColor(red: 90/255.0, green: 174.0/255.0, blue: 224.0/255.0, alpha: 1.0), name: "25%", value: 25),
+            Segment(color: UIColor(red: 100.0/255.0, green: 241.0/255.0, blue: 183.0/255.0, alpha: 0.0), name: "", value: 75)
+        ]
+        pieChartView.segmentLabelFont = UIFont(name: "MyriadPro-Bold", size: 30)!
+        pieChartView.showSegmentValueInLabel = false
+        viewPieChart.addSubview(pieChartView)
+//        let firstItem: RKPieChartItem = RKPieChartItem(ratio: 50, color: .orange, title: "1st Item ")
+//        let secondItem: RKPieChartItem = RKPieChartItem(ratio: 30, color: .gray, title: "2nd Item")
+//        let thirdItem: RKPieChartItem = RKPieChartItem(ratio: 20, color: .yellow, title: "3th Item")
+//        pieChart = RKPieChartView(items: [firstItem, secondItem, thirdItem])
+//        pieChart.style = .round
+//        pieChart.isIntensityActivated = true
 //        pieChart.circleColor = .green
 //        pieChart.arcWidt100 100
 //
@@ -97,32 +118,32 @@ class HomeViewController: BaseViewController {
 //
     }
     
-    func setupLineChart(){
-        let line1 = LineChartDataSet(values: lineChartEntry, label: "Number")
-        line1.colors = [NSUIColor.orange]
-        line1.circleColors = [NSUIColor.orange]
-        line1.circleHoleColor = NSUIColor.white
-        line1.mode = .cubicBezier
-        line1.lineWidth = 5
-        line1.circleRadius = 6
-        line1.circleHoleRadius = 4
-        let data = LineChartData()
-        data.addDataSet(line1)
-        data.setDrawValues(false)
-        chart.data = data
-        chart.chartDescription?.text = ""
-        chart.drawGridBackgroundEnabled = false
-        chart.drawBordersEnabled = false
-        chart.borderLineWidth = 4
-        chart.legend.enabled = false
-        chart.xAxis.enabled = false
-        chart.xAxis.drawLabelsEnabled = false
-        chart.rightAxis.drawGridLinesEnabled = true
-        chart.rightAxis.zeroLineColor = NSUIColor.black
-        chart.rightAxis.drawLabelsEnabled = false
-        chart.leftAxis.enabled = false
-        chart.isUserInteractionEnabled = false
-    }
+//    func setupLineChart(){
+//        let line1 = LineChartDataSet(values: lineChartEntry, label: "Number")
+//        line1.colors = [NSUIColor.orange]
+//        line1.circleColors = [NSUIColor.orange]
+//        line1.circleHoleColor = NSUIColor.white
+//        line1.mode = .cubicBezier
+//        line1.lineWidth = 5
+//        line1.circleRadius = 6
+//        line1.circleHoleRadius = 4
+//        let data = LineChartData()
+//        data.addDataSet(line1)
+//        data.setDrawValues(false)
+//        chart.data = data
+//        chart.chartDescription?.text = ""
+//        chart.drawGridBackgroundEnabled = false
+//        chart.drawBordersEnabled = false
+//        chart.borderLineWidth = 4
+//        chart.legend.enabled = false
+//        chart.xAxis.enabled = false
+//        chart.xAxis.drawLabelsEnabled = false
+//        chart.rightAxis.drawGridLinesEnabled = true
+//        chart.rightAxis.zeroLineColor = NSUIColor.black
+//        chart.rightAxis.drawLabelsEnabled = false
+//        chart.leftAxis.enabled = false
+//        chart.isUserInteractionEnabled = false
+//    }
     
     @IBAction func proofPhotoPressed(_ sender: Any){
         print("camera action")

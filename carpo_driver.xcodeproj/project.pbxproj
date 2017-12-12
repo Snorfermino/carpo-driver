@@ -97,6 +97,9 @@
 		03E09AFB1FB93B7500DC65AA /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E09AFA1FB93B7500DC65AA /* SideMenu.swift */; };
 		03E09AFE1FB93C1A00DC65AA /* StoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E09AFD1FB93C1A00DC65AA /* StoryboardExtension.swift */; };
 		03E09B001FB93C7B00DC65AA /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E09AFF1FB93C7B00DC65AA /* StringExtension.swift */; };
+		03E17C561FDB842700F9A8A5 /* Myriad Pro Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03E17C541FDB842300F9A8A5 /* Myriad Pro Bold.ttf */; };
+		03E17C571FDB842700F9A8A5 /* Myriad Pro Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03E17C551FDB842400F9A8A5 /* Myriad Pro Regular.ttf */; };
+		03EFD7F11FDE3357000B7D5B /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EFD7F01FDE3357000B7D5B /* PieChartView.swift */; };
 		13B42E7B9F2D65DCBD93F6B5 /* Pods_carpo_driverUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C52838263102FC22B8EC92 /* Pods_carpo_driverUITests.framework */; };
 		1E9DA95FBE780EFB45079C74 /* Pods_carpo_driverTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C0175D10E554E8F39651C59 /* Pods_carpo_driverTests.framework */; };
 		4775BFF4F605DF41DE7360D3 /* Pods_carpo_driver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 138BA7E948A50C1E284BCCC4 /* Pods_carpo_driver.framework */; };
@@ -216,6 +219,9 @@
 		03E09AFA1FB93B7500DC65AA /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
 		03E09AFD1FB93C1A00DC65AA /* StoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardExtension.swift; sourceTree = "<group>"; };
 		03E09AFF1FB93C7B00DC65AA /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		03E17C541FDB842300F9A8A5 /* Myriad Pro Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Myriad Pro Bold.ttf"; sourceTree = "<group>"; };
+		03E17C551FDB842400F9A8A5 /* Myriad Pro Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Myriad Pro Regular.ttf"; sourceTree = "<group>"; };
+		03EFD7F01FDE3357000B7D5B /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
 		09FB14240F163663CE103D12 /* Pods-carpo_driver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carpo_driver.release.xcconfig"; path = "Pods/Target Support Files/Pods-carpo_driver/Pods-carpo_driver.release.xcconfig"; sourceTree = "<group>"; };
 		12352E8A831D95801AD95674 /* Pods-carpo_driverUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carpo_driverUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-carpo_driverUITests/Pods-carpo_driverUITests.release.xcconfig"; sourceTree = "<group>"; };
 		138BA7E948A50C1E284BCCC4 /* Pods_carpo_driver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_carpo_driver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -279,6 +285,8 @@
 		0341A3BC1FB952A700EC73A1 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				03E17C541FDB842300F9A8A5 /* Myriad Pro Bold.ttf */,
+				03E17C551FDB842400F9A8A5 /* Myriad Pro Regular.ttf */,
 				0349F3E01FC66F1100F2BDBC /* Roboto Mono Bold for Powerline.ttf */,
 				0349F3DB1FC66F1000F2BDBC /* Roboto Mono Bold Italic for Powerline.ttf */,
 				0349F3DD1FC66F1000F2BDBC /* Roboto Mono for Powerline.ttf */,
@@ -343,7 +351,7 @@
 				0341A4061FBAE83700EC73A1 /* MenuCell.swift */,
 				0341A4071FBAE83700EC73A1 /* MenuCell.xib */,
 			);
-			path = "XIB\t";
+			path = "XIB	";
 			sourceTree = "<group>";
 		};
 		0341A3FF1FBAA97700EC73A1 /* Storyboard */ = {
@@ -368,6 +376,7 @@
 				03128F171FCFEF0D0062317A /* Location.swift */,
 				038AA5EC1FD1097100B17205 /* GroupResult.swift */,
 				038AA5EE1FD5023D00B17205 /* OTPResult.swift */,
+				03EFD7F01FDE3357000B7D5B /* PieChartView.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -647,6 +656,7 @@
 				0349F3E91FC66F1200F2BDBC /* Roboto Mono Thin Italic for Powerline.ttf in Resources */,
 				0341A3DB1FB952DE00EC73A1 /* SanFranciscoDisplay-Bold.otf in Resources */,
 				0349F3ED1FC66F1200F2BDBC /* Roboto Mono Thin for Powerline.ttf in Resources */,
+				03E17C561FDB842700F9A8A5 /* Myriad Pro Bold.ttf in Resources */,
 				0341A3D81FB952DE00EC73A1 /* SanFranciscoDisplay-Ultralight.otf in Resources */,
 				0341A3F61FB9981600EC73A1 /* ProfileCell.xib in Resources */,
 				03E09AD61FB938C100DC65AA /* LaunchScreen.storyboard in Resources */,
@@ -654,6 +664,7 @@
 				0349F3EC1FC66F1200F2BDBC /* Roboto Mono Medium Italic for Powerline.ttf in Resources */,
 				0341A3E51FB952DE00EC73A1 /* SanFranciscoText-RegularItalic.otf in Resources */,
 				0349F3EA1FC66F1200F2BDBC /* Roboto Mono Bold for Powerline.ttf in Resources */,
+				03E17C571FDB842700F9A8A5 /* Myriad Pro Regular.ttf in Resources */,
 				0341A3E21FB952DE00EC73A1 /* SanFranciscoText-Semibold.otf in Resources */,
 				0341A3E41FB952DE00EC73A1 /* SanFranciscoDisplay-Light.otf in Resources */,
 				0341A3FC1FBA95B800EC73A1 /* ChartModePicker.xib in Resources */,
@@ -920,6 +931,7 @@
 				0341A4481FBBF6BE00EC73A1 /* APIManager.swift in Sources */,
 				0341A4361FBBF16000EC73A1 /* GetDirectionResult.swift in Sources */,
 				0341A44C1FBBF7E000EC73A1 /* APIConfig.swift in Sources */,
+				03EFD7F11FDE3357000B7D5B /* PieChartView.swift in Sources */,
 				0341A3E91FB9555E00EC73A1 /* SignInViewController.swift in Sources */,
 				0341A44A1FBBF74600EC73A1 /* MyAPI.swift in Sources */,
 				03128F181FCFEF0D0062317A /* Location.swift in Sources */,

@@ -48,7 +48,12 @@ extension UIViewController {
         let image = #imageLiteral(resourceName: "ic_back").withRenderingMode(.alwaysOriginal)
         let button = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(popViewController))
         navigationItem.setLeftBarButton(button, animated: true)
-//        addLogoToTitleView()
+    }
+    
+    func setNavigationBarItemForBack(_ action: Selector) {
+        let image = #imageLiteral(resourceName: "ic_back").withRenderingMode(.alwaysOriginal)
+        let button = UIBarButtonItem(image: image, style: .plain, target: self, action: action)
+        navigationItem.setLeftBarButton(button, animated: true)
     }
     
     @objc func popViewController() {

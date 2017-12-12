@@ -51,9 +51,9 @@ enum LeftMenu: Int {
             let viewController = UINavigationController(rootViewController: mainStoryboard.viewController(SupportViewController.self))
             return LeftMenuItem(title: "Hỗ Trợ", viewController: viewController, icon: #imageLiteral(resourceName: "ic_gender"))
         case .group:
-            Global.currentScreenTitle = "Nhóm"
+            Global.currentScreenTitle = "Quản lý nhóm"
             let viewController = UINavigationController(rootViewController: mainStoryboard.viewController(GroupViewController.self))
-            return LeftMenuItem(title: "Nhóm", viewController: viewController, icon: #imageLiteral(resourceName: "ic_gender"))
+            return LeftMenuItem(title: "Quản lý nhóm", viewController: viewController, icon: #imageLiteral(resourceName: "ic_gender"))
 
         }
     }
@@ -101,7 +101,7 @@ class LeftMenuViewController: BaseViewController,LeftMenuProtocol {
     var signInViewController: UIViewController!
     var myWalletViewController: UIViewController!
     var leftMenuItems = [[LeftMenuItem]]()
-    var menuTitle = ["Trang chủ","Lịch sử","Nhóm","Hỗ trợ"]
+    var menuTitle = ["Trang chủ","Lịch sử","Quản lý nhóm","Hỗ trợ"]
     var sub1: Bool = false
     var sub2: Bool = false
     
