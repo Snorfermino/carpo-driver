@@ -57,8 +57,6 @@ class HomeViewController: BaseViewController {
             let roundedHeight = view.frame.height / 2 * 0.9
             view.layer.cornerRadius = roundedHeight.rounded(.down)
         }
- 
-//        setupLineChart()
          setupPieChart()
     }
     
@@ -74,76 +72,8 @@ class HomeViewController: BaseViewController {
         pieChartView.segmentLabelFont = UIFont(name: "MyriadPro-Bold", size: 30)!
         pieChartView.showSegmentValueInLabel = false
         viewPieChart.addSubview(pieChartView)
-//        let firstItem: RKPieChartItem = RKPieChartItem(ratio: 50, color: .orange, title: "1st Item ")
-//        let secondItem: RKPieChartItem = RKPieChartItem(ratio: 30, color: .gray, title: "2nd Item")
-//        let thirdItem: RKPieChartItem = RKPieChartItem(ratio: 20, color: .yellow, title: "3th Item")
-//        pieChart = RKPieChartView(items: [firstItem, secondItem, thirdItem])
-//        pieChart.style = .round
-//        pieChart.isIntensityActivated = true
-//        pieChart.circleColor = .green
-//        pieChart.arcWidt100 100
-//
-//        pieChart.drawSlicesUnderHoleEnabled = false
-//        pieChart.transparentCircleColor = NSUIColor.appRed
-//        let dataPoints = ["A","B"]
-//        let values = [25.0,75]
-//        var dataEntries: [ChartDataEntry] = []
-//
-//        for i in 0..<dataPoints.count {
-//            let dataEntry = ChartDataEntry(x: Double(i), y: values[i])
-//            dataEntries.append(dataEntry)
-//        }
-//        let formatter = NumberFormatter()
-//        formatter.numberStyle = .percent
-//        formatter.maximumFractionDigits = 0
-//        formatter.multiplier = 1.0
-//        let pieChartDataSet = PieChartDataSet(values: dataEntries, label: "% đi được trong tháng")
-//        let pieChartData = PieChartData(dataSet: pieChartDataSet)
-////        pieChartData.setValueFormatter(DefaultValueFormatter(formatter:formatter))
-//
-//        pieChartDataSet.valueFormatter = DefaultValueFormatter(formatter: formatter)
-//        pieChartDataSet.selectionShift = 0
-//        pieChart.data = pieChartData
-//
-//        let colors: [UIColor] = [UIColor(hex: "50B0EC"), UIColor.clear]
-//        pieChart.holeRadiusPercent = 0
-//        pieChart.drawHoleEnabled = false
-//        pieChart.entryLabelFont = UIFont(name: "Roboto Mono Medium for Powerline", size: 50)
-//        pieChart.drawEntryLabelsEnabled = true
-//        pieChartDataSet.drawValuesEnabled = true
-//        pieChartDataSet.xValuePosition = .insideSlice
-//
-//
-//        pieChartDataSet.colors = colors
-//
+
     }
-    
-//    func setupLineChart(){
-//        let line1 = LineChartDataSet(values: lineChartEntry, label: "Number")
-//        line1.colors = [NSUIColor.orange]
-//        line1.circleColors = [NSUIColor.orange]
-//        line1.circleHoleColor = NSUIColor.white
-//        line1.mode = .cubicBezier
-//        line1.lineWidth = 5
-//        line1.circleRadius = 6
-//        line1.circleHoleRadius = 4
-//        let data = LineChartData()
-//        data.addDataSet(line1)
-//        data.setDrawValues(false)
-//        chart.data = data
-//        chart.chartDescription?.text = ""
-//        chart.drawGridBackgroundEnabled = false
-//        chart.drawBordersEnabled = false
-//        chart.borderLineWidth = 4
-//        chart.legend.enabled = false
-//        chart.xAxis.enabled = false
-//        chart.xAxis.drawLabelsEnabled = false
-//        chart.rightAxis.drawGridLinesEnabled = true
-//        chart.rightAxis.zeroLineColor = NSUIColor.black
-//        chart.rightAxis.drawLabelsEnabled = false
-//        chart.leftAxis.enabled = false
-//        chart.isUserInteractionEnabled = false
-//    }
     
     @IBAction func proofPhotoPressed(_ sender: Any){
         print("camera action")
