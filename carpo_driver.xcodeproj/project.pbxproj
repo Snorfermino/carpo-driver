@@ -73,6 +73,7 @@
 		0341A44F1FBBF85400EC73A1 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341A44E1FBBF85400EC73A1 /* ErrorResponse.swift */; };
 		0341A4511FBC163100EC73A1 /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341A4501FBC163100EC73A1 /* GroupViewController.swift */; };
 		0341A4551FBC182400EC73A1 /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341A4541FBC182400EC73A1 /* Driver.swift */; };
+		0348B99A1FE0C14B00DBCF4A /* GetInfoForHomeScreenResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0348B9991FE0C14B00DBCF4A /* GetInfoForHomeScreenResult.swift */; };
 		0349F3D91FC3E48C00F2BDBC /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0349F3D81FC3E48C00F2BDBC /* DateExtension.swift */; };
 		0349F3E41FC66F1200F2BDBC /* Roboto Mono Medium for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0349F3DA1FC66F1000F2BDBC /* Roboto Mono Medium for Powerline.ttf */; };
 		0349F3E51FC66F1200F2BDBC /* Roboto Mono Bold Italic for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0349F3DB1FC66F1000F2BDBC /* Roboto Mono Bold Italic for Powerline.ttf */; };
@@ -88,6 +89,7 @@
 		038AA5EF1FD5023D00B17205 /* OTPResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038AA5EE1FD5023D00B17205 /* OTPResult.swift */; };
 		038AA5F21FD50BF200B17205 /* ChangePassword.xib in Resources */ = {isa = PBXBuildFile; fileRef = 038AA5F01FD50BF000B17205 /* ChangePassword.xib */; };
 		038AA5F31FD50BF200B17205 /* ChangePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038AA5F11FD50BF200B17205 /* ChangePassword.swift */; };
+		03AB98781FE0E0C400994E6C /* GetInfoForGroupMemberDetailScreenResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AB98771FE0E0C400994E6C /* GetInfoForGroupMemberDetailScreenResult.swift */; };
 		03E09ACC1FB938C100DC65AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E09ACB1FB938C100DC65AA /* AppDelegate.swift */; };
 		03E09AD11FB938C100DC65AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03E09ACF1FB938C100DC65AA /* Main.storyboard */; };
 		03E09AD31FB938C100DC65AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03E09AD21FB938C100DC65AA /* Assets.xcassets */; };
@@ -189,6 +191,7 @@
 		0341A44E1FBBF85400EC73A1 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		0341A4501FBC163100EC73A1 /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
 		0341A4541FBC182400EC73A1 /* Driver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
+		0348B9991FE0C14B00DBCF4A /* GetInfoForHomeScreenResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetInfoForHomeScreenResult.swift; sourceTree = "<group>"; };
 		0349F3D81FC3E48C00F2BDBC /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		0349F3DA1FC66F1000F2BDBC /* Roboto Mono Medium for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto Mono Medium for Powerline.ttf"; sourceTree = "<group>"; };
 		0349F3DB1FC66F1000F2BDBC /* Roboto Mono Bold Italic for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto Mono Bold Italic for Powerline.ttf"; sourceTree = "<group>"; };
@@ -204,6 +207,7 @@
 		038AA5EE1FD5023D00B17205 /* OTPResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPResult.swift; sourceTree = "<group>"; };
 		038AA5F01FD50BF000B17205 /* ChangePassword.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangePassword.xib; sourceTree = "<group>"; };
 		038AA5F11FD50BF200B17205 /* ChangePassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePassword.swift; sourceTree = "<group>"; };
+		03AB98771FE0E0C400994E6C /* GetInfoForGroupMemberDetailScreenResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetInfoForGroupMemberDetailScreenResult.swift; sourceTree = "<group>"; };
 		03E09AC81FB938C100DC65AA /* carpo_driver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = carpo_driver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03E09ACB1FB938C100DC65AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03E09AD01FB938C100DC65AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -377,6 +381,8 @@
 				038AA5EC1FD1097100B17205 /* GroupResult.swift */,
 				038AA5EE1FD5023D00B17205 /* OTPResult.swift */,
 				03EFD7F01FDE3357000B7D5B /* PieChartView.swift */,
+				0348B9991FE0C14B00DBCF4A /* GetInfoForHomeScreenResult.swift */,
+				03AB98771FE0E0C400994E6C /* GetInfoForGroupMemberDetailScreenResult.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -922,6 +928,7 @@
 				0341A4311FBBEF0800EC73A1 /* CGMapView.swift in Sources */,
 				0341A40B1FBAF97C00EC73A1 /* UIColorExtension.swift in Sources */,
 				0341A3FE1FBA95D100EC73A1 /* ChartModePicker.swift in Sources */,
+				0348B99A1FE0C14B00DBCF4A /* GetInfoForHomeScreenResult.swift in Sources */,
 				03128F161FCFEEEC0062317A /* HistoryResult.swift in Sources */,
 				0341A3F01FB959A500EC73A1 /* ForgotPasswordView.swift in Sources */,
 				0341A42F1FBBEF0800EC73A1 /* CGDriverMarker.swift in Sources */,
@@ -929,6 +936,7 @@
 				0341A40D1FBAF9B600EC73A1 /* ExSlideMenuController.swift in Sources */,
 				0341A44F1FBBF85400EC73A1 /* ErrorResponse.swift in Sources */,
 				0341A4481FBBF6BE00EC73A1 /* APIManager.swift in Sources */,
+				03AB98781FE0E0C400994E6C /* GetInfoForGroupMemberDetailScreenResult.swift in Sources */,
 				0341A4361FBBF16000EC73A1 /* GetDirectionResult.swift in Sources */,
 				0341A44C1FBBF7E000EC73A1 /* APIConfig.swift in Sources */,
 				03EFD7F11FDE3357000B7D5B /* PieChartView.swift in Sources */,

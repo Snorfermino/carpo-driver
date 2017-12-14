@@ -106,6 +106,72 @@ class ApiManager {
         }
     }
     
+    static func getInfoHomeScreen(_ userID: String, completion: @escaping ((GetInfoForHomeScreenResult?, String?) -> Void)){
+        provider.request(.getInfoForHomeScreen(userID: userID)) { (result) in
+            switch result {
+            case .success(let response):
+                print(response)
+                if(response.statusCode == 200) {
+                    do {
+                        let result = try response.mapObject(GetInfoForHomeScreenResult.self)
+                        completion(result, nil)
+                    } catch {
+                        completion(nil, nil)
+                    }
+                } else {
+                    completion(nil, self.parseError(response: response))
+                }
+            case .failure(let error):
+                print(error)
+                completion(nil, error.errorDescription)
+            }
+        }
+    }
+    
+    static func getInfoForManageGroupScreen(_ leaderID: String, completion: @escaping ((GetInfoForHomeScreenResult?, String?) -> Void)){
+        provider.request(.getInfoForManageGroupScreen(leaderID: leaderID)) { (result) in
+            switch result {
+            case .success(let response):
+                print(response)
+                if(response.statusCode == 200) {
+                    do {
+                        let result = try response.mapObject(GetInfoForHomeScreenResult.self)
+                        completion(result, nil)
+                    } catch {
+                        completion(nil, nil)
+                    }
+                } else {
+                    completion(nil, self.parseError(response: response))
+                }
+            case .failure(let error):
+                print(error)
+                completion(nil, error.errorDescription)
+            }
+        }
+    }
+    
+    static func getInfoForGroupMemberDetailScreen(_ leaderID: String, completion: @escaping ((GetInfoForGroupMemberDetailScreenResult?, String?) -> Void)){
+        provider.request(.getInfoForGroupMemberDetailScreen(leaderID: leaderID)) { (result) in
+            switch result {
+            case .success(let response):
+                print(response)
+                if(response.statusCode == 200) {
+                    do {
+                        let result = try response.mapObject(GetInfoForGroupMemberDetailScreenResult.self)
+                        completion(result, nil)
+                    } catch {
+                        completion(nil, nil)
+                    }
+                } else {
+                    completion(nil, self.parseError(response: response))
+                }
+            case .failure(let error):
+                print(error)
+                completion(nil, error.errorDescription)
+            }
+        }
+    }
+    
     static func getUserInfo(_ userID: String, completion: @escaping ((String?,String?) -> Void)) {
         provider.request(.getInfo(id: userID)) { (result) in
             switch result {

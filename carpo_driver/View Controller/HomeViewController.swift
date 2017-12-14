@@ -13,16 +13,17 @@ import JTMaterialSwitch
 import RKPieChart
 import IBAnimatable
 class HomeViewController: BaseViewController {
-    var lineChartEntry = [ChartDataEntry]()
-    @IBOutlet weak var pieChart: RKPieChartView!
     @IBOutlet weak var viewPieChart: AnimatableView!
-    @IBOutlet weak var lbBtnChartMode: UILabel!
-    @IBOutlet weak var lbChartMode: UILabel!
     @IBOutlet weak var viewSwitch: UIView!
     @IBOutlet weak var imgViewProof:UIImageView!
     @IBOutlet var viewDistanceDisplay: [UIView]!
+    @IBOutlet weak var lbTraveledPercentages:UILabel!
+    @IBOutlet weak var lbUntraveledPercentages:UILabel!
+    @IBOutlet weak var lbTraveledDistanceToday:UILabel!
+    @IBOutlet weak var lbTraveledDistanceThreeDaysAgo:UILabel!
+    @IBOutlet weak var lbTraveledDistanceSevenDaysAgo:UILabel!
+    @IBOutlet weak var lbTotalTraveledDistanceInCurrentMonth:UILabel!
     let pieChartView = PieChartView()
-    var dataforPicker = ["Hôm nay", "Ngày trước","7 ngày gần nhất","30 ngày gần nhất","Tháng trước"]
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -36,7 +37,7 @@ class HomeViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.setNavigationBarItem(title: "Trang chủ")
         pieChartView.frame = viewPieChart.bounds
-
+        
     }
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
@@ -48,31 +49,97 @@ class HomeViewController: BaseViewController {
         }
         SVProgressHUD.dismiss()
         //TO-DO: input chart data
-        for i in 0..<10 {
-            let value =  ChartDataEntry(x: Double(i), y: Double(i) * 2.5)
-            lineChartEntry.append(value)
-        }
         
         for view in viewDistanceDisplay {
-            let roundedHeight = view.frame.height / 2 * 0.9
-            view.layer.cornerRadius = roundedHeight.rounded(.down)
+            
+            view.layer.cornerRadius = 5
         }
-         setupPieChart()
+        let rightView = UIView()
+        let gpsLabel = UILabel()
+        gpsLabel.text = "GPS"
+        let button = UISwitch()
+        rightView.addSubview(gpsLabel)
+        
+        rightView.addSubview(button)
+        //        button.setImage(#imageLiteral(resourceName: "ic_back").resizeImage(newWidth: 20)?.withRenderingMode(.alwaysOriginal), for: .normal)
+        //        button.setTitle("  \(title ?? " ")", for: .normal)
+        //        button.addTarget(self, action: action, for: .touchUpInside)
+        button.sizeToFit()
+        //        gpsLabel.sizeToFit()
+        rightView.sizeToFit()
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: button)
+        //         setupPieChart()
+        getInfo()
     }
     
-    func setupPieChart(){
-        viewPieChart.maskType = .circle
-        viewPieChart.borderWidth = 15
-        viewPieChart.borderType = .solid
-        viewPieChart.borderColor = UIColor(red: 90/255.0, green: 174.0/255.0, blue: 224.0/255.0, alpha: 1.0)
+    
+    func formatDistanceLabelText(_ distance: Float, label: UILabel) {
+        let rawString = "\(distance)km"
+        let myMutableString = NSMutableAttributedString(
+            string: rawString,
+            attributes: [NSAttributedStringKey.font:UIFont(
+                name: "MyriadPro-Regular",
+                size: 17.0)!])
+        myMutableString.addAttribute(NSAttributedStringKey.font,
+                                     value: UIFont(
+                                        name: "MyriadPro-Bold",
+                                        size: 33.0)!,
+                                     range: NSRange(
+                                        location: 0,
+                                        length: distance.description.length))
+        myMutableString.addAttribute(.foregroundColor, value: UIColor.white, range: NSRange(
+            location: 0,
+            length:rawString.length))
+        
+        label.attributedText = myMutableString
+        
+    }
+    
+    func formatLegendsText(field: String, info: String, label: UILabel) {
+        let rawString = "\(field): \(info) %"
+        let myMutableString = NSMutableAttributedString(
+            string: rawString,
+            attributes: [NSAttributedStringKey.font:UIFont(
+                name: "MyriadPro-Regular",
+                size: 12.0)!])
+        myMutableString.addAttribute(.foregroundColor, value: UIColor(hex: "808080"), range: NSRange(
+            location: 0,
+            length: field.length))
+        myMutableString.addAttribute(NSAttributedStringKey.font,
+                                     value: UIFont(
+                                        name: "MyriadPro-Bold",
+                                        size: 33.0)!,
+                                     range: NSRange(
+                                        location: field.count.hashValue + 2,
+                                        length: info.length))
+        myMutableString.addAttribute(.foregroundColor, value: UIColor(hex: "FF9300"), range: NSRange(
+            location:field.count.hashValue + 2,
+            length:info.length))
+        myMutableString.addAttribute(NSAttributedStringKey.font,
+                                     value: UIFont(
+                                        name: "MyriadPro-Bold",
+                                        size: 17.0)!,
+                                     range: NSRange(
+                                        location: field.count.hashValue + 2 + info.count.hashValue + 1,
+                                        length: 1))
+        myMutableString.addAttribute(.foregroundColor, value: UIColor(hex: "808080"), range: NSRange(
+            location: field.count.hashValue + 2 + info.count.hashValue + 1,
+            length: 1))
+        label.attributedText = myMutableString
+        
+    }
+    
+    
+    func setupPieChart(_ value: Float){
+        pieChartView.removeFromSuperview()
+        pieChartView.frame = viewPieChart.frame
         pieChartView.segments = [
-            Segment(color: UIColor(red: 90/255.0, green: 174.0/255.0, blue: 224.0/255.0, alpha: 1.0), name: "25%", value: 25),
-            Segment(color: UIColor(red: 100.0/255.0, green: 241.0/255.0, blue: 183.0/255.0, alpha: 0.0), name: "", value: 75)
+            Segment(color: UIColor(red: 90/255.0, green: 174.0/255.0, blue: 224.0/255.0, alpha: 1.0), name: "", value: CGFloat(value)),
+            Segment(color: UIColor(red: 201.0/255.0, green: 201.0/255.0, blue: 201.0/255.0, alpha: 1.0), name: "", value: CGFloat(100 - value))
         ]
         pieChartView.segmentLabelFont = UIFont(name: "MyriadPro-Bold", size: 30)!
         pieChartView.showSegmentValueInLabel = false
         viewPieChart.addSubview(pieChartView)
-
     }
     
     @IBAction func proofPhotoPressed(_ sender: Any){
@@ -89,36 +156,40 @@ class HomeViewController: BaseViewController {
         }
     }
     
-
-}
-extension HomeViewController: UIPickerViewDelegate, UIPickerViewDataSource {
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-       return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return dataforPicker.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return  dataforPicker[row]
-    }
-}
-extension HomeViewController: AlertPresenting, ChartModePickerDelegate {
-    func chartMode(title: String, index: Int) {
+    func getInfo(){
         SVProgressHUD.show()
-        lbChartMode.text = title
-        lbBtnChartMode.text = title
+        let completion = {(result: GetInfoForHomeScreenResult?, error: String?) -> Void in
+            if let result = result {
+                if result.status == 0 {
+                    SVProgressHUD.dismiss()
+                    self.alert(title: "Lỗi", message: "Không có kết quả")
+                } else {
+                    SVProgressHUD.dismiss()
+                    self.updateScreen(result)
+                }
+            } else {
+                SVProgressHUD.dismiss()
+                self.alert(title: "Lỗi", message: "Không có kết quả")
+            }
+        }
+        guard let userID = Global.user?.data.id else {return}
+        ApiManager.getInfoHomeScreen(userID, completion: completion)
     }
     
-    func datePicked(date: Date) {
-        print(date.description)
+    func updateScreen(_ result: GetInfoForHomeScreenResult){
+       
+        formatLegendsText(field: "Tổng % đi được",
+                          info: String(describing: (result.data?.totalPercentMonth)!),
+                          label: lbTraveledPercentages)
+        formatLegendsText(field: "Tổng % chưa đi được",
+                          info: String(describing: 100 - (result.data?.totalPercentMonth)!),
+                          label: lbUntraveledPercentages)
+        formatDistanceLabelText((result.data?.totalKmToday)!,label: lbTraveledDistanceToday)
+        formatDistanceLabelText((result.data?.totalKmThreeDayBefore)!,label: lbTraveledDistanceThreeDaysAgo)
+        formatDistanceLabelText((result.data?.totalKmSevenDayBefore)!,label: lbTraveledDistanceSevenDaysAgo)
+        lbTotalTraveledDistanceInCurrentMonth.text = "\(String(describing:(result.data?.totalKmMonth)!))"
+        setupPieChart((result.data?.totalPercentMonth)!)
     }
-    
-    @IBAction func changeChartMode(_ sender: UIButton){
-        showAlert(self.view, delegate: self, isDatePicker: false)
-    }
-
 }
 extension HomeViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {

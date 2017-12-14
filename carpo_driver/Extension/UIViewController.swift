@@ -53,7 +53,17 @@ extension UIViewController {
     func setNavigationBarItemForBack(_ action: Selector) {
         let image = #imageLiteral(resourceName: "ic_back").withRenderingMode(.alwaysOriginal)
         let button = UIBarButtonItem(image: image, style: .plain, target: self, action: action)
+        button.title = "Something"
         navigationItem.setLeftBarButton(button, animated: true)
+    }
+    
+    func setNavigationBarItemForBack(title: String? = nil,_ action: Selector) {
+        let button = UIButton(type: .system)
+        button.setImage(#imageLiteral(resourceName: "ic_back").resizeImage(newWidth: 20)?.withRenderingMode(.alwaysOriginal), for: .normal)
+        button.setTitle("  \(title ?? " ")", for: .normal)
+        button.addTarget(self, action: action, for: .touchUpInside)
+        button.sizeToFit()
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: button)
     }
     
     @objc func popViewController() {

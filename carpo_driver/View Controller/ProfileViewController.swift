@@ -33,7 +33,7 @@ class ProfileViewController: BaseViewController {
     
     func setupTableView(){
         tableView.register(UINib(nibName: "ProfileCell", bundle: nil), forCellReuseIdentifier: "ProfileCell")
-        tableView.layer.addBorder(edge: .top, color: UIColor(hex: "808080"), thickness: 0.5)
+        tableView.layer.addBorder(edge: .top, color: UIColor(hex: "808080"), thickness: 0.25)
         tableView.estimatedRowHeight = 60
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.sizeToFit()

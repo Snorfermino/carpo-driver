@@ -181,18 +181,31 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dY1-5U-mPq" customClass="AnimatableView" customModule="IBAnimatable">
                                 <rect key="frame" x="20" y="358.5" width="335" height="80"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_attach" translatesAutoresizingMaskIntoConstraints="NO" id="HC4-S5-KlI">
-                                        <rect key="frame" x="20" y="20" width="39.5" height="40"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wuf-nO-x8E">
+                                        <rect key="frame" x="45" y="10" width="245" height="60"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_attach" translatesAutoresizingMaskIntoConstraints="NO" id="HC4-S5-KlI">
+                                                <rect key="frame" x="10" y="9.5" width="57" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="HC4-S5-KlI" secondAttribute="height" multiplier="1.42" id="0fu-Yy-M0C"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đính kèm tệp" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKY-C5-U4q">
+                                                <rect key="frame" x="75" y="16.5" width="130" height="26"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="22"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="HC4-S5-KlI" secondAttribute="height" id="0fu-Yy-M0C"/>
+                                            <constraint firstItem="TKY-C5-U4q" firstAttribute="centerY" secondItem="HC4-S5-KlI" secondAttribute="centerY" id="4cm-Xn-wpf"/>
+                                            <constraint firstItem="TKY-C5-U4q" firstAttribute="leading" secondItem="HC4-S5-KlI" secondAttribute="trailing" constant="8" id="6y1-wB-v7D"/>
+                                            <constraint firstItem="HC4-S5-KlI" firstAttribute="leading" secondItem="wuf-nO-x8E" secondAttribute="leading" constant="10" id="f20-g7-DLu"/>
+                                            <constraint firstItem="HC4-S5-KlI" firstAttribute="top" secondItem="wuf-nO-x8E" secondAttribute="top" constant="10" id="qH4-eg-B8b"/>
+                                            <constraint firstAttribute="bottom" secondItem="HC4-S5-KlI" secondAttribute="bottom" constant="10" id="t3M-am-DpG"/>
                                         </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đính kèm tệp" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKY-C5-U4q">
-                                        <rect key="frame" x="79.5" y="27" width="130" height="26"/>
-                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="22"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFV-En-KLU">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="80"/>
                                         <connections>
@@ -203,15 +216,14 @@
                                 <color key="backgroundColor" red="0.17254901960784313" green="0.68235294117647061" blue="0.89411764705882346" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="dY1-5U-mPq" secondAttribute="height" multiplier="335:80" id="DIK-8Q-oaQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="wuf-nO-x8E" secondAttribute="bottom" constant="10" id="DVA-Ym-RE5"/>
                                     <constraint firstItem="BFV-En-KLU" firstAttribute="top" secondItem="dY1-5U-mPq" secondAttribute="top" id="Hyb-kP-yJi"/>
+                                    <constraint firstAttribute="trailing" secondItem="wuf-nO-x8E" secondAttribute="trailing" constant="45" id="KZV-tz-HuO"/>
                                     <constraint firstAttribute="bottom" secondItem="BFV-En-KLU" secondAttribute="bottom" id="Lm5-EF-YWs"/>
-                                    <constraint firstItem="TKY-C5-U4q" firstAttribute="centerY" secondItem="HC4-S5-KlI" secondAttribute="centerY" id="Owe-Hg-unh"/>
                                     <constraint firstAttribute="trailing" secondItem="BFV-En-KLU" secondAttribute="trailing" id="adk-Z6-ubv"/>
-                                    <constraint firstItem="HC4-S5-KlI" firstAttribute="top" secondItem="dY1-5U-mPq" secondAttribute="top" constant="20" id="avo-tb-fTM"/>
                                     <constraint firstItem="BFV-En-KLU" firstAttribute="leading" secondItem="dY1-5U-mPq" secondAttribute="leading" id="iyq-aE-Rgx"/>
-                                    <constraint firstItem="TKY-C5-U4q" firstAttribute="leading" secondItem="HC4-S5-KlI" secondAttribute="trailing" constant="20" id="j0R-q1-v9a"/>
-                                    <constraint firstAttribute="bottom" secondItem="HC4-S5-KlI" secondAttribute="bottom" constant="20" id="qhh-di-CXk"/>
-                                    <constraint firstItem="HC4-S5-KlI" firstAttribute="leading" secondItem="dY1-5U-mPq" secondAttribute="leading" constant="20" id="tUT-qj-Wnk"/>
+                                    <constraint firstItem="wuf-nO-x8E" firstAttribute="top" secondItem="dY1-5U-mPq" secondAttribute="top" constant="10" id="lYP-cO-snG"/>
+                                    <constraint firstItem="wuf-nO-x8E" firstAttribute="leading" secondItem="dY1-5U-mPq" secondAttribute="leading" constant="45" id="x9j-b3-pQB"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -262,7 +274,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="grI-VQ-Ofm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1071" y="-819"/>
+            <point key="canvasLocation" x="1069.5999999999999" y="-819.04047976011998"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -824,41 +836,187 @@
                                             <constraint firstAttribute="width" secondItem="fM4-fC-9OZ" secondAttribute="height" multiplier="345:230" id="Oml-5a-U6q"/>
                                         </constraints>
                                     </view>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vvr-mR-HwU">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vvr-mR-HwU">
                                         <rect key="frame" x="15" y="270" width="345" height="397"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DriverCell" id="dKS-ab-TZV" customClass="DriverCell" customModule="carpo_driver" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DriverTitleCell" id="96O-9B-KWL" customClass="DriverTitleCell" customModule="carpo_driver" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="345" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dKS-ab-TZV" id="EB5-YT-TcF">
-                                                    <rect key="frame" x="0.0" y="0.0" width="345" height="43.5"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="96O-9B-KWL" id="Mqj-eB-RpU">
+                                                    <rect key="frame" x="0.0" y="0.0" width="345" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nguyễn Văn A" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrv-5q-ESS">
-                                                            <rect key="frame" x="30" y="13" width="92.5" height="18"/>
-                                                            <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="15"/>
-                                                            <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_arrowRight" translatesAutoresizingMaskIntoConstraints="NO" id="mXB-Ut-YZ8">
-                                                            <rect key="frame" x="307" y="16" width="8" height="12"/>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nMB-n5-LhW">
+                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="44"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zkT-69-U8e">
+                                                                    <rect key="frame" x="13.5" y="15" width="23.5" height="14"/>
+                                                                    <fontDescription key="fontDescription" name="MyriadPro-Bold" family="Myriad Pro" pointSize="14"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" secondItem="mXB-Ut-YZ8" secondAttribute="height" multiplier="8:12" id="Rrj-nx-b4a"/>
+                                                                <constraint firstItem="zkT-69-U8e" firstAttribute="centerY" secondItem="nMB-n5-LhW" secondAttribute="centerY" id="59n-gE-Ox9"/>
+                                                                <constraint firstItem="zkT-69-U8e" firstAttribute="centerX" secondItem="nMB-n5-LhW" secondAttribute="centerX" id="g9S-4C-xVJ"/>
                                                             </constraints>
-                                                        </imageView>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3cB-O1-tOl">
+                                                            <rect key="frame" x="50" y="0.0" width="163" height="44"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tên" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SHk-Uw-DXb">
+                                                                    <rect key="frame" x="69.5" y="15.5" width="22.5" height="14"/>
+                                                                    <fontDescription key="fontDescription" name="MyriadPro-Bold" family="Myriad Pro" pointSize="14"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            <constraints>
+                                                                <constraint firstItem="SHk-Uw-DXb" firstAttribute="centerX" secondItem="3cB-O1-tOl" secondAttribute="centerX" id="3bB-Jk-pAH"/>
+                                                                <constraint firstItem="SHk-Uw-DXb" firstAttribute="centerY" secondItem="3cB-O1-tOl" secondAttribute="centerY" id="75O-6t-lG5"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jgr-aK-xOn">
+                                                            <rect key="frame" x="213" y="0.0" width="132" height="44"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DhC-fS-5CJ">
+                                                                    <rect key="frame" x="4" y="15.5" width="125" height="14"/>
+                                                                    <attributedString key="attributedText">
+                                                                        <fragment content="Số km đã chạy">
+                                                                            <attributes>
+                                                                                <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                                <font key="NSFont" size="14" name="MyriadPro-Bold"/>
+                                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                        <fragment content="(tháng)">
+                                                                            <attributes>
+                                                                                <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                                <font key="NSFont" size="11" name="MyriadPro-Bold"/>
+                                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                    </attributedString>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            <constraints>
+                                                                <constraint firstItem="DhC-fS-5CJ" firstAttribute="centerY" secondItem="Jgr-aK-xOn" secondAttribute="centerY" id="7wI-PD-Hrb"/>
+                                                                <constraint firstItem="DhC-fS-5CJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Jgr-aK-xOn" secondAttribute="leading" constant="3" id="DFc-gT-bcI"/>
+                                                                <constraint firstItem="DhC-fS-5CJ" firstAttribute="centerX" secondItem="Jgr-aK-xOn" secondAttribute="centerX" id="NyX-gj-gn1"/>
+                                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="DhC-fS-5CJ" secondAttribute="trailing" constant="3" id="bvN-Aj-ek9"/>
+                                                            </constraints>
+                                                        </view>
                                                     </subviews>
+                                                    <color key="backgroundColor" red="0.91764705882352937" green="0.59607843137254901" blue="0.24313725490196078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
-                                                        <constraint firstItem="mXB-Ut-YZ8" firstAttribute="centerY" secondItem="EB5-YT-TcF" secondAttribute="centerY" id="BoW-k2-IhR"/>
-                                                        <constraint firstAttribute="trailing" secondItem="mXB-Ut-YZ8" secondAttribute="trailing" constant="30" id="O7d-c4-waH"/>
-                                                        <constraint firstItem="vrv-5q-ESS" firstAttribute="centerY" secondItem="EB5-YT-TcF" secondAttribute="centerY" id="aEV-vK-kLz"/>
-                                                        <constraint firstItem="mXB-Ut-YZ8" firstAttribute="width" secondItem="EB5-YT-TcF" secondAttribute="width" multiplier="8:375" id="pr5-SF-RLX"/>
-                                                        <constraint firstItem="vrv-5q-ESS" firstAttribute="leading" secondItem="EB5-YT-TcF" secondAttribute="leading" constant="30" id="wky-Y7-RWk"/>
+                                                        <constraint firstItem="Jgr-aK-xOn" firstAttribute="leading" secondItem="3cB-O1-tOl" secondAttribute="trailing" id="03w-6R-szz"/>
+                                                        <constraint firstItem="3cB-O1-tOl" firstAttribute="leading" secondItem="nMB-n5-LhW" secondAttribute="trailing" id="7CD-Si-IP8"/>
+                                                        <constraint firstItem="3cB-O1-tOl" firstAttribute="width" secondItem="Mqj-eB-RpU" secondAttribute="width" multiplier="163:345" id="Bwo-K0-z5h"/>
+                                                        <constraint firstItem="nMB-n5-LhW" firstAttribute="leading" secondItem="Mqj-eB-RpU" secondAttribute="leading" id="Ylx-O7-JxI"/>
+                                                        <constraint firstItem="Jgr-aK-xOn" firstAttribute="top" secondItem="Mqj-eB-RpU" secondAttribute="top" id="dx5-9P-vn3"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Jgr-aK-xOn" secondAttribute="trailing" id="hnK-aK-M37"/>
+                                                        <constraint firstItem="nMB-n5-LhW" firstAttribute="width" secondItem="Mqj-eB-RpU" secondAttribute="width" multiplier="50:345" id="jMb-sK-l5a"/>
+                                                        <constraint firstAttribute="bottom" secondItem="nMB-n5-LhW" secondAttribute="bottom" id="jMw-g3-kMo"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Jgr-aK-xOn" secondAttribute="bottom" id="n80-OS-KiP"/>
+                                                        <constraint firstItem="3cB-O1-tOl" firstAttribute="top" secondItem="Mqj-eB-RpU" secondAttribute="top" id="wCy-yS-ttd"/>
+                                                        <constraint firstAttribute="bottom" secondItem="3cB-O1-tOl" secondAttribute="bottom" id="yAW-N3-CQj"/>
+                                                        <constraint firstItem="nMB-n5-LhW" firstAttribute="top" secondItem="Mqj-eB-RpU" secondAttribute="top" id="zqG-MI-1Y0"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DriverCell" id="GtQ-ym-0bd" customClass="DriverCell" customModule="carpo_driver" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="72" width="345" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GtQ-ym-0bd" id="DnF-8k-OHo">
+                                                    <rect key="frame" x="0.0" y="0.0" width="345" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FS5-km-pF1">
+                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="44"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZd-jK-MRv">
+                                                                    <rect key="frame" x="21.5" y="15" width="8" height="14"/>
+                                                                    <fontDescription key="fontDescription" name="MyriadPro-Bold" family="Myriad Pro" pointSize="14"/>
+                                                                    <color key="textColor" red="0.40392156862745099" green="0.40392156862745099" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            <constraints>
+                                                                <constraint firstItem="HZd-jK-MRv" firstAttribute="centerX" secondItem="FS5-km-pF1" secondAttribute="centerX" id="avb-PC-6Gs"/>
+                                                                <constraint firstItem="HZd-jK-MRv" firstAttribute="centerY" secondItem="FS5-km-pF1" secondAttribute="centerY" id="saN-Qj-skI"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LMF-TF-FDu" customClass="AnimatableView" customModule="IBAnimatable">
+                                                            <rect key="frame" x="50" y="0.0" width="163" height="44"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nguyễn Văn A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLs-A9-O6A">
+                                                                    <rect key="frame" x="38" y="15.5" width="87" height="14"/>
+                                                                    <fontDescription key="fontDescription" name="MyriadPro-Bold" family="Myriad Pro" pointSize="14"/>
+                                                                    <color key="textColor" red="0.4039215686" green="0.4039215686" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            <constraints>
+                                                                <constraint firstItem="rLs-A9-O6A" firstAttribute="centerX" secondItem="LMF-TF-FDu" secondAttribute="centerX" id="Edq-Xe-k9F"/>
+                                                                <constraint firstItem="rLs-A9-O6A" firstAttribute="centerY" secondItem="LMF-TF-FDu" secondAttribute="centerY" id="nVm-hu-Dl8"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                    <color key="value" red="0.4039215686" green="0.4039215686" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="_borderType" value="solid"/>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                    <real key="value" value="0.0"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="_borderSides" value="left,right"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qxd-C0-dbS">
+                                                            <rect key="frame" x="213" y="0.0" width="132" height="44"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9.000" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsP-vt-7uP">
+                                                                    <rect key="frame" x="49" y="15.5" width="35" height="14"/>
+                                                                    <fontDescription key="fontDescription" name="MyriadPro-Bold" family="Myriad Pro" pointSize="14"/>
+                                                                    <color key="textColor" red="0.4039215686" green="0.4039215686" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hsP-vt-7uP" secondAttribute="trailing" constant="3" id="3Cc-ya-rzI"/>
+                                                                <constraint firstItem="hsP-vt-7uP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qxd-C0-dbS" secondAttribute="leading" constant="3" id="IfT-70-Nbg"/>
+                                                                <constraint firstItem="hsP-vt-7uP" firstAttribute="centerX" secondItem="qxd-C0-dbS" secondAttribute="centerX" id="qio-kd-r79"/>
+                                                                <constraint firstItem="hsP-vt-7uP" firstAttribute="centerY" secondItem="qxd-C0-dbS" secondAttribute="centerY" id="uL6-PX-hSf"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="FS5-km-pF1" firstAttribute="top" secondItem="DnF-8k-OHo" secondAttribute="top" id="4Oj-o7-uCj"/>
+                                                        <constraint firstAttribute="bottom" secondItem="LMF-TF-FDu" secondAttribute="bottom" id="5B7-S6-fDW"/>
+                                                        <constraint firstItem="FS5-km-pF1" firstAttribute="width" secondItem="DnF-8k-OHo" secondAttribute="width" multiplier="50:345" id="7qW-On-Enu"/>
+                                                        <constraint firstItem="qxd-C0-dbS" firstAttribute="leading" secondItem="LMF-TF-FDu" secondAttribute="trailing" id="Hq9-eu-I9H"/>
+                                                        <constraint firstItem="LMF-TF-FDu" firstAttribute="leading" secondItem="FS5-km-pF1" secondAttribute="trailing" id="RZG-3v-4lS"/>
+                                                        <constraint firstItem="LMF-TF-FDu" firstAttribute="width" secondItem="DnF-8k-OHo" secondAttribute="width" multiplier="163:345" id="Rju-Vb-dha"/>
+                                                        <constraint firstAttribute="bottom" secondItem="FS5-km-pF1" secondAttribute="bottom" id="VNI-Fv-RtH"/>
+                                                        <constraint firstItem="FS5-km-pF1" firstAttribute="leading" secondItem="DnF-8k-OHo" secondAttribute="leading" id="VOe-h1-MaX"/>
+                                                        <constraint firstItem="qxd-C0-dbS" firstAttribute="top" secondItem="DnF-8k-OHo" secondAttribute="top" id="r3Q-CA-rOV"/>
+                                                        <constraint firstAttribute="bottom" secondItem="qxd-C0-dbS" secondAttribute="bottom" id="sS4-NF-ri4"/>
+                                                        <constraint firstItem="LMF-TF-FDu" firstAttribute="top" secondItem="DnF-8k-OHo" secondAttribute="top" id="tu7-aZ-KI3"/>
+                                                        <constraint firstAttribute="trailing" secondItem="qxd-C0-dbS" secondAttribute="trailing" id="v2y-QM-pOd"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
-                                                    <outlet property="lbName" destination="vrv-5q-ESS" id="HBJ-ng-Khc"/>
+                                                    <outlet property="lbDriverIndex" destination="HZd-jK-MRv" id="3z5-2C-chL"/>
+                                                    <outlet property="lbMonthlyDistance" destination="hsP-vt-7uP" id="5So-My-Zlw"/>
+                                                    <outlet property="lbName" destination="rLs-A9-O6A" id="r4T-0Z-MlV"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
@@ -891,14 +1049,17 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="69V-hz-LFc" customClass="AnimatableView" customModule="IBAnimatable">
                                                 <rect key="frame" x="0.0" y="175" width="170" height="165"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="27" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JVL-u4-XNe">
-                                                        <rect key="frame" x="30" y="57.5" width="111" height="50"/>
-                                                        <fontDescription key="fontDescription" name="MyriadPro-Bold" family="Myriad Pro" pointSize="50"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="JVL-u4-XNe">
+                                                        <rect key="frame" x="39" y="62.5" width="93.5" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="1fF-Fh-P7c"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="MyriadPro-Bold" family="Myriad Pro" pointSize="42"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="a2H-mX-5W7">
-                                                        <rect key="frame" x="118" y="40.5" width="23" height="17"/>
+                                                        <rect key="frame" x="109.5" y="45.5" width="23" height="17"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="17" id="afj-zE-EKg"/>
                                                         </constraints>
@@ -960,21 +1121,21 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kPR-zt-5Yg" customClass="AnimatableView" customModule="IBAnimatable">
                                                         <rect key="frame" x="222" y="0.0" width="115" height="40"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlv-2i-4IY">
-                                                                <rect key="frame" x="28" y="1.5" width="59.5" height="38.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dlv-2i-4IY">
+                                                                <rect key="frame" x="28" y="2" width="59.5" height="35.5"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="57">
                                                                         <attributes>
                                                                             <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                             <font key="NSFont" size="33" name="MyriadPro-BoldCond"/>
-                                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
                                                                     </fragment>
                                                                     <fragment content="km">
                                                                         <attributes>
                                                                             <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                             <font key="NSFont" size="17" name="MyriadPro-Regular"/>
-                                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
                                                                     </fragment>
                                                                 </attributedString>
@@ -984,7 +1145,11 @@
                                                         <color key="backgroundColor" red="0.31372549020000001" green="0.69019607839999997" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstItem="dlv-2i-4IY" firstAttribute="centerY" secondItem="kPR-zt-5Yg" secondAttribute="centerY" id="D6b-HW-F2p"/>
+                                                            <constraint firstItem="dlv-2i-4IY" firstAttribute="top" relation="greaterThanOrEqual" secondItem="kPR-zt-5Yg" secondAttribute="top" constant="2" id="Hrd-hJ-KLz"/>
+                                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dlv-2i-4IY" secondAttribute="trailing" id="KtH-cF-gTb"/>
+                                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="dlv-2i-4IY" secondAttribute="bottom" constant="2" id="OFh-7W-uUv"/>
                                                             <constraint firstItem="dlv-2i-4IY" firstAttribute="centerX" secondItem="kPR-zt-5Yg" secondAttribute="centerX" id="jR9-IU-B3q"/>
+                                                            <constraint firstItem="dlv-2i-4IY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kPR-zt-5Yg" secondAttribute="leading" id="jaZ-OA-yEa"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
@@ -1012,7 +1177,7 @@
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vih-D3-0dI">
-                                                        <rect key="frame" x="33" y="2" width="152.5" height="35"/>
+                                                        <rect key="frame" x="33" y="-4" width="152.5" height="35"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="S">
                                                                 <attributes>
@@ -1069,21 +1234,21 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pAf-gF-MWH" customClass="AnimatableView" customModule="IBAnimatable">
                                                         <rect key="frame" x="222" y="0.0" width="115" height="39.5"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmn-2P-A3g">
-                                                                <rect key="frame" x="28" y="0.5" width="59.5" height="38.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kmn-2P-A3g">
+                                                                <rect key="frame" x="28" y="2" width="59.5" height="35.5"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="57">
                                                                         <attributes>
                                                                             <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                             <font key="NSFont" size="33" name="MyriadPro-BoldCond"/>
-                                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
                                                                     </fragment>
                                                                     <fragment content="km">
                                                                         <attributes>
                                                                             <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                             <font key="NSFont" size="17" name="MyriadPro-Regular"/>
-                                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
                                                                     </fragment>
                                                                 </attributedString>
@@ -1092,8 +1257,12 @@
                                                         </subviews>
                                                         <color key="backgroundColor" red="0.31372549020000001" green="0.69019607839999997" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
+                                                            <constraint firstItem="kmn-2P-A3g" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="pAf-gF-MWH" secondAttribute="leading" id="AmF-P6-ljl"/>
+                                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="kmn-2P-A3g" secondAttribute="bottom" constant="2" id="E8O-Sr-0W1"/>
                                                             <constraint firstItem="kmn-2P-A3g" firstAttribute="centerY" secondItem="pAf-gF-MWH" secondAttribute="centerY" id="FDm-DI-cay"/>
+                                                            <constraint firstItem="kmn-2P-A3g" firstAttribute="top" relation="greaterThanOrEqual" secondItem="pAf-gF-MWH" secondAttribute="top" constant="2" id="OKN-kW-zFN"/>
                                                             <constraint firstItem="kmn-2P-A3g" firstAttribute="centerX" secondItem="pAf-gF-MWH" secondAttribute="centerX" id="OPz-20-6Qr"/>
+                                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kmn-2P-A3g" secondAttribute="trailing" id="kiE-RH-38q"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
@@ -1104,9 +1273,9 @@
                                                     <constraint firstItem="pAf-gF-MWH" firstAttribute="centerY" secondItem="3YG-MF-sKG" secondAttribute="centerY" id="Mq7-gz-Tz5"/>
                                                     <constraint firstItem="pAf-gF-MWH" firstAttribute="height" secondItem="3YG-MF-sKG" secondAttribute="height" id="UyV-R5-Am6"/>
                                                     <constraint firstItem="PZI-s9-h2F" firstAttribute="centerY" secondItem="3YG-MF-sKG" secondAttribute="centerY" id="Xt9-SR-DDu"/>
-                                                    <constraint firstItem="vih-D3-0dI" firstAttribute="centerY" secondItem="3YG-MF-sKG" secondAttribute="centerY" id="YzN-JP-lLD"/>
                                                     <constraint firstItem="PZI-s9-h2F" firstAttribute="leading" secondItem="3YG-MF-sKG" secondAttribute="leading" constant="8" id="cjy-UX-kiP"/>
                                                     <constraint firstItem="pAf-gF-MWH" firstAttribute="width" secondItem="3YG-MF-sKG" secondAttribute="width" multiplier="1:3" id="orG-Ld-hrz"/>
+                                                    <constraint firstItem="vih-D3-0dI" firstAttribute="baseline" secondItem="PZI-s9-h2F" secondAttribute="baseline" id="xPZ-e4-2nl"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NKk-rr-6f4">
@@ -1121,7 +1290,7 @@
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zz6-n5-UBZ">
-                                                        <rect key="frame" x="33" y="2" width="152.5" height="35"/>
+                                                        <rect key="frame" x="33" y="-3.5" width="152.5" height="35"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="S">
                                                                 <attributes>
@@ -1178,21 +1347,21 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u75-R2-Nsc" customClass="AnimatableView" customModule="IBAnimatable">
                                                         <rect key="frame" x="222" y="0.0" width="115" height="40"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ScZ-dQ-ijh">
-                                                                <rect key="frame" x="28" y="1" width="59.5" height="38.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ScZ-dQ-ijh">
+                                                                <rect key="frame" x="28" y="2" width="59.5" height="35.5"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="57">
                                                                         <attributes>
                                                                             <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                             <font key="NSFont" size="33" name="MyriadPro-BoldCond"/>
-                                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
                                                                     </fragment>
                                                                     <fragment content="km">
                                                                         <attributes>
                                                                             <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                             <font key="NSFont" size="17" name="MyriadPro-Regular"/>
-                                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
                                                                     </fragment>
                                                                 </attributedString>
@@ -1201,18 +1370,22 @@
                                                         </subviews>
                                                         <color key="backgroundColor" red="0.31372549020000001" green="0.69019607839999997" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
+                                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ScZ-dQ-ijh" secondAttribute="bottom" constant="2" id="HE6-d6-3iA"/>
                                                             <constraint firstItem="ScZ-dQ-ijh" firstAttribute="centerX" secondItem="u75-R2-Nsc" secondAttribute="centerX" id="HGH-2u-B5q"/>
                                                             <constraint firstItem="ScZ-dQ-ijh" firstAttribute="centerY" secondItem="u75-R2-Nsc" secondAttribute="centerY" id="Rqf-rG-Rqd"/>
+                                                            <constraint firstItem="ScZ-dQ-ijh" firstAttribute="top" relation="greaterThanOrEqual" secondItem="u75-R2-Nsc" secondAttribute="top" constant="2" id="hoT-IY-xMg"/>
+                                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ScZ-dQ-ijh" secondAttribute="trailing" id="oJG-Fc-plv"/>
+                                                            <constraint firstItem="ScZ-dQ-ijh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="u75-R2-Nsc" secondAttribute="leading" id="sO1-5D-ntp"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstItem="X5R-rv-Ws0" firstAttribute="centerY" secondItem="NKk-rr-6f4" secondAttribute="centerY" id="4fi-Ow-fhJ"/>
-                                                    <constraint firstItem="zz6-n5-UBZ" firstAttribute="centerY" secondItem="NKk-rr-6f4" secondAttribute="centerY" id="IhZ-KP-LoE"/>
                                                     <constraint firstAttribute="trailing" secondItem="u75-R2-Nsc" secondAttribute="trailing" constant="8" id="NWh-oi-8mZ"/>
                                                     <constraint firstItem="u75-R2-Nsc" firstAttribute="width" secondItem="NKk-rr-6f4" secondAttribute="width" multiplier="1:3" id="VOT-BX-Z6e"/>
                                                     <constraint firstItem="X5R-rv-Ws0" firstAttribute="leading" secondItem="NKk-rr-6f4" secondAttribute="leading" constant="8" id="Z2W-DB-7Ky"/>
+                                                    <constraint firstItem="zz6-n5-UBZ" firstAttribute="baseline" secondItem="X5R-rv-Ws0" secondAttribute="baseline" id="cZG-gK-3rN"/>
                                                     <constraint firstItem="u75-R2-Nsc" firstAttribute="height" secondItem="NKk-rr-6f4" secondAttribute="height" id="dJH-YG-zvr"/>
                                                     <constraint firstItem="u75-R2-Nsc" firstAttribute="centerY" secondItem="NKk-rr-6f4" secondAttribute="centerY" id="lMo-Ro-D3q"/>
                                                     <constraint firstItem="zz6-n5-UBZ" firstAttribute="leading" secondItem="X5R-rv-Ws0" secondAttribute="trailing" constant="15" id="rBr-Aa-MaW"/>
@@ -1272,11 +1445,11 @@
                                                     <constraint firstItem="zqc-W9-gxs" firstAttribute="leading" secondItem="xaZ-Xg-gvR" secondAttribute="leading" constant="8" id="0Wm-UP-wIb"/>
                                                     <constraint firstAttribute="trailing" secondItem="s8s-Hg-ulI" secondAttribute="trailing" constant="8" id="7aw-f5-ACs"/>
                                                     <constraint firstItem="s8s-Hg-ulI" firstAttribute="centerY" secondItem="xaZ-Xg-gvR" secondAttribute="centerY" id="LcI-DX-cHG"/>
+                                                    <constraint firstItem="acB-xe-kR8" firstAttribute="baseline" secondItem="zqc-W9-gxs" secondAttribute="baseline" id="VDS-OX-UuO"/>
                                                     <constraint firstItem="s8s-Hg-ulI" firstAttribute="width" secondItem="xaZ-Xg-gvR" secondAttribute="width" multiplier="1:3" id="fkI-Jz-cC2"/>
                                                     <constraint firstItem="s8s-Hg-ulI" firstAttribute="height" secondItem="xaZ-Xg-gvR" secondAttribute="height" id="idB-oq-GQi"/>
                                                     <constraint firstItem="zqc-W9-gxs" firstAttribute="centerY" secondItem="xaZ-Xg-gvR" secondAttribute="centerY" id="iw3-qV-WtM"/>
                                                     <constraint firstItem="acB-xe-kR8" firstAttribute="leading" secondItem="zqc-W9-gxs" secondAttribute="trailing" constant="15" id="jvq-My-U9t"/>
-                                                    <constraint firstItem="acB-xe-kR8" firstAttribute="centerY" secondItem="xaZ-Xg-gvR" secondAttribute="centerY" id="rtl-q5-USL"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -1285,31 +1458,212 @@
                                         </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tổng % đi được trong tháng" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3b-41-9nM">
-                                        <rect key="frame" x="241" y="75.5" width="119" height="34"/>
+                                        <rect key="frame" x="241" y="76" width="119" height="34"/>
                                         <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tổng km đi được trong tháng" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XN7-Pf-hdX">
-                                        <rect key="frame" x="241" y="250.5" width="119" height="34"/>
+                                        <rect key="frame" x="205" y="250.5" width="155" height="34"/>
                                         <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="D2c-ce-yCe" userLabel="Chart Legends">
+                                        <rect key="frame" x="205" y="51.5" width="155" height="82.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cRe-fg-shg">
+                                                <rect key="frame" x="0.0" y="0.0" width="155" height="41.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v9t-l7-PbL">
+                                                        <rect key="frame" x="20" y="-3.5" width="116" height="38.5"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="% đi đ">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <font key="NSFont" size="12" name="MyriadPro-Regular"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content="ượ">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <font key="NSFont" size="12" name="LucidaGrande"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content="c:">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <font key="NSFont" size="12" name="MyriadPro-Regular"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content=" ">
+                                                                <attributes>
+                                                                    <font key="NSFont" size="12" name="MyriadPro-Regular"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content="3">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="1" green="0.57647058823529407" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <font key="NSFont" size="33" name="MyriadPro-BoldCond"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content="5">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="1" green="0.57647058823529407" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <font key="NSFont" size="33" name="MyriadPro-BoldCond"/>
+                                                                    <font key="NSOriginalFont" size="33" name="MyriadPro-BoldCond"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content=" ">
+                                                                <attributes>
+                                                                    <font key="NSFont" metaFont="system" size="17"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content="%">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <font key="NSFont" size="17" name="MyriadPro-BoldCond"/>
+                                                                    <font key="NSOriginalFont" size="17" name="MyriadPro-BoldCond"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lvM-Ws-khu">
+                                                        <rect key="frame" x="0.0" y="13" width="15" height="15"/>
+                                                        <color key="backgroundColor" red="0.35124781729999999" green="0.68238878250000001" blue="0.87726902959999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="lvM-Ws-khu" secondAttribute="height" id="30y-hZ-22T"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="v9t-l7-PbL" secondAttribute="trailing" constant="8" id="2a1-Jw-1k8"/>
+                                                    <constraint firstItem="lvM-Ws-khu" firstAttribute="centerY" secondItem="cRe-fg-shg" secondAttribute="centerY" id="GJZ-0k-9PX"/>
+                                                    <constraint firstItem="v9t-l7-PbL" firstAttribute="leading" secondItem="lvM-Ws-khu" secondAttribute="trailing" constant="5" id="iv9-mX-3CS"/>
+                                                    <constraint firstItem="lvM-Ws-khu" firstAttribute="leading" secondItem="cRe-fg-shg" secondAttribute="leading" id="l9D-Ph-g9r"/>
+                                                    <constraint firstItem="v9t-l7-PbL" firstAttribute="baseline" secondItem="lvM-Ws-khu" secondAttribute="baseline" id="oE5-Rb-bw9"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2wv-0h-sUe">
+                                                <rect key="frame" x="0.0" y="41.5" width="155" height="41"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UH0-nV-Mse">
+                                                        <rect key="frame" x="20" y="-3.5" width="127" height="38.5"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="% ch">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <font key="NSFont" size="12" name="MyriadPro-Regular"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content="ư">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <font key="NSFont" size="12" name="LucidaGrande"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content="a đi đ">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <font key="NSFont" size="12" name="MyriadPro-Regular"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content="ượ">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <font key="NSFont" size="12" name="LucidaGrande"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content="c: ">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <font key="NSFont" size="12" name="MyriadPro-Regular"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content="6">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="1" green="0.57647058823529407" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <font key="NSFont" size="33" name="MyriadPro-BoldCond"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content="5">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="1" green="0.57647058823529407" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <font key="NSFont" size="33" name="MyriadPro-BoldCond"/>
+                                                                    <font key="NSOriginalFont" size="33" name="MyriadPro-BoldCond"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content=" ">
+                                                                <attributes>
+                                                                    <font key="NSFont" metaFont="system" size="17"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content="%">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <font key="NSFont" size="17" name="MyriadPro-BoldCond"/>
+                                                                    <font key="NSOriginalFont" size="17" name="MyriadPro-BoldCond"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8uf-4X-j8h">
+                                                        <rect key="frame" x="0.0" y="13" width="15" height="15"/>
+                                                        <color key="backgroundColor" red="0.78823529411764703" green="0.78823529411764703" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="8uf-4X-j8h" secondAttribute="height" id="sHU-Bw-HoI"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="8uf-4X-j8h" firstAttribute="leading" secondItem="2wv-0h-sUe" secondAttribute="leading" id="1Q1-le-XjO"/>
+                                                    <constraint firstItem="8uf-4X-j8h" firstAttribute="centerY" secondItem="2wv-0h-sUe" secondAttribute="centerY" id="5gP-Hd-VEG"/>
+                                                    <constraint firstItem="UH0-nV-Mse" firstAttribute="baseline" secondItem="8uf-4X-j8h" secondAttribute="baseline" id="aqC-Jw-EFo"/>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="UH0-nV-Mse" secondAttribute="trailing" constant="8" id="krQ-Ps-mxM"/>
+                                                    <constraint firstItem="UH0-nV-Mse" firstAttribute="leading" secondItem="8uf-4X-j8h" secondAttribute="trailing" constant="5" id="zw1-GN-lPp"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="D2c-ce-yCe" firstAttribute="height" secondItem="GrB-9x-rhA" secondAttribute="height" multiplier="1:2" id="2nd-i5-d2X"/>
                                     <constraint firstItem="L3b-41-9nM" firstAttribute="centerY" secondItem="GrB-9x-rhA" secondAttribute="centerY" id="4qH-Pn-dfu"/>
-                                    <constraint firstItem="XN7-Pf-hdX" firstAttribute="leading" secondItem="L3b-41-9nM" secondAttribute="leading" id="AkW-c2-j4E"/>
                                     <constraint firstItem="ldN-4i-Rgy" firstAttribute="top" secondItem="KdV-yh-uw6" secondAttribute="top" constant="10" id="C47-wq-ooN"/>
+                                    <constraint firstItem="D2c-ce-yCe" firstAttribute="centerY" secondItem="GrB-9x-rhA" secondAttribute="centerY" id="E3u-MM-hTt"/>
                                     <constraint firstItem="XN7-Pf-hdX" firstAttribute="trailing" secondItem="L3b-41-9nM" secondAttribute="trailing" id="G4j-S6-DPD"/>
+                                    <constraint firstAttribute="trailing" secondItem="D2c-ce-yCe" secondAttribute="trailing" constant="15" id="HRd-Jl-apu"/>
                                     <constraint firstItem="L3b-41-9nM" firstAttribute="leading" secondItem="GrB-9x-rhA" secondAttribute="trailing" constant="51" id="HgR-jR-mGk"/>
                                     <constraint firstAttribute="trailing" secondItem="L3b-41-9nM" secondAttribute="trailing" constant="15" id="MTe-Df-PzN"/>
                                     <constraint firstItem="ldN-4i-Rgy" firstAttribute="leading" secondItem="KdV-yh-uw6" secondAttribute="leading" constant="20" id="Pz0-jq-Cc5"/>
                                     <constraint firstItem="ldN-4i-Rgy" firstAttribute="width" secondItem="KdV-yh-uw6" secondAttribute="width" multiplier="170:375" id="T3o-Ur-ow7"/>
                                     <constraint firstItem="XLD-39-Ypl" firstAttribute="width" secondItem="KdV-yh-uw6" secondAttribute="width" multiplier="345:375" id="cAJ-Iy-V1P"/>
+                                    <constraint firstItem="D2c-ce-yCe" firstAttribute="leading" secondItem="ldN-4i-Rgy" secondAttribute="trailing" constant="15" id="k9e-l4-Xsh"/>
                                     <constraint firstItem="XN7-Pf-hdX" firstAttribute="centerY" secondItem="69V-hz-LFc" secondAttribute="centerY" id="tt5-Jk-b4w"/>
                                     <constraint firstItem="XLD-39-Ypl" firstAttribute="centerX" secondItem="KdV-yh-uw6" secondAttribute="centerX" id="wEZ-Bp-hek"/>
+                                    <constraint firstItem="XN7-Pf-hdX" firstAttribute="leading" secondItem="D2c-ce-yCe" secondAttribute="leading" id="x9C-27-vM3"/>
                                     <constraint firstItem="XLD-39-Ypl" firstAttribute="top" secondItem="ldN-4i-Rgy" secondAttribute="bottom" constant="10" id="zDj-qM-SkC"/>
                                 </constraints>
                             </view>
@@ -1317,18 +1671,26 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="KdV-yh-uw6" secondAttribute="bottom" id="2RC-hR-WvQ"/>
+                            <constraint firstItem="8uf-4X-j8h" firstAttribute="width" secondItem="l8b-c2-pF8" secondAttribute="width" multiplier="15:375" id="4BC-gw-uhK"/>
                             <constraint firstItem="KdV-yh-uw6" firstAttribute="top" secondItem="l8b-c2-pF8" secondAttribute="top" id="5rk-Ch-KYT"/>
                             <constraint firstAttribute="trailing" secondItem="WjZ-2T-p25" secondAttribute="trailing" id="MyY-G2-wyv"/>
                             <constraint firstItem="KdV-yh-uw6" firstAttribute="leading" secondItem="l8b-c2-pF8" secondAttribute="leading" id="Nmb-WQ-gBk"/>
                             <constraint firstItem="WjZ-2T-p25" firstAttribute="leading" secondItem="l8b-c2-pF8" secondAttribute="leading" id="PrU-nt-RP5"/>
                             <constraint firstAttribute="bottom" secondItem="WjZ-2T-p25" secondAttribute="bottom" id="iXf-JD-cCT"/>
                             <constraint firstItem="WjZ-2T-p25" firstAttribute="top" secondItem="l8b-c2-pF8" secondAttribute="top" id="pdS-pN-tjj"/>
+                            <constraint firstItem="lvM-Ws-khu" firstAttribute="width" secondItem="l8b-c2-pF8" secondAttribute="width" multiplier="15:375" id="pel-1k-2VG"/>
                             <constraint firstAttribute="trailing" secondItem="KdV-yh-uw6" secondAttribute="trailing" id="vdk-oh-ArC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jSr-Wo-CSX"/>
                     </view>
                     <connections>
                         <outlet property="barChart" destination="fM4-fC-9OZ" id="rl2-91-nFx"/>
+                        <outlet property="lbTotalTraveledDistanceInCurrentMonth" destination="JVL-u4-XNe" id="pbs-uM-EWe"/>
+                        <outlet property="lbTraveledDistanceSevenDaysAgo" destination="ScZ-dQ-ijh" id="mR3-P7-d6g"/>
+                        <outlet property="lbTraveledDistanceThreeDaysAgo" destination="kmn-2P-A3g" id="1di-KL-gpb"/>
+                        <outlet property="lbTraveledDistanceToday" destination="dlv-2i-4IY" id="Ntj-qE-Gaf"/>
+                        <outlet property="lbTraveledPercentages" destination="v9t-l7-PbL" id="dTq-dt-ku1"/>
+                        <outlet property="lbUntraveledPercentages" destination="UH0-nV-Mse" id="HL0-o9-Q8s"/>
                         <outlet property="tableView" destination="vvr-mR-HwU" id="dX5-vg-7q2"/>
                         <outlet property="viewGroupDriversDetail" destination="WjZ-2T-p25" id="G9q-VQ-OWX"/>
                         <outlet property="viewGroupGeneral" destination="KdV-yh-uw6" id="60o-4F-B0e"/>
@@ -1352,13 +1714,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="wfL-aO-kZg" userLabel="Số km">
-                                <rect key="frame" x="15" y="370" width="345" height="111"/>
+                                <rect key="frame" x="15" y="370" width="345" height="120"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tfh-yH-s1j">
-                                        <rect key="frame" x="0.0" y="0.0" width="345" height="33.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="36.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1PK-ZM-eKd" userLabel="Bullet Orange">
-                                                <rect key="frame" x="8" y="12" width="10" height="10"/>
+                                                <rect key="frame" x="8" y="13.5" width="10" height="10"/>
                                                 <color key="backgroundColor" red="0.91697853799999995" green="0.59293329719999999" blue="0.2443961352" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="1PK-ZM-eKd" secondAttribute="height" id="Ach-SD-rxq"/>
@@ -1366,29 +1728,29 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Số km hôm nay:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPU-y8-B1j">
-                                                <rect key="frame" x="33" y="8.5" width="113.5" height="17"/>
+                                                <rect key="frame" x="33" y="10.5" width="113.5" height="17"/>
                                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="17"/>
                                                 <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HPW-8y-hlC" customClass="AnimatableView" customModule="IBAnimatable">
-                                                <rect key="frame" x="222" y="0.0" width="115" height="33.5"/>
+                                                <rect key="frame" x="222" y="0.0" width="115" height="36.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdz-z5-UVL">
-                                                        <rect key="frame" x="28" y="-2" width="59.5" height="38.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qdz-z5-UVL">
+                                                        <rect key="frame" x="28" y="2" width="59.5" height="32.5"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="57">
                                                                 <attributes>
                                                                     <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <font key="NSFont" size="33" name="MyriadPro-BoldCond"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>
                                                             <fragment content="km">
                                                                 <attributes>
                                                                     <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <font key="NSFont" size="17" name="MyriadPro-Regular"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>
                                                         </attributedString>
@@ -1398,7 +1760,11 @@
                                                 <color key="backgroundColor" red="0.31372549019607843" green="0.69019607843137254" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="qdz-z5-UVL" firstAttribute="centerX" secondItem="HPW-8y-hlC" secondAttribute="centerX" id="2IV-RE-Fjm"/>
+                                                    <constraint firstItem="qdz-z5-UVL" firstAttribute="top" relation="greaterThanOrEqual" secondItem="HPW-8y-hlC" secondAttribute="top" constant="2" id="3zo-ZM-eCy"/>
+                                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="qdz-z5-UVL" secondAttribute="bottom" constant="2" id="ABP-RE-W2C"/>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qdz-z5-UVL" secondAttribute="trailing" id="Dnp-51-ewR"/>
                                                     <constraint firstItem="qdz-z5-UVL" firstAttribute="centerY" secondItem="HPW-8y-hlC" secondAttribute="centerY" id="ifr-Z1-0L2"/>
+                                                    <constraint firstItem="qdz-z5-UVL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HPW-8y-hlC" secondAttribute="leading" id="wMe-qa-GbD"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -1415,10 +1781,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P2L-bX-GZg">
-                                        <rect key="frame" x="0.0" y="38.5" width="345" height="34"/>
+                                        <rect key="frame" x="0.0" y="41.5" width="345" height="37"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WjS-v8-G8s" userLabel="Bullet Orange">
-                                                <rect key="frame" x="8" y="12" width="10" height="10"/>
+                                                <rect key="frame" x="8" y="13.5" width="10" height="10"/>
                                                 <color key="backgroundColor" red="0.91697853799999995" green="0.59293329719999999" blue="0.2443961352" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="10" id="FrS-xF-orD"/>
@@ -1426,29 +1792,29 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Số km 3 ngày trước:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQF-3l-jkL">
-                                                <rect key="frame" x="33" y="8.5" width="139.5" height="17"/>
+                                                <rect key="frame" x="33" y="10.5" width="139.5" height="17"/>
                                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="17"/>
                                                 <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7uC-pc-T91" customClass="AnimatableView" customModule="IBAnimatable">
-                                                <rect key="frame" x="222" y="0.0" width="115" height="34"/>
+                                                <rect key="frame" x="222" y="0.0" width="115" height="37"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23L-wf-E2w">
-                                                        <rect key="frame" x="28" y="-2" width="59.5" height="38.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="23L-wf-E2w">
+                                                        <rect key="frame" x="28" y="2" width="59.5" height="33"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="57">
                                                                 <attributes>
                                                                     <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <font key="NSFont" size="33" name="MyriadPro-BoldCond"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>
                                                             <fragment content="km">
                                                                 <attributes>
                                                                     <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <font key="NSFont" size="17" name="MyriadPro-Regular"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>
                                                         </attributedString>
@@ -1457,6 +1823,10 @@
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.31372549020000001" green="0.69019607839999997" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
+                                                    <constraint firstItem="23L-wf-E2w" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7uC-pc-T91" secondAttribute="leading" id="7k8-ie-2tZ"/>
+                                                    <constraint firstItem="23L-wf-E2w" firstAttribute="top" relation="greaterThanOrEqual" secondItem="7uC-pc-T91" secondAttribute="top" constant="2" id="8M9-pW-Wft"/>
+                                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="23L-wf-E2w" secondAttribute="bottom" constant="2" id="UNI-oJ-s2u"/>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="23L-wf-E2w" secondAttribute="trailing" id="Uca-I7-bbH"/>
                                                     <constraint firstItem="23L-wf-E2w" firstAttribute="centerY" secondItem="7uC-pc-T91" secondAttribute="centerY" id="u2D-yh-eBc"/>
                                                     <constraint firstItem="23L-wf-E2w" firstAttribute="centerX" secondItem="7uC-pc-T91" secondAttribute="centerX" id="vOy-uw-zFX"/>
                                                 </constraints>
@@ -1475,10 +1845,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="shp-cN-s8F">
-                                        <rect key="frame" x="0.0" y="77.5" width="345" height="33.5"/>
+                                        <rect key="frame" x="0.0" y="83.5" width="345" height="36.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UNh-6H-cyX" userLabel="Bullet Orange">
-                                                <rect key="frame" x="8" y="11.5" width="10" height="10"/>
+                                                <rect key="frame" x="8" y="13" width="10" height="10"/>
                                                 <color key="backgroundColor" red="0.91697853799999995" green="0.59293329719999999" blue="0.2443961352" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="UNh-6H-cyX" secondAttribute="height" id="BrT-Qp-xro"/>
@@ -1486,29 +1856,29 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Số km 7 ngày trước" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9tD-kV-Z9C">
-                                                <rect key="frame" x="33" y="8" width="136" height="17"/>
+                                                <rect key="frame" x="33" y="9" width="136" height="17"/>
                                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="17"/>
                                                 <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ExJ-ED-9Tf" customClass="AnimatableView" customModule="IBAnimatable">
-                                                <rect key="frame" x="222" y="0.0" width="115" height="33.5"/>
+                                                <rect key="frame" x="222" y="0.0" width="115" height="36.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zaJ-x2-3Yt">
-                                                        <rect key="frame" x="28" y="-2.5" width="59.5" height="38.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zaJ-x2-3Yt">
+                                                        <rect key="frame" x="28" y="2" width="59.5" height="32.5"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="57">
                                                                 <attributes>
                                                                     <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <font key="NSFont" size="33" name="MyriadPro-BoldCond"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>
                                                             <fragment content="km">
                                                                 <attributes>
                                                                     <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <font key="NSFont" size="17" name="MyriadPro-Regular"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>
                                                         </attributedString>
@@ -1519,6 +1889,10 @@
                                                 <constraints>
                                                     <constraint firstItem="zaJ-x2-3Yt" firstAttribute="centerX" secondItem="ExJ-ED-9Tf" secondAttribute="centerX" id="Vp8-f9-CDa"/>
                                                     <constraint firstItem="zaJ-x2-3Yt" firstAttribute="centerY" secondItem="ExJ-ED-9Tf" secondAttribute="centerY" id="XOs-cl-WOq"/>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zaJ-x2-3Yt" secondAttribute="trailing" id="YcZ-YI-E27"/>
+                                                    <constraint firstItem="zaJ-x2-3Yt" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ExJ-ED-9Tf" secondAttribute="leading" id="aV3-do-iVn"/>
+                                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="zaJ-x2-3Yt" secondAttribute="bottom" constant="2" id="kkn-FD-Xba"/>
+                                                    <constraint firstItem="zaJ-x2-3Yt" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ExJ-ED-9Tf" secondAttribute="top" constant="2" id="vLM-O4-23J"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -1536,7 +1910,7 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="wfL-aO-kZg" secondAttribute="height" multiplier="345:111" id="TUW-lJ-8gm"/>
+                                    <constraint firstAttribute="width" secondItem="wfL-aO-kZg" secondAttribute="height" multiplier="345:120" id="TUW-lJ-8gm"/>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Gf5-Uu-iNp" userLabel="Graph">
@@ -1548,14 +1922,23 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k4s-Jb-Spa" customClass="AnimatableView" customModule="IBAnimatable">
                                         <rect key="frame" x="0.0" y="180" width="175" height="170"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="27" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rsI-Wv-c4D">
-                                                <rect key="frame" x="32.5" y="60" width="111" height="50"/>
-                                                <fontDescription key="fontDescription" name="MyriadPro-Bold" family="Myriad Pro" pointSize="50"/>
-                                                <nil key="textColor"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rsI-Wv-c4D">
+                                                <rect key="frame" x="41" y="65" width="93.5" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="vKD-O7-HYb"/>
+                                                </constraints>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="1000">
+                                                        <attributes>
+                                                            <font key="NSFont" size="42" name="MyriadPro-Bold"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="mo4-Bu-go9">
-                                                <rect key="frame" x="120.5" y="43" width="23" height="17"/>
+                                                <rect key="frame" x="111.5" y="48" width="23" height="17"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="17" id="88a-vt-kYN"/>
                                                 </constraints>
@@ -1595,69 +1978,83 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LuZ-UO-avW" customClass="AnimatableView" customModule="IBAnimatable">
-                                <rect key="frame" x="15" y="491" width="345" height="100"/>
+                                <rect key="frame" x="15" y="500" width="345" height="100"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u7s-pD-FbA">
-                                        <rect key="frame" x="120" y="40" width="162.5" height="20.5"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="Ch">
-                                                <attributes>
-                                                    <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <font key="NSFont" size="17" name="MyriadPro-Regular"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content="ụ">
-                                                <attributes>
-                                                    <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <font key="NSFont" size="17" name="LucidaGrande"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content="p ">
-                                                <attributes>
-                                                    <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <font key="NSFont" size="17" name="MyriadPro-Regular"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content="ả">
-                                                <attributes>
-                                                    <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <font key="NSFont" size="17" name="LucidaGrande"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content="nh ch">
-                                                <attributes>
-                                                    <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <font key="NSFont" size="17" name="MyriadPro-Regular"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content="ứ">
-                                                <attributes>
-                                                    <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <font key="NSFont" size="17" name="LucidaGrande"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content="ng minh">
-                                                <attributes>
-                                                    <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <font key="NSFont" size="17" name="MyriadPro-Regular"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_camera" translatesAutoresizingMaskIntoConstraints="NO" id="qdx-PB-6KT">
-                                        <rect key="frame" x="50" y="25" width="50" height="50"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PwF-Z5-daD">
+                                        <rect key="frame" x="57.5" y="25" width="230" height="50"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_camera" translatesAutoresizingMaskIntoConstraints="NO" id="qdx-PB-6KT">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="qdx-PB-6KT" secondAttribute="height" id="1Hx-SD-vdK"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u7s-pD-FbA">
+                                                <rect key="frame" x="61" y="14.5" width="169" height="20.5"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Ch">
+                                                        <attributes>
+                                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <font key="NSFont" size="17" name="MyriadPro-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="ụ">
+                                                        <attributes>
+                                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <font key="NSFont" size="17" name="LucidaGrande"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="p ">
+                                                        <attributes>
+                                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <font key="NSFont" size="17" name="MyriadPro-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="ả">
+                                                        <attributes>
+                                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <font key="NSFont" size="17" name="LucidaGrande"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="nh ch">
+                                                        <attributes>
+                                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <font key="NSFont" size="17" name="MyriadPro-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="ứ">
+                                                        <attributes>
+                                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <font key="NSFont" size="17" name="LucidaGrande"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="ng minh">
+                                                        <attributes>
+                                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <font key="NSFont" size="17" name="MyriadPro-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="qdx-PB-6KT" secondAttribute="height" id="1Hx-SD-vdK"/>
+                                            <constraint firstItem="u7s-pD-FbA" firstAttribute="leading" secondItem="qdx-PB-6KT" secondAttribute="trailing" constant="11" id="5SI-iQ-LXR"/>
+                                            <constraint firstItem="qdx-PB-6KT" firstAttribute="top" secondItem="PwF-Z5-daD" secondAttribute="top" id="AvC-ja-tTR"/>
+                                            <constraint firstItem="qdx-PB-6KT" firstAttribute="leading" secondItem="PwF-Z5-daD" secondAttribute="leading" id="HRf-AA-tCS"/>
+                                            <constraint firstAttribute="bottom" secondItem="qdx-PB-6KT" secondAttribute="bottom" id="YAZ-Ih-l0J"/>
+                                            <constraint firstAttribute="trailing" secondItem="u7s-pD-FbA" secondAttribute="trailing" id="YYQ-Ev-z4b"/>
+                                            <constraint firstItem="u7s-pD-FbA" firstAttribute="centerY" secondItem="qdx-PB-6KT" secondAttribute="centerY" id="f8B-Od-tyj"/>
                                         </constraints>
-                                    </imageView>
+                                    </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NqO-dQ-vLf">
                                         <rect key="frame" x="0.0" y="0.0" width="345" height="100"/>
                                         <connections>
@@ -1667,17 +2064,14 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.50192874670028687" green="0.50191891193389893" blue="0.50192558765411377" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstItem="qdx-PB-6KT" firstAttribute="centerY" secondItem="LuZ-UO-avW" secondAttribute="centerY" id="4WL-gH-rqU"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="u7s-pD-FbA" secondAttribute="trailing" constant="10" id="HDe-R3-bNA"/>
                                     <constraint firstAttribute="trailing" secondItem="NqO-dQ-vLf" secondAttribute="trailing" id="KiX-02-3eu"/>
                                     <constraint firstAttribute="bottom" secondItem="NqO-dQ-vLf" secondAttribute="bottom" id="ONW-dE-l3m"/>
+                                    <constraint firstItem="PwF-Z5-daD" firstAttribute="centerY" secondItem="LuZ-UO-avW" secondAttribute="centerY" id="R8W-vh-4gH"/>
                                     <constraint firstItem="NqO-dQ-vLf" firstAttribute="leading" secondItem="LuZ-UO-avW" secondAttribute="leading" id="SvM-ey-PJc"/>
                                     <constraint firstItem="NqO-dQ-vLf" firstAttribute="top" secondItem="LuZ-UO-avW" secondAttribute="top" id="Tl7-cz-64e"/>
-                                    <constraint firstItem="u7s-pD-FbA" firstAttribute="centerY" secondItem="qdx-PB-6KT" secondAttribute="centerY" id="Tst-V8-I11"/>
-                                    <constraint firstItem="qdx-PB-6KT" firstAttribute="leading" secondItem="LuZ-UO-avW" secondAttribute="leading" constant="50" id="ZLk-uk-uq7"/>
-                                    <constraint firstItem="u7s-pD-FbA" firstAttribute="leading" secondItem="qdx-PB-6KT" secondAttribute="trailing" constant="20" id="cQI-5T-uF7"/>
-                                    <constraint firstItem="qdx-PB-6KT" firstAttribute="width" secondItem="LuZ-UO-avW" secondAttribute="width" multiplier="50:345" id="coo-Mj-XSw"/>
                                     <constraint firstAttribute="width" secondItem="LuZ-UO-avW" secondAttribute="height" multiplier="345:100" id="lgF-dR-67Z"/>
+                                    <constraint firstItem="PwF-Z5-daD" firstAttribute="centerX" secondItem="LuZ-UO-avW" secondAttribute="centerX" id="ufk-kZ-rbj"/>
+                                    <constraint firstItem="PwF-Z5-daD" firstAttribute="centerY" secondItem="LuZ-UO-avW" secondAttribute="centerY" id="wCY-xo-6BX"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -1686,15 +2080,195 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tổng % đi được trong tháng" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s6x-Zz-phe">
-                                <rect key="frame" x="210" y="78.5" width="113" height="34"/>
+                                <rect key="frame" x="210" y="78" width="113" height="34"/>
                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="o4J-Sv-a6A" userLabel="Chart Legends">
+                                <rect key="frame" x="200" y="53" width="167" height="85"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u1R-GN-vub">
+                                        <rect key="frame" x="0.0" y="0.0" width="167" height="42.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IAe-Q5-cht">
+                                                <rect key="frame" x="18" y="-2.5" width="149" height="38.5"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="% đi đ">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <font key="NSFont" size="12" name="MyriadPro-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="ượ">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <font key="NSFont" size="12" name="LucidaGrande"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="c:">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <font key="NSFont" size="12" name="MyriadPro-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=" ">
+                                                        <attributes>
+                                                            <font key="NSFont" size="12" name="MyriadPro-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="2">
+                                                        <attributes>
+                                                            <color key="NSColor" red="1" green="0.57647058823529407" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <font key="NSFont" size="33" name="MyriadPro-BoldCond"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="5">
+                                                        <attributes>
+                                                            <color key="NSColor" red="1" green="0.57647058823529407" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <font key="NSFont" size="33" name="MyriadPro-BoldCond"/>
+                                                            <font key="NSOriginalFont" size="33" name="MyriadPro-BoldCond"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=" ">
+                                                        <attributes>
+                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="%">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <font key="NSFont" size="17" name="MyriadPro-BoldCond"/>
+                                                            <font key="NSOriginalFont" size="17" name="MyriadPro-BoldCond"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aSe-dS-uAx">
+                                                <rect key="frame" x="0.0" y="14" width="15" height="15"/>
+                                                <color key="backgroundColor" red="0.35124781729999999" green="0.68238878250000001" blue="0.87726902959999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="aSe-dS-uAx" secondAttribute="height" id="6e7-yq-01x"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="IAe-Q5-cht" firstAttribute="leading" secondItem="aSe-dS-uAx" secondAttribute="trailing" constant="3" id="2rb-ZU-15l"/>
+                                            <constraint firstItem="IAe-Q5-cht" firstAttribute="baseline" secondItem="aSe-dS-uAx" secondAttribute="baseline" id="Dmh-cS-JbC"/>
+                                            <constraint firstAttribute="trailing" secondItem="IAe-Q5-cht" secondAttribute="trailing" id="RYv-Nx-c0N"/>
+                                            <constraint firstItem="aSe-dS-uAx" firstAttribute="leading" secondItem="u1R-GN-vub" secondAttribute="leading" id="n45-h5-eVh"/>
+                                            <constraint firstItem="aSe-dS-uAx" firstAttribute="centerY" secondItem="u1R-GN-vub" secondAttribute="centerY" id="zUy-vm-Y5e"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UQg-2w-KTj">
+                                        <rect key="frame" x="0.0" y="42.5" width="167" height="42.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q01-M0-Tzs">
+                                                <rect key="frame" x="18" y="-2.5" width="149" height="38.5"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="% ch">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <font key="NSFont" size="12" name="MyriadPro-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="ư">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <font key="NSFont" size="12" name="LucidaGrande"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="a đi đ">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <font key="NSFont" size="12" name="MyriadPro-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="ượ">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <font key="NSFont" size="12" name="LucidaGrande"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="c: ">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <font key="NSFont" size="12" name="MyriadPro-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="7">
+                                                        <attributes>
+                                                            <color key="NSColor" red="1" green="0.57647058823529407" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <font key="NSFont" size="33" name="MyriadPro-BoldCond"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="5">
+                                                        <attributes>
+                                                            <color key="NSColor" red="1" green="0.57647058823529407" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <font key="NSFont" size="33" name="MyriadPro-BoldCond"/>
+                                                            <font key="NSOriginalFont" size="33" name="MyriadPro-BoldCond"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=" ">
+                                                        <attributes>
+                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="%">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <font key="NSFont" size="17" name="MyriadPro-BoldCond"/>
+                                                            <font key="NSOriginalFont" size="17" name="MyriadPro-BoldCond"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dPh-ga-gEA">
+                                                <rect key="frame" x="0.0" y="14" width="15" height="15"/>
+                                                <color key="backgroundColor" red="0.78823529410000004" green="0.78823529410000004" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="dPh-ga-gEA" secondAttribute="height" id="bLH-xU-ver"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="Q01-M0-Tzs" firstAttribute="baseline" secondItem="dPh-ga-gEA" secondAttribute="baseline" id="2AQ-6E-zb9"/>
+                                            <constraint firstAttribute="trailing" secondItem="Q01-M0-Tzs" secondAttribute="trailing" id="9L3-4r-k6L"/>
+                                            <constraint firstItem="dPh-ga-gEA" firstAttribute="leading" secondItem="UQg-2w-KTj" secondAttribute="leading" id="DxL-I5-mQA"/>
+                                            <constraint firstItem="Q01-M0-Tzs" firstAttribute="leading" secondItem="dPh-ga-gEA" secondAttribute="trailing" constant="3" id="UO1-aJ-llC"/>
+                                            <constraint firstItem="dPh-ga-gEA" firstAttribute="centerY" secondItem="UQg-2w-KTj" secondAttribute="centerY" id="iCH-3X-DrA"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="dPh-ga-gEA" firstAttribute="width" secondItem="aSe-dS-uAx" secondAttribute="width" id="MAJ-cw-LdZ"/>
+                                </constraints>
+                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tổng km đi được trong tháng" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A0F-ba-jbJ">
                                 <rect key="frame" x="210" y="258" width="122" height="34"/>
                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -1702,17 +2276,24 @@
                         <constraints>
                             <constraint firstItem="Gf5-Uu-iNp" firstAttribute="leading" secondItem="Tu9-V8-App" secondAttribute="leading" constant="20" id="6aY-Lx-V11"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="A0F-ba-jbJ" secondAttribute="trailing" constant="15" id="8C0-w5-lck"/>
+                            <constraint firstItem="PwF-Z5-daD" firstAttribute="width" secondItem="kgf-re-bm2" secondAttribute="width" multiplier="230:375" id="8WD-fe-Hzr"/>
+                            <constraint firstAttribute="trailing" secondItem="o4J-Sv-a6A" secondAttribute="trailing" constant="8" id="AEZ-2n-BLq"/>
                             <constraint firstItem="LuZ-UO-avW" firstAttribute="width" secondItem="kgf-re-bm2" secondAttribute="width" multiplier="345:375" id="Bsv-c6-EGH"/>
                             <constraint firstItem="LuZ-UO-avW" firstAttribute="top" secondItem="wfL-aO-kZg" secondAttribute="bottom" constant="10" id="D7m-Dc-TCE"/>
                             <constraint firstItem="s6x-Zz-phe" firstAttribute="centerY" secondItem="uet-Zo-u2E" secondAttribute="centerY" id="EeB-8e-pkK"/>
                             <constraint firstItem="wfL-aO-kZg" firstAttribute="centerX" secondItem="kgf-re-bm2" secondAttribute="centerX" id="I6b-J2-duT"/>
+                            <constraint firstItem="o4J-Sv-a6A" firstAttribute="leading" secondItem="Gf5-Uu-iNp" secondAttribute="trailing" constant="5" id="LaA-Dv-l8h"/>
+                            <constraint firstItem="PwF-Z5-daD" firstAttribute="height" secondItem="kgf-re-bm2" secondAttribute="height" multiplier="50:667" id="NoX-6A-6BX"/>
                             <constraint firstItem="wfL-aO-kZg" firstAttribute="width" secondItem="kgf-re-bm2" secondAttribute="width" multiplier="345:375" id="Spf-rK-raH"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="LuZ-UO-avW" secondAttribute="bottom" constant="20" id="U40-JG-r1h"/>
                             <constraint firstItem="s6x-Zz-phe" firstAttribute="leading" secondItem="Gf5-Uu-iNp" secondAttribute="trailing" constant="15" id="WGn-no-j30"/>
                             <constraint firstItem="A0F-ba-jbJ" firstAttribute="centerY" secondItem="k4s-Jb-Spa" secondAttribute="centerY" id="WQb-al-mgz"/>
+                            <constraint firstItem="o4J-Sv-a6A" firstAttribute="centerY" secondItem="uet-Zo-u2E" secondAttribute="centerY" id="b8C-1m-WAD"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="s6x-Zz-phe" secondAttribute="trailing" constant="15" id="c0S-Dk-fUC"/>
+                            <constraint firstItem="aSe-dS-uAx" firstAttribute="width" secondItem="kgf-re-bm2" secondAttribute="width" multiplier="15:375" id="cYl-N9-xWm"/>
                             <constraint firstItem="LuZ-UO-avW" firstAttribute="centerX" secondItem="kgf-re-bm2" secondAttribute="centerX" id="g8s-JK-2Yh"/>
                             <constraint firstItem="Gf5-Uu-iNp" firstAttribute="width" secondItem="kgf-re-bm2" secondAttribute="width" multiplier="175:375" id="i4Q-Mk-8uR"/>
+                            <constraint firstItem="o4J-Sv-a6A" firstAttribute="height" secondItem="uet-Zo-u2E" secondAttribute="height" multiplier="1:2" id="nZc-L0-wjl"/>
                             <constraint firstItem="A0F-ba-jbJ" firstAttribute="leading" secondItem="s6x-Zz-phe" secondAttribute="leading" id="pI8-lL-8Ng"/>
                             <constraint firstItem="Gf5-Uu-iNp" firstAttribute="top" secondItem="kgf-re-bm2" secondAttribute="top" constant="10" id="rnK-BY-htJ"/>
                             <constraint firstItem="wfL-aO-kZg" firstAttribute="top" secondItem="Gf5-Uu-iNp" secondAttribute="bottom" constant="10" id="tDK-Zd-yD8"/>
@@ -1721,6 +2302,12 @@
                     </view>
                     <connections>
                         <outlet property="imgViewProof" destination="qdx-PB-6KT" id="sbt-pH-7LU"/>
+                        <outlet property="lbTotalTraveledDistanceInCurrentMonth" destination="rsI-Wv-c4D" id="rlV-cO-G78"/>
+                        <outlet property="lbTraveledDistanceSevenDaysAgo" destination="zaJ-x2-3Yt" id="sVf-aI-Qe1"/>
+                        <outlet property="lbTraveledDistanceThreeDaysAgo" destination="23L-wf-E2w" id="udj-k5-ekE"/>
+                        <outlet property="lbTraveledDistanceToday" destination="qdz-z5-UVL" id="lNg-gC-GxG"/>
+                        <outlet property="lbTraveledPercentages" destination="IAe-Q5-cht" id="F6E-i5-ffc"/>
+                        <outlet property="lbUntraveledPercentages" destination="Q01-M0-Tzs" id="80S-EF-5I5"/>
                         <outlet property="viewPieChart" destination="uet-Zo-u2E" id="48i-m2-hI9"/>
                         <outletCollection property="viewDistanceDisplay" destination="HPW-8y-hlC" collectionClass="NSMutableArray" id="N7e-Ok-mUY"/>
                         <outletCollection property="viewDistanceDisplay" destination="7uC-pc-T91" collectionClass="NSMutableArray" id="c3j-f2-N29"/>
@@ -1751,8 +2338,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ic_arrowRight" width="21" height="38"/>
-        <image name="ic_attach" width="101" height="101"/>
+        <image name="ic_attach" width="153" height="108"/>
         <image name="ic_calendar" width="88" height="71"/>
         <image name="ic_camera" width="148" height="133"/>
         <image name="ic_facebook" width="33" height="70"/>

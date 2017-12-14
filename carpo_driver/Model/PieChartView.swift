@@ -6,7 +6,7 @@
 //  Copyright © 2017 Tien Dat. All rights reserved.
 //
 import UIKit
-
+import IBAnimatable
 private extension CGFloat {
     
     /// Formats the CGFloat to a maximum of 1 decimal place.
@@ -32,7 +32,7 @@ struct Segment {
     var value : CGFloat
 }
 
-class PieChartView: UIView {
+class PieChartView: AnimatableView {
     
     /// An array of structs representing the segments of the pie chart
     var segments = [Segment]() {
@@ -92,6 +92,12 @@ class PieChartView: UIView {
         
         // the starting angle is -90 degrees (top of the circle, as the context is flipped). By default, 0 is the right hand side of the circle, with the positive angle being in an anti-clockwise direction (same as a unit circle in maths).
         var startAngle = -CGFloat.pi * 0.5
+        
+        self.maskType = .circle
+        self.borderWidth = 15
+        self.borderType = .solid
+        self.borderColor = UIColor(red: 90/255.0, green: 174.0/255.0, blue: 224.0/255.0, alpha: 1.0)
+        self.borderType = .solid
 //        self.layer.cornerRadius = radius
 //        self.layer.borderWidth = 8.5/375 * UIScreen.main.bounds.width
 //        self.layer.masksToBounds = false

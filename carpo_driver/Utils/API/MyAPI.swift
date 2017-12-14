@@ -28,6 +28,11 @@ enum MyAPI {
     case group(id:String)
     case getHistory(date:String)
     case getCarInfoBy(userID: String)
+    
+    //Info for Screen UIs
+    case getInfoForHomeScreen(userID: String)
+    case getInfoForManageGroupScreen(leaderID: String)
+    case getInfoForGroupMemberDetailScreen(leaderID: String)
 }
 
 extension MyAPI: TargetType {
@@ -73,10 +78,16 @@ extension MyAPI: TargetType {
             return "change-password-user"
         case .trackLocation:
             return "insert-tracking"
-            case .support:
+        case .support:
             return "insert-report"
-            case .changeAvatar:
+        case .changeAvatar:
             return "change-avata-user"
+        case .getInfoForHomeScreen:
+            return "get-info-home-driver"
+        case .getInfoForManageGroupScreen:
+            return "get-info-screen-manager-group"
+        case .getInfoForGroupMemberDetailScreen:
+            return "get-info-group-member-in-month"
         default:
             return ""
         }
@@ -115,6 +126,12 @@ extension MyAPI: TargetType {
                     "new_password":newPwd]
         case .trackLocation(let param):
             return param.toJSON()
+        case .getInfoForHomeScreen(let userID):
+            return ["user_id": userID]
+        case .getInfoForManageGroupScreen(let leaderID):
+            return ["leader_id":leaderID]
+        case .getInfoForGroupMemberDetailScreen(let leaderID):
+            return ["leader_id":leaderID]
         default:
             return nil
         }
@@ -128,9 +145,6 @@ extension MyAPI: TargetType {
             }
             let str64 = data.base64EncodedString()
             return .requestParameters(parameters: ["user_id": Global.user?.data.id ?? "","image":str64,"message":message], encoding: encoding)
-//            var multipartdata:[MultipartFormData] = []
-//            multipartdata.append(MultipartFormData(provider: .data(data), name: "image", fileName: "support.jpg", mimeType: "image/jpg"))
-//            return .uploadCompositeMultipart(multipartdata, urlParameters: ["user_id": Global.user?.data.id ?? "","message":message])
         case .changeAvatar(let avatar):
             guard let data = UIImageJPEGRepresentation(avatar ,0.5) else {
                 return .requestPlain
