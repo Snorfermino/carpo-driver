@@ -11,6 +11,11 @@ import SkyFloatingLabelTextField
 import SVProgressHUD
 import Charts
 import IBAnimatable
+enum groupScreenState: Int {
+    case general = 0
+    case groupDetail
+    case driverDetail
+}
 class DriverTitleCell: UITableViewCell {
     
 }
@@ -21,11 +26,19 @@ class DriverCell: UITableViewCell {
 }
 class GroupViewController: BaseViewController {
     @IBOutlet weak var viewGroupDriversDetail: UIView!
+    @IBOutlet weak var viewGroupGeneral: UIView!
+    @IBOutlet weak var viewDriverInfo: UIView!
+    @IBOutlet weak var lbDriverName:UILabel!
+
+    @IBOutlet weak var lbDriverPlate:UILabel!
+    @IBOutlet weak var lbDriverVehicleBrand:UILabel!
+    @IBOutlet weak var lbDriverVehicleColor:UILabel!
+    @IBOutlet weak var lbTotalTraveledDistances:UILabel!
     @IBOutlet weak var tableView: UITableView!
     let pieChart = PieChartView()
     @IBOutlet weak var viewPieChart: AnimatableView!
     @IBOutlet weak var barChart: BarChartView!
-    @IBOutlet weak var viewGroupGeneral: UIView!
+
     @IBOutlet var viewsDistance: [UIView]!
     @IBOutlet weak var lbTraveledPercentages:UILabel!
     @IBOutlet weak var lbUntraveledPercentages:UILabel!
@@ -34,22 +47,9 @@ class GroupViewController: BaseViewController {
     @IBOutlet weak var lbTraveledDistanceSevenDaysAgo:UILabel!
     @IBOutlet weak var lbTotalTraveledDistanceInCurrentMonth:UILabel!
     var tableViewDriversData:[GetInfoForGroupMemberDetailScreenResult.Data] = []
-    var isSelectedDriver = false
     var selectedIndex = 0
-    var isDetailPressed = false {
-        didSet{
-            if isDetailPressed {
-                //                setNavigationBarItemForBack(#selector(method))
-            }
-        }
-    }
-    var sortedDrivers:[Driver.Data] = []
-    var drivers:[Driver.Data] = [] {
-        didSet{
-            sortedDrivers = drivers
-        }
-    }
-    
+    var drivers:[Driver.Data] = []
+    var state:groupScreenState = .general
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -197,10 +197,10 @@ class GroupViewController: BaseViewController {
     }
 
     func updateScreen(_ result: GetInfoForHomeScreenResult){
-        formatLegendsText(field: "Tổng % đi được",
+        formatLegendsText(field: "% đi được",
                           info: String(describing: (result.data?.totalPercentMonth)!),
                           label: lbTraveledPercentages)
-        formatLegendsText(field: "Tổng % chưa đi được",
+        formatLegendsText(field: "% chưa đi được",
                           info: String(describing: 100 - (result.data?.totalPercentMonth)!),
                           label: lbUntraveledPercentages)
         formatDistanceLabelText((result.data?.totalKmToday)!,label: lbTraveledDistanceToday)
@@ -208,6 +208,10 @@ class GroupViewController: BaseViewController {
         formatDistanceLabelText((result.data?.totalKmSevenDayBefore)!,label: lbTraveledDistanceSevenDaysAgo)
         lbTotalTraveledDistanceInCurrentMonth.text = "\(String(describing:(result.data?.totalKmMonth)!))"
         setupPieChart((result.data?.totalPercentMonth)!)
+    }
+    
+    func updateDriverDetail(){
+        
     }
     
     func updateTableViewAndBarChart(_ result: GetInfoForGroupMemberDetailScreenResult){
@@ -221,32 +225,15 @@ class GroupViewController: BaseViewController {
     }
     
     @IBAction func changeToDetailScreen(_ sender: Any){
-        isDetailPressed = true
+        state = .groupDetail
         getGroupDetail()
         viewGroupGeneral.leftToRightAnimation(duration: 0.5, completionDelegate: self)
     }
     
     @objc func changeToGeneralScreen(_ sender: Any){
-        isDetailPressed = false
         viewGroupDriversDetail.rightToLeftAnimation(duration: 0.5, completionDelegate: self)
     }
-    
-    func getGroupDriversInfo(){
-        
-        let completion = {(driver: User?, error: String?) -> Void in
-            if let driverInfo = driver {
-                if driverInfo.status == 0 {
-                    self.alert(title: "Lỗi", message: "Không tìm thấy thông tin tài xế")
-                } else {
-                    self.tableView.reloadData()
-                    SVProgressHUD.dismiss()
-                }
-            } else {
-                self.alert(title: "Lỗi", message: "Không tìm thấy kết quả")
-            }
-        }
-        ApiManager.getInfoCarByUserId(sortedDrivers[selectedIndex].userId!, completion: completion)
-    }
+
     
 }
 extension GroupViewController{
@@ -296,23 +283,23 @@ extension GroupViewController{
         }
         ApiManager.getInfoForGroupMemberDetailScreen((user.data.id)!, completion: completion)
     }
-    func sortDriverName(_ name: String? = ""){
-        guard name != "" else {
-            sortedDrivers = drivers
-            tableView.reloadData()
-            return
-        }
-        sortedDrivers.removeAll()
-        for d in drivers {
-            //            if name?.lowercased().range(of: d.name.lowercased() ) != nil {
-            //                sortedDrivers.append(d)
-            //            }
-            let charset = CharacterSet(charactersIn: d.name.lowercased())
-            if name?.lowercased().rangeOfCharacter(from: charset) != nil {
-                sortedDrivers.append(d)
+    
+    
+    func getDriverInfo(){
+        SVProgressHUD.show()
+        let completion = {(driver: User?, error: String?) -> Void in
+            if let driverInfo = driver {
+                if driverInfo.status == 0 {
+                    self.alert(title: "Lỗi", message: "Không tìm thấy thông tin tài xế")
+                } else {
+                    SVProgressHUD.dismiss()
+                    self.viewGroupDriversDetail.leftToRightAnimation(duration: 0.5, completionDelegate: self)
+                }
+            } else {
+                self.alert(title: "Lỗi", message: "Không tìm thấy kết quả")
             }
         }
-        tableView.reloadData()
+        ApiManager.getInfoCarByUserId(tableViewDriversData[selectedIndex].id!, completion: completion)
     }
 }
 extension GroupViewController: UITableViewDelegate, UITableViewDataSource {
@@ -324,9 +311,8 @@ extension GroupViewController: UITableViewDelegate, UITableViewDataSource {
         case 0:
             return 1
         default:
-            //TO-DO:
-            return tableViewDriversData.count
-//            return 10
+//            return tableViewDriversData.count
+            return 5
         }
     }
     
@@ -338,22 +324,22 @@ extension GroupViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "DriverCell") as! DriverCell
-            //TO-DO:
-            //        cell.lbName.text = sortedDrivers[indexPath.row].name
-            cell.lbDriverIndex.text = "\(indexPath.row + 1)"
-            cell.lbName.text = tableViewDriversData[indexPath.row].name
-            cell.lbMonthlyDistance.text = tableViewDriversData[indexPath.row].totalKmMonth?.description
-            cell.selectionStyle = .none
-            if indexPath.row % 2 == 0 {
-                cell.contentView.backgroundColor = UIColor(hex: "DBE9F6")
-            }
+//            cell.lbDriverIndex.text = "\(indexPath.row + 1)"
+//            cell.lbName.text = tableViewDriversData[indexPath.row].name
+//            cell.lbMonthlyDistance.text = tableViewDriversData[indexPath.row].totalKmMonth?.description
+//            cell.selectionStyle = .none
+//            if indexPath.row % 2 == 0 {
+//                cell.contentView.backgroundColor = UIColor(hex: "DBE9F6")
+//            }
             return cell
         }
         
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
+        state = .driverDetail
+        selectedIndex = indexPath.row
+        getDriverInfo()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -368,24 +354,21 @@ extension GroupViewController: UITableViewDelegate, UITableViewDataSource {
 extension GroupViewController: CAAnimationDelegate{
     func animationDidStart(_ anim: CAAnimation) {
         SVProgressHUD.show()
-        if isDetailPressed {
-            
-        }
+
     }
     func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
-        if isDetailPressed {
-            SVProgressHUD.dismiss()
-            //TO-DO: call API get group drivers
-            self.view.bringSubview(toFront: viewGroupDriversDetail)
-            setNavigationBarItemForBack(title: "So sánh trong nhóm" ,#selector(changeToGeneralScreen(_:)))
-            //        setNavigationBarItem(title: "So sách trong nhóm")
-            
-            //            getGroupDriversInfo()
-        } else {
-            SVProgressHUD.dismiss()
-            //TO-DO: call API get group drivers
+        SVProgressHUD.dismiss()
+        switch state {
+        case .general:
             self.view.bringSubview(toFront: viewGroupGeneral)
             setNavigationBarItem(title: "Quản lý nhóm")
+        case .groupDetail:
+            self.view.bringSubview(toFront: viewGroupDriversDetail)
+            setNavigationBarItemForBack(title: "So sánh trong nhóm" ,#selector(changeToGeneralScreen(_:)))
+        case .driverDetail:
+            self.view.bringSubview(toFront: viewDriverInfo)
+            setNavigationBarItemForBack(title: "Thông tin tài xế" ,#selector(changeToGeneralScreen(_:)))
+            
         }
     }
 }

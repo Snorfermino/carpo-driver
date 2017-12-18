@@ -1,53 +1,50 @@
 //
-//  GetInfoForGroupMemberDetailScreenResult.swift
+//  ChangeAvatarResult.swift
 //
-//  Created by Tien Dat on 12/13/17
+//  Created by Tien Dat on 12/14/17
 //  Copyright (c) . All rights reserved.
 //
 
 import Foundation
 import ObjectMapper
-class GetInfoForGroupMemberDetailScreenResult: BaseModel {
+public class ChangeAvatarResult: Mappable {
     
     // MARK: Declaration for string constants to be used to decode and also serialize.
     private struct SerializationKeys {
+        static let status = "status"
         static let data = "data"
     }
     
     // MARK: Properties
-    public var data: [Data]?
+    public var status: Int?
+    public var data: Data?
     
     // MARK: ObjectMapper Initializers
     /// Map a JSON object to this class using ObjectMapper.
     ///
     /// - parameter map: A mapping from ObjectMapper.
     public required init?(map: Map){
-        super.init(map: map)
+        
     }
     
     /// Map a JSON object to this class using ObjectMapper.
     ///
     /// - parameter map: A mapping from ObjectMapper.
-    public override func mapping(map: Map) {
-        super.mapping(map: map)
+    public func mapping(map: Map) {
+        status <- map[SerializationKeys.status]
         data <- map[SerializationKeys.data]
     }
 }
-extension GetInfoForGroupMemberDetailScreenResult {
-    
-    class Data: Mappable {
+extension ChangeAvatarResult {
+    public class Data: Mappable {
         
         // MARK: Declaration for string constants to be used to decode and also serialize.
         private struct SerializationKeys {
-            static let id = "_id"
-            static let name = "name"
-            static let totalKmMonth = "total_km_month"
+            static let imageUrl = "image_url"
         }
         
         // MARK: Properties
-        public var id: String?
-        public var name: String?
-        public var totalKmMonth: Float?
+        public var imageUrl: String?
         
         // MARK: ObjectMapper Initializers
         /// Map a JSON object to this class using ObjectMapper.
@@ -61,9 +58,7 @@ extension GetInfoForGroupMemberDetailScreenResult {
         ///
         /// - parameter map: A mapping from ObjectMapper.
         public func mapping(map: Map) {
-            id <- map[SerializationKeys.id]
-            name <- map[SerializationKeys.name]
-            totalKmMonth <- map[SerializationKeys.totalKmMonth]
+            imageUrl <- map[SerializationKeys.imageUrl]
         }
     }
 }

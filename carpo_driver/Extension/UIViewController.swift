@@ -78,7 +78,7 @@ extension UIViewController {
     }
     
     func addLogoToTitleView() {
-        let logoImageView = UIImageView(image: #imageLiteral(resourceName: "ic_gender"))
+        let logoImageView = UIImageView(image: #imageLiteral(resourceName: "ic_logo"))
         let view = UIView(frame: CGRect(x: 0, y: 0, width: logoImageView.frame.width, height: logoImageView.frame.height))
         view.addSubview(logoImageView)
         logoImageView.center = view.center

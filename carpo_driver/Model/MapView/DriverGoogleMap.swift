@@ -36,16 +36,15 @@ class DriverGoogleMap: CGMapView {
         super.initControl()
         setMinZoom(1, maxZoom: 20)
         
-        //        startMarker.addPulsatorWith(image: #imageLiteral(resourceName: "ic_pin"))
-        endMarker.addPulsatorWith(image: #imageLiteral(resourceName: "ic_gender"),
-                                  pulseColor: UIColor(hex: "FF005B"))
+        endMarker.addPinIcon(image: #imageLiteral(resourceName: "ic_markerActive").resizeImage(newWidth: 20)!)
+//        endMarker.addPulsatorWith(image: #imageLiteral(resourceName: "ic_markerActive"),
+//                                  pulseColor: UIColor(hex: "FF005B"))
         
         //       startMarker.pulsator.start()
         //        endMarker.pulsator.start()
         let camera = GMSCameraPosition.camera(withLatitude: 0,
                                               longitude: 0,
                                               zoom: Config.shareInstance.zoomLevel)
-        
         isMyLocationEnabled = false
         self.camera = camera
         self.moveCamera(location: CGLocation(lat: 10.776555, long: 106.6783891))

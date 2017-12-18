@@ -33,6 +33,7 @@ enum MyAPI {
     case getInfoForHomeScreen(userID: String)
     case getInfoForManageGroupScreen(leaderID: String)
     case getInfoForGroupMemberDetailScreen(leaderID: String)
+    case getInfoMemberByUserID(userID: String)
 }
 
 extension MyAPI: TargetType {
@@ -88,6 +89,8 @@ extension MyAPI: TargetType {
             return "get-info-screen-manager-group"
         case .getInfoForGroupMemberDetailScreen:
             return "get-info-group-member-in-month"
+        case .getInfoMemberByUserID:
+            return "get-info-member-by-user-id"
         default:
             return ""
         }
@@ -132,6 +135,8 @@ extension MyAPI: TargetType {
             return ["leader_id":leaderID]
         case .getInfoForGroupMemberDetailScreen(let leaderID):
             return ["leader_id":leaderID]
+        case .getInfoMemberByUserID(let userID):
+            return ["user_id": userID]
         default:
             return nil
         }

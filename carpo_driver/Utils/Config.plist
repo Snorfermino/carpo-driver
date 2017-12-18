@@ -9,11 +9,11 @@
 	<key>GoogleMap</key>
 	<dict>
 		<key>GoogleMapAPI-Key</key>
-		<string>AIzaSyAK_Z5Y1ATCNCRTabZb9yLpGrKsuzox04o</string>
+		<string>AIzaSyCLjl11_M9On5ZzTcgjWwSvC7FJYaRfWFg</string>
 		<key>GoolgeMap-BundleId</key>
 		<string>ngocdung.carpo-driver</string>
 		<key>GoolgeMap-Key</key>
-		<string>AIzaSyAK_Z5Y1ATCNCRTabZb9yLpGrKsuzox04o</string>
+		<string>AIzaSyCLjl11_M9On5ZzTcgjWwSvC7FJYaRfWFg</string>
 	</dict>
 	<key>UserInterface</key>
 	<dict>

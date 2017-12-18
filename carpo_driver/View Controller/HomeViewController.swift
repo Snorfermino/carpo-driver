@@ -178,10 +178,10 @@ class HomeViewController: BaseViewController {
     
     func updateScreen(_ result: GetInfoForHomeScreenResult){
        
-        formatLegendsText(field: "Tổng % đi được",
+        formatLegendsText(field: "% đi được",
                           info: String(describing: (result.data?.totalPercentMonth)!),
                           label: lbTraveledPercentages)
-        formatLegendsText(field: "Tổng % chưa đi được",
+        formatLegendsText(field: "% chưa đi được",
                           info: String(describing: 100 - (result.data?.totalPercentMonth)!),
                           label: lbUntraveledPercentages)
         formatDistanceLabelText((result.data?.totalKmToday)!,label: lbTraveledDistanceToday)

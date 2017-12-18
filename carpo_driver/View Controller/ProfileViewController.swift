@@ -135,11 +135,12 @@ extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationCo
     }
     
     func uploadAvatar(_ image: UIImage){
-        let completion = {(status: Int?, error: String?) -> Void in
-            if status == 0 {
+        let completion = {(result: ChangeAvatarResult?, error: String?) -> Void in
+            if result?.status == 0 {
                 self.alert(title: "Lỗi", message: "Cập nhập hình ảnh thất bại")
             } else {
                 self.alert(title: "Đã cập nhập", message: "")
+                Global.user?.data.photo = result?.data?.imageUrl
             }
         }
         ApiManager.changeAvatar(image, completion: completion)

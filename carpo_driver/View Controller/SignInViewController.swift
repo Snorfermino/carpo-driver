@@ -93,11 +93,10 @@ extension SignInViewController: ForgotPasswordViewDelegate {
         alert(title: "Lỗi", message: title)
     }
 }
-extension SignInViewController: SignInViewModelDelegate {
+extension SignInViewController: SignInViewModelDelegate, AlertPresenting {
     func loginFailed() {
         SVProgressHUD.dismiss()
-        print("Failed")
-        alert(title: "Đăng nhập thất bại", message: "Tài khoản hoặc mặt khẩu không tồn tại")
+        showWrongPwd(self.view)
     }
     func loginSuccess() {
         SVProgressHUD.dismiss()

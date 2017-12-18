@@ -191,7 +191,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đính kèm tệp" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKY-C5-U4q">
-                                                <rect key="frame" x="75" y="16.5" width="130" height="26"/>
+                                                <rect key="frame" x="75" y="17" width="130" height="26"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="22"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -851,7 +851,7 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="50" height="44"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zkT-69-U8e">
-                                                                    <rect key="frame" x="13.5" y="15" width="23.5" height="14"/>
+                                                                    <rect key="frame" x="13.5" y="15.5" width="23.5" height="14"/>
                                                                     <fontDescription key="fontDescription" name="MyriadPro-Bold" family="Myriad Pro" pointSize="14"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
@@ -867,7 +867,7 @@
                                                             <rect key="frame" x="50" y="0.0" width="163" height="44"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tên" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SHk-Uw-DXb">
-                                                                    <rect key="frame" x="69.5" y="15.5" width="22.5" height="14"/>
+                                                                    <rect key="frame" x="69.5" y="15" width="22.5" height="14"/>
                                                                     <fontDescription key="fontDescription" name="MyriadPro-Bold" family="Myriad Pro" pointSize="14"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
@@ -883,7 +883,7 @@
                                                             <rect key="frame" x="213" y="0.0" width="132" height="44"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DhC-fS-5CJ">
-                                                                    <rect key="frame" x="4" y="15.5" width="125" height="14"/>
+                                                                    <rect key="frame" x="4" y="15" width="125" height="14"/>
                                                                     <attributedString key="attributedText">
                                                                         <fragment content="Số km đã chạy">
                                                                             <attributes>
@@ -940,7 +940,7 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="50" height="44"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZd-jK-MRv">
-                                                                    <rect key="frame" x="21.5" y="15" width="8" height="14"/>
+                                                                    <rect key="frame" x="21.5" y="15.5" width="8" height="14"/>
                                                                     <fontDescription key="fontDescription" name="MyriadPro-Bold" family="Myriad Pro" pointSize="14"/>
                                                                     <color key="textColor" red="0.40392156862745099" green="0.40392156862745099" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <nil key="highlightedColor"/>
@@ -955,34 +955,42 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LMF-TF-FDu" customClass="AnimatableView" customModule="IBAnimatable">
                                                             <rect key="frame" x="50" y="0.0" width="163" height="44"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nguyễn Văn A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLs-A9-O6A">
-                                                                    <rect key="frame" x="38" y="15.5" width="87" height="14"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nguyễn Văn A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLs-A9-O6A">
+                                                                    <rect key="frame" x="0.0" y="1.5" width="163" height="42.5"/>
                                                                     <fontDescription key="fontDescription" name="MyriadPro-Bold" family="Myriad Pro" pointSize="14"/>
-                                                                    <color key="textColor" red="0.4039215686" green="0.4039215686" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <color key="textColor" red="0.0" green="0.69803921568627447" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sxa-FG-fFD">
+                                                                    <rect key="frame" x="0.0" y="41" width="163" height="3"/>
+                                                                    <color key="backgroundColor" red="1" green="0.57647058819999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="3" id="jb5-et-Kk6"/>
+                                                                    </constraints>
+                                                                </view>
                                                             </subviews>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="sxa-FG-fFD" secondAttribute="trailing" id="BXp-hk-8Ua"/>
                                                                 <constraint firstItem="rLs-A9-O6A" firstAttribute="centerX" secondItem="LMF-TF-FDu" secondAttribute="centerX" id="Edq-Xe-k9F"/>
+                                                                <constraint firstAttribute="bottom" secondItem="rLs-A9-O6A" secondAttribute="bottom" id="Yxs-9g-Rzk"/>
                                                                 <constraint firstItem="rLs-A9-O6A" firstAttribute="centerY" secondItem="LMF-TF-FDu" secondAttribute="centerY" id="nVm-hu-Dl8"/>
+                                                                <constraint firstItem="sxa-FG-fFD" firstAttribute="leading" secondItem="LMF-TF-FDu" secondAttribute="leading" id="ns3-Yy-Tjt"/>
+                                                                <constraint firstItem="rLs-A9-O6A" firstAttribute="leading" secondItem="LMF-TF-FDu" secondAttribute="leading" id="p9W-g0-en4"/>
+                                                                <constraint firstAttribute="trailing" secondItem="rLs-A9-O6A" secondAttribute="trailing" id="vjD-nP-1Uc"/>
+                                                                <constraint firstAttribute="bottom" secondItem="sxa-FG-fFD" secondAttribute="bottom" id="yum-Cn-pRS"/>
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                    <color key="value" red="0.4039215686" green="0.4039215686" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="string" keyPath="_borderType" value="solid"/>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                                     <real key="value" value="0.0"/>
                                                                 </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="string" keyPath="_borderSides" value="left,right"/>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qxd-C0-dbS">
                                                             <rect key="frame" x="213" y="0.0" width="132" height="44"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9.000" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsP-vt-7uP">
-                                                                    <rect key="frame" x="49" y="15.5" width="35" height="14"/>
+                                                                    <rect key="frame" x="49" y="15" width="35" height="14"/>
                                                                     <fontDescription key="fontDescription" name="MyriadPro-Bold" family="Myriad Pro" pointSize="14"/>
                                                                     <color key="textColor" red="0.4039215686" green="0.4039215686" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <nil key="highlightedColor"/>
@@ -1458,7 +1466,7 @@
                                         </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tổng % đi được trong tháng" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3b-41-9nM">
-                                        <rect key="frame" x="241" y="76" width="119" height="34"/>
+                                        <rect key="frame" x="241" y="75.5" width="119" height="34"/>
                                         <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>

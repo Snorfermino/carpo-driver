@@ -12,27 +12,6 @@
 		03379FD41FC8248F0089B29C /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03379FD31FC8248F0089B29C /* SignInViewModel.swift */; };
 		03379FD61FC920170089B29C /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03379FD51FC920160089B29C /* BaseModel.swift */; };
 		03379FD81FCBF8250089B29C /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03379FD71FCBF8250089B29C /* DataManager.swift */; };
-		0341A3D21FB952DE00EC73A1 /* SanFranciscoText-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3BD1FB952DC00EC73A1 /* SanFranciscoText-Bold.otf */; };
-		0341A3D31FB952DE00EC73A1 /* SanFranciscoDisplay-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3BE1FB952DC00EC73A1 /* SanFranciscoDisplay-Medium.otf */; };
-		0341A3D41FB952DE00EC73A1 /* SanFranciscoText-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3BF1FB952DC00EC73A1 /* SanFranciscoText-LightItalic.otf */; };
-		0341A3D51FB952DE00EC73A1 /* SanFranciscoDisplay-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3C01FB952DC00EC73A1 /* SanFranciscoDisplay-Black.otf */; };
-		0341A3D61FB952DE00EC73A1 /* SanFranciscoText-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3C11FB952DC00EC73A1 /* SanFranciscoText-Heavy.otf */; };
-		0341A3D71FB952DE00EC73A1 /* SanFranciscoDisplay-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3C21FB952DC00EC73A1 /* SanFranciscoDisplay-Semibold.otf */; };
-		0341A3D81FB952DE00EC73A1 /* SanFranciscoDisplay-Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3C31FB952DC00EC73A1 /* SanFranciscoDisplay-Ultralight.otf */; };
-		0341A3D91FB952DE00EC73A1 /* SanFranciscoText-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3C41FB952DD00EC73A1 /* SanFranciscoText-Regular.otf */; };
-		0341A3DA1FB952DE00EC73A1 /* SanFranciscoDisplay-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3C51FB952DD00EC73A1 /* SanFranciscoDisplay-Thin.otf */; };
-		0341A3DB1FB952DE00EC73A1 /* SanFranciscoDisplay-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3C61FB952DD00EC73A1 /* SanFranciscoDisplay-Bold.otf */; };
-		0341A3DC1FB952DE00EC73A1 /* SanFranciscoDisplay-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3C71FB952DD00EC73A1 /* SanFranciscoDisplay-Regular.otf */; };
-		0341A3DD1FB952DE00EC73A1 /* SanFranciscoText-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3C81FB952DD00EC73A1 /* SanFranciscoText-BoldItalic.otf */; };
-		0341A3DE1FB952DE00EC73A1 /* SanFranciscoText-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3C91FB952DD00EC73A1 /* SanFranciscoText-HeavyItalic.otf */; };
-		0341A3DF1FB952DE00EC73A1 /* SanFranciscoText-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3CA1FB952DD00EC73A1 /* SanFranciscoText-Light.otf */; };
-		0341A3E01FB952DE00EC73A1 /* SanFranciscoText-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3CB1FB952DD00EC73A1 /* SanFranciscoText-Medium.otf */; };
-		0341A3E11FB952DE00EC73A1 /* SanFranciscoText-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3CC1FB952DD00EC73A1 /* SanFranciscoText-MediumItalic.otf */; };
-		0341A3E21FB952DE00EC73A1 /* SanFranciscoText-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3CD1FB952DD00EC73A1 /* SanFranciscoText-Semibold.otf */; };
-		0341A3E31FB952DE00EC73A1 /* SanFranciscoDisplay-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3CE1FB952DD00EC73A1 /* SanFranciscoDisplay-Heavy.otf */; };
-		0341A3E41FB952DE00EC73A1 /* SanFranciscoDisplay-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3CF1FB952DE00EC73A1 /* SanFranciscoDisplay-Light.otf */; };
-		0341A3E51FB952DE00EC73A1 /* SanFranciscoText-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3D01FB952DE00EC73A1 /* SanFranciscoText-RegularItalic.otf */; };
-		0341A3E61FB952DE00EC73A1 /* SanFranciscoText-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3D11FB952DE00EC73A1 /* SanFranciscoText-SemiboldItalic.otf */; };
 		0341A3E91FB9555E00EC73A1 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341A3E81FB9555E00EC73A1 /* SignInViewController.swift */; };
 		0341A3EE1FB956A700EC73A1 /* ForgotPasswordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0341A3ED1FB956A700EC73A1 /* ForgotPasswordView.xib */; };
 		0341A3F01FB959A500EC73A1 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341A3EF1FB959A500EC73A1 /* ForgotPasswordView.swift */; };
@@ -85,11 +64,19 @@
 		0349F3EB1FC66F1200F2BDBC /* Roboto Mono Light for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0349F3E11FC66F1100F2BDBC /* Roboto Mono Light for Powerline.ttf */; };
 		0349F3EC1FC66F1200F2BDBC /* Roboto Mono Medium Italic for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0349F3E21FC66F1100F2BDBC /* Roboto Mono Medium Italic for Powerline.ttf */; };
 		0349F3ED1FC66F1200F2BDBC /* Roboto Mono Thin for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0349F3E31FC66F1200F2BDBC /* Roboto Mono Thin for Powerline.ttf */; };
+		0362CA181FE22C8400D846BD /* ChangeAvatarResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362CA171FE22C8400D846BD /* ChangeAvatarResult.swift */; };
+		0362CA1A1FE235D800D846BD /* GoogleMapAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362CA191FE235D800D846BD /* GoogleMapAPIManager.swift */; };
+		0362CA1F1FE261AE00D846BD /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0362CA1B1FE261A700D846BD /* Roboto-Bold.ttf */; };
+		0362CA201FE261AE00D846BD /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0362CA1C1FE261A900D846BD /* Roboto-Regular.ttf */; };
+		0362CA211FE261AE00D846BD /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0362CA1D1FE261AA00D846BD /* Roboto-Light.ttf */; };
+		0362CA221FE261AE00D846BD /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0362CA1E1FE261AC00D846BD /* Roboto-Medium.ttf */; };
 		038AA5ED1FD1097100B17205 /* GroupResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038AA5EC1FD1097100B17205 /* GroupResult.swift */; };
 		038AA5EF1FD5023D00B17205 /* OTPResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038AA5EE1FD5023D00B17205 /* OTPResult.swift */; };
 		038AA5F21FD50BF200B17205 /* ChangePassword.xib in Resources */ = {isa = PBXBuildFile; fileRef = 038AA5F01FD50BF000B17205 /* ChangePassword.xib */; };
 		038AA5F31FD50BF200B17205 /* ChangePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038AA5F11FD50BF200B17205 /* ChangePassword.swift */; };
 		03AB98781FE0E0C400994E6C /* GetInfoForGroupMemberDetailScreenResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AB98771FE0E0C400994E6C /* GetInfoForGroupMemberDetailScreenResult.swift */; };
+		03BB3F681FE4CBAF004EEE6A /* WrongPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BB3F671FE4CBAF004EEE6A /* WrongPassword.swift */; };
+		03BB3F6A1FE4CBC7004EEE6A /* WrongPassword.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03BB3F691FE4CBC7004EEE6A /* WrongPassword.xib */; };
 		03E09ACC1FB938C100DC65AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E09ACB1FB938C100DC65AA /* AppDelegate.swift */; };
 		03E09AD11FB938C100DC65AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03E09ACF1FB938C100DC65AA /* Main.storyboard */; };
 		03E09AD31FB938C100DC65AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03E09AD21FB938C100DC65AA /* Assets.xcassets */; };
@@ -130,27 +117,6 @@
 		03379FD31FC8248F0089B29C /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		03379FD51FC920160089B29C /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		03379FD71FCBF8250089B29C /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		0341A3BD1FB952DC00EC73A1 /* SanFranciscoText-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-Bold.otf"; sourceTree = "<group>"; };
-		0341A3BE1FB952DC00EC73A1 /* SanFranciscoDisplay-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Medium.otf"; sourceTree = "<group>"; };
-		0341A3BF1FB952DC00EC73A1 /* SanFranciscoText-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-LightItalic.otf"; sourceTree = "<group>"; };
-		0341A3C01FB952DC00EC73A1 /* SanFranciscoDisplay-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Black.otf"; sourceTree = "<group>"; };
-		0341A3C11FB952DC00EC73A1 /* SanFranciscoText-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-Heavy.otf"; sourceTree = "<group>"; };
-		0341A3C21FB952DC00EC73A1 /* SanFranciscoDisplay-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Semibold.otf"; sourceTree = "<group>"; };
-		0341A3C31FB952DC00EC73A1 /* SanFranciscoDisplay-Ultralight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Ultralight.otf"; sourceTree = "<group>"; };
-		0341A3C41FB952DD00EC73A1 /* SanFranciscoText-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-Regular.otf"; sourceTree = "<group>"; };
-		0341A3C51FB952DD00EC73A1 /* SanFranciscoDisplay-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Thin.otf"; sourceTree = "<group>"; };
-		0341A3C61FB952DD00EC73A1 /* SanFranciscoDisplay-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Bold.otf"; sourceTree = "<group>"; };
-		0341A3C71FB952DD00EC73A1 /* SanFranciscoDisplay-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Regular.otf"; sourceTree = "<group>"; };
-		0341A3C81FB952DD00EC73A1 /* SanFranciscoText-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-BoldItalic.otf"; sourceTree = "<group>"; };
-		0341A3C91FB952DD00EC73A1 /* SanFranciscoText-HeavyItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-HeavyItalic.otf"; sourceTree = "<group>"; };
-		0341A3CA1FB952DD00EC73A1 /* SanFranciscoText-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-Light.otf"; sourceTree = "<group>"; };
-		0341A3CB1FB952DD00EC73A1 /* SanFranciscoText-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-Medium.otf"; sourceTree = "<group>"; };
-		0341A3CC1FB952DD00EC73A1 /* SanFranciscoText-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-MediumItalic.otf"; sourceTree = "<group>"; };
-		0341A3CD1FB952DD00EC73A1 /* SanFranciscoText-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-Semibold.otf"; sourceTree = "<group>"; };
-		0341A3CE1FB952DD00EC73A1 /* SanFranciscoDisplay-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Heavy.otf"; sourceTree = "<group>"; };
-		0341A3CF1FB952DE00EC73A1 /* SanFranciscoDisplay-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Light.otf"; sourceTree = "<group>"; };
-		0341A3D01FB952DE00EC73A1 /* SanFranciscoText-RegularItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-RegularItalic.otf"; sourceTree = "<group>"; };
-		0341A3D11FB952DE00EC73A1 /* SanFranciscoText-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-SemiboldItalic.otf"; sourceTree = "<group>"; };
 		0341A3E81FB9555E00EC73A1 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		0341A3ED1FB956A700EC73A1 /* ForgotPasswordView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordView.xib; sourceTree = "<group>"; };
 		0341A3EF1FB959A500EC73A1 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
@@ -203,11 +169,19 @@
 		0349F3E11FC66F1100F2BDBC /* Roboto Mono Light for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto Mono Light for Powerline.ttf"; sourceTree = "<group>"; };
 		0349F3E21FC66F1100F2BDBC /* Roboto Mono Medium Italic for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto Mono Medium Italic for Powerline.ttf"; sourceTree = "<group>"; };
 		0349F3E31FC66F1200F2BDBC /* Roboto Mono Thin for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto Mono Thin for Powerline.ttf"; sourceTree = "<group>"; };
+		0362CA171FE22C8400D846BD /* ChangeAvatarResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeAvatarResult.swift; sourceTree = "<group>"; };
+		0362CA191FE235D800D846BD /* GoogleMapAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapAPIManager.swift; sourceTree = "<group>"; };
+		0362CA1B1FE261A700D846BD /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		0362CA1C1FE261A900D846BD /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		0362CA1D1FE261AA00D846BD /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		0362CA1E1FE261AC00D846BD /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		038AA5EC1FD1097100B17205 /* GroupResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupResult.swift; sourceTree = "<group>"; };
 		038AA5EE1FD5023D00B17205 /* OTPResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPResult.swift; sourceTree = "<group>"; };
 		038AA5F01FD50BF000B17205 /* ChangePassword.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangePassword.xib; sourceTree = "<group>"; };
 		038AA5F11FD50BF200B17205 /* ChangePassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePassword.swift; sourceTree = "<group>"; };
 		03AB98771FE0E0C400994E6C /* GetInfoForGroupMemberDetailScreenResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetInfoForGroupMemberDetailScreenResult.swift; sourceTree = "<group>"; };
+		03BB3F671FE4CBAF004EEE6A /* WrongPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrongPassword.swift; sourceTree = "<group>"; };
+		03BB3F691FE4CBC7004EEE6A /* WrongPassword.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WrongPassword.xib; sourceTree = "<group>"; };
 		03E09AC81FB938C100DC65AA /* carpo_driver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = carpo_driver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03E09ACB1FB938C100DC65AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03E09AD01FB938C100DC65AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -289,6 +263,10 @@
 		0341A3BC1FB952A700EC73A1 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				0362CA1B1FE261A700D846BD /* Roboto-Bold.ttf */,
+				0362CA1D1FE261AA00D846BD /* Roboto-Light.ttf */,
+				0362CA1E1FE261AC00D846BD /* Roboto-Medium.ttf */,
+				0362CA1C1FE261A900D846BD /* Roboto-Regular.ttf */,
 				03E17C541FDB842300F9A8A5 /* Myriad Pro Bold.ttf */,
 				03E17C551FDB842400F9A8A5 /* Myriad Pro Regular.ttf */,
 				0349F3E01FC66F1100F2BDBC /* Roboto Mono Bold for Powerline.ttf */,
@@ -301,27 +279,6 @@
 				0349F3E21FC66F1100F2BDBC /* Roboto Mono Medium Italic for Powerline.ttf */,
 				0349F3E31FC66F1200F2BDBC /* Roboto Mono Thin for Powerline.ttf */,
 				0349F3DF1FC66F1100F2BDBC /* Roboto Mono Thin Italic for Powerline.ttf */,
-				0341A3C01FB952DC00EC73A1 /* SanFranciscoDisplay-Black.otf */,
-				0341A3C61FB952DD00EC73A1 /* SanFranciscoDisplay-Bold.otf */,
-				0341A3CE1FB952DD00EC73A1 /* SanFranciscoDisplay-Heavy.otf */,
-				0341A3CF1FB952DE00EC73A1 /* SanFranciscoDisplay-Light.otf */,
-				0341A3BE1FB952DC00EC73A1 /* SanFranciscoDisplay-Medium.otf */,
-				0341A3C71FB952DD00EC73A1 /* SanFranciscoDisplay-Regular.otf */,
-				0341A3C21FB952DC00EC73A1 /* SanFranciscoDisplay-Semibold.otf */,
-				0341A3C51FB952DD00EC73A1 /* SanFranciscoDisplay-Thin.otf */,
-				0341A3C31FB952DC00EC73A1 /* SanFranciscoDisplay-Ultralight.otf */,
-				0341A3BD1FB952DC00EC73A1 /* SanFranciscoText-Bold.otf */,
-				0341A3C81FB952DD00EC73A1 /* SanFranciscoText-BoldItalic.otf */,
-				0341A3C11FB952DC00EC73A1 /* SanFranciscoText-Heavy.otf */,
-				0341A3C91FB952DD00EC73A1 /* SanFranciscoText-HeavyItalic.otf */,
-				0341A3CA1FB952DD00EC73A1 /* SanFranciscoText-Light.otf */,
-				0341A3BF1FB952DC00EC73A1 /* SanFranciscoText-LightItalic.otf */,
-				0341A3CB1FB952DD00EC73A1 /* SanFranciscoText-Medium.otf */,
-				0341A3CC1FB952DD00EC73A1 /* SanFranciscoText-MediumItalic.otf */,
-				0341A3C41FB952DD00EC73A1 /* SanFranciscoText-Regular.otf */,
-				0341A3D01FB952DE00EC73A1 /* SanFranciscoText-RegularItalic.otf */,
-				0341A3CD1FB952DD00EC73A1 /* SanFranciscoText-Semibold.otf */,
-				0341A3D11FB952DE00EC73A1 /* SanFranciscoText-SemiboldItalic.otf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -354,6 +311,8 @@
 				0341A3FD1FBA95D100EC73A1 /* ChartModePicker.swift */,
 				0341A4061FBAE83700EC73A1 /* MenuCell.swift */,
 				0341A4071FBAE83700EC73A1 /* MenuCell.xib */,
+				03BB3F671FE4CBAF004EEE6A /* WrongPassword.swift */,
+				03BB3F691FE4CBC7004EEE6A /* WrongPassword.xib */,
 			);
 			path = "XIB	";
 			sourceTree = "<group>";
@@ -383,6 +342,7 @@
 				03EFD7F01FDE3357000B7D5B /* PieChartView.swift */,
 				0348B9991FE0C14B00DBCF4A /* GetInfoForHomeScreenResult.swift */,
 				03AB98771FE0E0C400994E6C /* GetInfoForGroupMemberDetailScreenResult.swift */,
+				0362CA171FE22C8400D846BD /* ChangeAvatarResult.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -416,6 +376,7 @@
 			isa = PBXGroup;
 			children = (
 				0341A4431FBBF38100EC73A1 /* GoogleMapAPI.swift */,
+				0362CA191FE235D800D846BD /* GoogleMapAPIManager.swift */,
 			);
 			path = GoogleMap;
 			sourceTree = "<group>";
@@ -651,43 +612,27 @@
 			files = (
 				0341A4401FBBF31C00EC73A1 /* Config.plist in Resources */,
 				0349F3E71FC66F1200F2BDBC /* Roboto Mono for Powerline.ttf in Resources */,
-				0341A3D91FB952DE00EC73A1 /* SanFranciscoText-Regular.otf in Resources */,
 				0341A3EE1FB956A700EC73A1 /* ForgotPasswordView.xib in Resources */,
 				0349F3E81FC66F1200F2BDBC /* Roboto Mono Italic for Powerline.ttf in Resources */,
+				0362CA1F1FE261AE00D846BD /* Roboto-Bold.ttf in Resources */,
+				0362CA221FE261AE00D846BD /* Roboto-Medium.ttf in Resources */,
 				0341A4091FBAE83700EC73A1 /* MenuCell.xib in Resources */,
-				0341A3E31FB952DE00EC73A1 /* SanFranciscoDisplay-Heavy.otf in Resources */,
-				0341A3DF1FB952DE00EC73A1 /* SanFranciscoText-Light.otf in Resources */,
-				0341A3E11FB952DE00EC73A1 /* SanFranciscoText-MediumItalic.otf in Resources */,
 				0349F3E41FC66F1200F2BDBC /* Roboto Mono Medium for Powerline.ttf in Resources */,
+				03BB3F6A1FE4CBC7004EEE6A /* WrongPassword.xib in Resources */,
 				0349F3E91FC66F1200F2BDBC /* Roboto Mono Thin Italic for Powerline.ttf in Resources */,
-				0341A3DB1FB952DE00EC73A1 /* SanFranciscoDisplay-Bold.otf in Resources */,
 				0349F3ED1FC66F1200F2BDBC /* Roboto Mono Thin for Powerline.ttf in Resources */,
 				03E17C561FDB842700F9A8A5 /* Myriad Pro Bold.ttf in Resources */,
-				0341A3D81FB952DE00EC73A1 /* SanFranciscoDisplay-Ultralight.otf in Resources */,
 				0341A3F61FB9981600EC73A1 /* ProfileCell.xib in Resources */,
 				03E09AD61FB938C100DC65AA /* LaunchScreen.storyboard in Resources */,
-				0341A3DA1FB952DE00EC73A1 /* SanFranciscoDisplay-Thin.otf in Resources */,
 				0349F3EC1FC66F1200F2BDBC /* Roboto Mono Medium Italic for Powerline.ttf in Resources */,
-				0341A3E51FB952DE00EC73A1 /* SanFranciscoText-RegularItalic.otf in Resources */,
 				0349F3EA1FC66F1200F2BDBC /* Roboto Mono Bold for Powerline.ttf in Resources */,
+				0362CA211FE261AE00D846BD /* Roboto-Light.ttf in Resources */,
 				03E17C571FDB842700F9A8A5 /* Myriad Pro Regular.ttf in Resources */,
-				0341A3E21FB952DE00EC73A1 /* SanFranciscoText-Semibold.otf in Resources */,
-				0341A3E41FB952DE00EC73A1 /* SanFranciscoDisplay-Light.otf in Resources */,
 				0341A3FC1FBA95B800EC73A1 /* ChartModePicker.xib in Resources */,
-				0341A3D21FB952DE00EC73A1 /* SanFranciscoText-Bold.otf in Resources */,
-				0341A3D61FB952DE00EC73A1 /* SanFranciscoText-Heavy.otf in Resources */,
-				0341A3DD1FB952DE00EC73A1 /* SanFranciscoText-BoldItalic.otf in Resources */,
 				03E09AD31FB938C100DC65AA /* Assets.xcassets in Resources */,
-				0341A3D31FB952DE00EC73A1 /* SanFranciscoDisplay-Medium.otf in Resources */,
 				038AA5F21FD50BF200B17205 /* ChangePassword.xib in Resources */,
+				0362CA201FE261AE00D846BD /* Roboto-Regular.ttf in Resources */,
 				0349F3E51FC66F1200F2BDBC /* Roboto Mono Bold Italic for Powerline.ttf in Resources */,
-				0341A3DC1FB952DE00EC73A1 /* SanFranciscoDisplay-Regular.otf in Resources */,
-				0341A3D51FB952DE00EC73A1 /* SanFranciscoDisplay-Black.otf in Resources */,
-				0341A3E01FB952DE00EC73A1 /* SanFranciscoText-Medium.otf in Resources */,
-				0341A3E61FB952DE00EC73A1 /* SanFranciscoText-SemiboldItalic.otf in Resources */,
-				0341A3DE1FB952DE00EC73A1 /* SanFranciscoText-HeavyItalic.otf in Resources */,
-				0341A3D71FB952DE00EC73A1 /* SanFranciscoDisplay-Semibold.otf in Resources */,
-				0341A3D41FB952DE00EC73A1 /* SanFranciscoText-LightItalic.otf in Resources */,
 				0349F3EB1FC66F1200F2BDBC /* Roboto Mono Light for Powerline.ttf in Resources */,
 				0349F3E61FC66F1200F2BDBC /* Roboto Mono Light Italic for Powerline.ttf in Resources */,
 				03E09AD11FB938C100DC65AA /* Main.storyboard in Resources */,
@@ -935,6 +880,7 @@
 				0341A4011FBAA99A00EC73A1 /* HistoryViewController.swift in Sources */,
 				0341A40D1FBAF9B600EC73A1 /* ExSlideMenuController.swift in Sources */,
 				0341A44F1FBBF85400EC73A1 /* ErrorResponse.swift in Sources */,
+				0362CA181FE22C8400D846BD /* ChangeAvatarResult.swift in Sources */,
 				0341A4481FBBF6BE00EC73A1 /* APIManager.swift in Sources */,
 				03AB98781FE0E0C400994E6C /* GetInfoForGroupMemberDetailScreenResult.swift in Sources */,
 				0341A4361FBBF16000EC73A1 /* GetDirectionResult.swift in Sources */,
@@ -943,6 +889,7 @@
 				0341A3E91FB9555E00EC73A1 /* SignInViewController.swift in Sources */,
 				0341A44A1FBBF74600EC73A1 /* MyAPI.swift in Sources */,
 				03128F181FCFEF0D0062317A /* Location.swift in Sources */,
+				0362CA1A1FE235D800D846BD /* GoogleMapAPIManager.swift in Sources */,
 				0341A4141FBAFDD000EC73A1 /* Global.swift in Sources */,
 				0341A4111FBAFD7A00EC73A1 /* UIViewController.swift in Sources */,
 				03E09B001FB93C7B00DC65AA /* StringExtension.swift in Sources */,
@@ -954,6 +901,7 @@
 				0341A3F51FB9981600EC73A1 /* ProfileCell.swift in Sources */,
 				03379FD61FC920170089B29C /* BaseModel.swift in Sources */,
 				0341A4341FBBEF1400EC73A1 /* DriverGoogleMap.swift in Sources */,
+				03BB3F681FE4CBAF004EEE6A /* WrongPassword.swift in Sources */,
 				03379FD81FCBF8250089B29C /* DataManager.swift in Sources */,
 				0341A3F21FB9918F00EC73A1 /* ProfileViewController.swift in Sources */,
 				038AA5ED1FD1097100B17205 /* GroupResult.swift in Sources */,

@@ -275,15 +275,16 @@ class ApiManager {
         //        }
     }
     
-    static func changeAvatar(_ avatar: UIImage, completion: @escaping ((Int?, String?) -> Void)) {
+    static func changeAvatar(_ avatar: UIImage, completion: @escaping ((ChangeAvatarResult?, String?) -> Void)) {
             provider.request(.changeAvatar(avatar: avatar)) { (result) in
                 switch result {
                 case .success(let response):
                     print(response)
                     if(response.statusCode == 200) {
                         do {
-                            let result = try response.mapObject(BaseModel.self)
-                            completion(result.status, nil)
+                            
+                            let result = try response.mapObject(ChangeAvatarResult.self)
+                            completion(result, nil)
                         } catch {
                             completion(nil, nil)
                         }

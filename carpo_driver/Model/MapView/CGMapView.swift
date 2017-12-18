@@ -231,6 +231,35 @@ class CGMapView: GMSMapView {
         currentMarkers = newMarkers
     }
     
+    public func updateDriversPath(infos: [CGLocation]) {
+
+        let completion = {(result: GetDirectionResult?, error: String?) -> Void in
+            guard let result = result else { return }
+            guard let startLocation = result.routes?.first?.legs?.first?.startLocation else { return }
+            guard let endLocation = result.routes?.first?.legs?.first?.endLocation else { return }
+            let cgStart = startLocation.CLLocation().cgLocation
+            let cgEnd = endLocation.CLLocation().cgLocation
+            
+            //update start, end marker location
+            self.updateStartMarkerLocation(location: cgStart)
+            self.updateEndMarkerLocation(location: cgEnd)
+            
+            guard let encodePath = result.routes?.first?.overviewPolyline?.points else {
+                return
+            }
+            guard let gmsPath = GMSPath(fromEncodedPath: encodePath) else {
+                return
+            }
+            let northeast   = result.routes!.first!.bounds!.northeast!.CLLocation()
+            let southwest   = result.routes!.first!.bounds!.southwest!.CLLocation()
+            self.drawRoute(gmsPath: gmsPath,
+                           northeast: northeast,
+                           southwest: southwest)
+            self.scaleToFit(gmsPath: gmsPath)
+        }
+        GoogleMapAPIManager.getWaypoints(locations: infos, completion: completion)
+    }
+    
     public func updateDriversLocation(infos: [(id: String, location: CGLocation)]) {
         
         var newDrivers = [CGDriverMarker]()
@@ -288,13 +317,37 @@ class CGMapView: GMSMapView {
     }
     
     func requestDrawRoute(from: CGLocation, 
-                          to: CGLocation, 
-                          vc: BaseViewController,
-                          zoom:Float = 14,
+                          to: CGLocation,
                           completion:  ( (_ travelTime: String?) -> ())? = nil) {
+        
+        let completion = {(result: GetDirectionResult?, error: String?) -> Void in
+            guard let result = result else { return }
+            guard let startLocation = result.routes?.first?.legs?.first?.startLocation else { return }
+            guard let endLocation = result.routes?.first?.legs?.first?.endLocation else { return }
+            let cgStart = startLocation.CLLocation().cgLocation
+            let cgEnd = endLocation.CLLocation().cgLocation
+            
+            //update start, end marker location
+            self.updateStartMarkerLocation(location: cgStart)
+            self.updateEndMarkerLocation(location: cgEnd)
+
+            guard let encodePath = result.routes?.first?.overviewPolyline?.points else {
+                return
+            }
+            guard let gmsPath = GMSPath(fromEncodedPath: encodePath) else {
+                return
+            }
+            let northeast   = result.routes!.first!.bounds!.northeast!.CLLocation()
+            let southwest   = result.routes!.first!.bounds!.southwest!.CLLocation()
+            self.drawRoute(gmsPath: gmsPath,
+                           northeast: northeast,
+                           southwest: southwest)
+            self.scaleToFit(gmsPath: gmsPath)
+        }
+        GoogleMapAPIManager.getRoute(from: from, to: to, completion: completion)
 //        let api = GoogleMapApi()
 //        _ = api.getRoute(originAddress: from, destinationAddress: to, completeBlock: { (task) -> APITask in
-//            
+//
 //            do {
 //                guard let objectData = task.result as? GetDirectionResult else {
 //                    throw APIError.conflictTypeResponse
@@ -305,11 +358,11 @@ class CGMapView: GMSMapView {
 //                guard let endLocation = objectData.routes?.first?.legs?.last?.endLocation else {
 //                    throw APIError.dontHaveResponse
 //                }
-//                
-//                
+//
+//
 //                let cgStart = startLocation.CLLocation().cgLocation
 //                let cgEnd = endLocation.CLLocation().cgLocation
-//                
+//
 //                //update start, end marker location
 //                self.updateStartMarkerLocation(location: cgStart)
 //                self.updateEndMarkerLocation(location: cgEnd)
@@ -326,7 +379,7 @@ class CGMapView: GMSMapView {
 //                let southwest   = objectData.routes!.first!.bounds!.southwest!.CLLocation()
 //                self.drawRoute(gmsPath: gmsPath,
 //                               northeast: northeast,
-//                               southwest: southwest)  
+//                               southwest: southwest)
 //                self.scaleToFit(gmsPath: gmsPath)
 //                completion?(objectData.routes?.last?.legs?.last?.duration?.text)
 //                Session.shareInstance.travelDuration = objectData.routes?.last?.legs?.last?.duration?.text
@@ -336,7 +389,7 @@ class CGMapView: GMSMapView {
 //            } catch APIError.conflictTypeResponse {
 //                print("error ConflictTypeResponse")
 //                vc.alert(title: "error", message: "ConflictTypeResponse")
-//                
+//
 //            } catch {
 //                print("error Undefined")
 //                vc.alert(title: "error", message: "Undefined")
@@ -351,8 +404,8 @@ class CGMapView: GMSMapView {
                           southwest: CLLocationCoordinate2D? = nil) {
         if directionLine != nil { directionLine.map = nil } //remove it from map
         directionLine = GMSPolyline(path: gmsPath)
-        directionLine!.strokeWidth = 1
-        directionLine!.strokeColor = UIColor(hex: "A28938")
+        directionLine!.strokeWidth = 4
+        directionLine!.strokeColor = UIColor(hex: "ff9300")
         directionLine!.map = self
     }
     

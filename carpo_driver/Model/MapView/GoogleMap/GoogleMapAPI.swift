@@ -28,10 +28,9 @@ import Moya
 //import Alamofire
 
 enum GoogleMapAPI {
-
-    case GetDirection
-
     
+    case GetDirection(from: CGLocation, to: CGLocation)
+    case GetWaypoint(locations: [CGLocation])
 }
 
 extension GoogleMapAPI: TargetType {
@@ -60,6 +59,8 @@ extension GoogleMapAPI: TargetType {
         switch self {
         case .GetDirection:
             return "maps/api/directions/json"
+        case .GetWaypoint:
+            return "maps/api/directions/json"
         default:
             return ""
         }
@@ -72,20 +73,48 @@ extension GoogleMapAPI: TargetType {
         }
     }
     
+    public var parameters: [String: Any]? {
+        switch self {
+        case .GetDirection(let from, let to):
+            var param = [String: String]()
+            
+            
+            param["key"]            = Config.shareInstance.googleMapAPIKey
+            param["origin"]         = "\(from.latitude),\(from.longitude)"
+            param["destination"]    = "\(to.latitude),\(to.longitude)"
+            return param
+        case .GetWaypoint(let locations):
+            var param = [String: String]()
+            
+            
+            param["key"]            = Config.shareInstance.googleMapAPIKey
+    
+            param["origin"]         = "\(String(describing: (locations.first?.latitude)!)),\(String(describing: (locations.first?.longitude)!))"
+            param["destination"]    = "\(String(describing: (locations.last?.latitude)!)),\(String(describing: (locations.last?.longitude)!))"
+            let templocations = locations.filter({ $0.latitude != locations.first!.latitude || $0.latitude != locations.last!.latitude})
+            var waypoints = "optimize:true"
+            for location in templocations {
+                waypoints.append("|\(location.latitude),\(location.longitude)")
+            }
+            param["waypoints"]    = waypoints
+            return param
+
+        }
+    }
     var sampleData: Data {
         return Data()
     }
     
     var task: Task {
         let encoding = URLEncoding.default
-        var param = [String: String]()
-        
-        param["key"]            = Config.shareInstance.googleMapAPIKey
-        param["language"]       = "us"
-        param["query"]          = "some where over the rainbow"
+        //        var param = [String: String]()
+        //
+        //        param["key"]            = Config.shareInstance.googleMapAPIKey
+        //        param["language"]       = "us"
+        //        param["query"]          = "some where over the rainbow"
         switch self {
         default:
-            return Task.requestParameters(parameters: param, encoding: encoding)
+            return Task.requestParameters(parameters: self.parameters!, encoding: encoding)
         }
     }
 }
@@ -93,7 +122,7 @@ extension GoogleMapAPI: TargetType {
 
 
 
-//
+
 //
 //
 //class GoogleMapAPI: BaseAPI {
