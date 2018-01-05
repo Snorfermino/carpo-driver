@@ -39,16 +39,17 @@ extension GetInfoForGroupMemberDetailScreenResult {
         
         // MARK: Declaration for string constants to be used to decode and also serialize.
         private struct SerializationKeys {
-            static let id = "_id"
+            static let id = "user_id"
             static let name = "name"
             static let totalKmMonth = "total_km_month"
+            static let phone = "phone"
         }
         
         // MARK: Properties
         public var id: String?
         public var name: String?
         public var totalKmMonth: Float?
-        
+        public var phone: String?
         // MARK: ObjectMapper Initializers
         /// Map a JSON object to this class using ObjectMapper.
         ///
@@ -64,6 +65,7 @@ extension GetInfoForGroupMemberDetailScreenResult {
             id <- map[SerializationKeys.id]
             name <- map[SerializationKeys.name]
             totalKmMonth <- map[SerializationKeys.totalKmMonth]
+            phone <- map[SerializationKeys.phone]
         }
     }
 }

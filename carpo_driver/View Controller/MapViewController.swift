@@ -12,6 +12,7 @@ class MapViewController: BaseViewController {
     @IBOutlet weak var lbTravelDistance: UILabel!
     @IBOutlet weak var lbDate: UILabel!
     @IBOutlet weak var viewGoogleMap: DriverGoogleMap!
+    var userID = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -83,7 +84,13 @@ extension MapViewController: AlertPresenting, ChartModePickerDelegate {
                 self.alert(title: "Không tìm thấy kết quả", message: "")
             }
         }
-        ApiManager.getHistory(date.format(), completion: completion)
+        if userID != "" {
+            ApiManager.getHistory(userID,date.format(), completion: completion)
+        } else {
+            guard let id = Global.user?.data.id else { return }
+             ApiManager.getHistory(id,date.format(), completion: completion)
+        }
+
     }
     func printMyFonts() {
         print("--------- Available Font names ----------")

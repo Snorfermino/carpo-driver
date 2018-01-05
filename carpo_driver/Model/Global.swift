@@ -18,14 +18,11 @@ class Global {
             userInfo = newValue
             DataManager.saveUserInfo(user: newValue)
             NotificationCenter.default.post(name: Notification.Name("UserLoggedInNotification"), object: nil)
-
         }
         get {
-            
             return DataManager.getUserInfo()
         }
     }
-    
     static var currentScreenTitle:String = "Lịch sử"
 }
 

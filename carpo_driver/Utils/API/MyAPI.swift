@@ -16,17 +16,17 @@
 import Moya
 
 enum MyAPI {
-    
     case login(phone: String,password: String)
+    case refreshToken(token: String)
     case register(phone: String,password: String)
     case changePassword(oldPwd: String, newPwd: String)
     case changeAvatar(avatar: UIImage)
-    case trackLocation(param: User)
+    case trackLocation(param: User, location: CGLocation)
     case support(message: String, image: UIImage)
     case getInfo(id:String)
     case getOTP(phone:String)
     case group(id:String)
-    case getHistory(date:String)
+    case getHistory(id: String, date:String)
     case getCarInfoBy(userID: String)
     
     //Info for Screen UIs
@@ -65,6 +65,8 @@ extension MyAPI: TargetType {
         switch self {
         case .login:
             return "login"
+        case .refreshToken:
+            return "refresh-Token"
         case .group:
             return "get-group-member-by-leader-id"
         case .getInfo:
@@ -98,7 +100,7 @@ extension MyAPI: TargetType {
     
     var method: Moya.Method {
         switch self {
-        case .login,.changePassword, .trackLocation, .support, .changeAvatar:
+        case .login,.changePassword, .trackLocation, .support, .changeAvatar,.refreshToken:
             return .post
         default:
             return .get
@@ -112,13 +114,15 @@ extension MyAPI: TargetType {
     public var parameters: [String: Any]? {
         switch self {
         case .login(let phone, let pwd):
-            return ["username":phone,"password":pwd]
+            return ["username":phone,"password":pwd,"app_type":0]
+        case .refreshToken(let token):
+            return ["AuthorizationRefresh":token]
         case .group(let leaderID):
             return ["leader_id":leaderID]
         case .getInfo(let userID):
             return ["user_id":userID]
-        case .getHistory(let date):
-            return ["date":date,"user_id":Global.user?.data.id! ?? ""]
+        case .getHistory(let id, let date):
+            return ["date":date,"user_id":id]
         case .getCarInfoBy(let userID):
             return ["user_id": userID]
         case .getOTP(let phone):
@@ -127,8 +131,12 @@ extension MyAPI: TargetType {
             return ["user_id":Global.user?.data.id! ?? "",
                     "old_password":oldPwd,
                     "new_password":newPwd]
-        case .trackLocation(let param):
-            return param.toJSON()
+        case .trackLocation(let param, let location):
+            return ["car_id":param.data.carId!,
+                    "campaign_id":param.data.campaignId!,
+                    "location_lat":location.latitude,
+                    "location_long":location.longitude,
+                    "type":0]
         case .getInfoForHomeScreen(let userID):
             return ["user_id": userID]
         case .getInfoForManageGroupScreen(let leaderID):

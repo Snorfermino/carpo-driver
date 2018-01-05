@@ -232,32 +232,42 @@ class CGMapView: GMSMapView {
     }
     
     public func updateDriversPath(infos: [CGLocation]) {
-
-        let completion = {(result: GetDirectionResult?, error: String?) -> Void in
-            guard let result = result else { return }
-            guard let startLocation = result.routes?.first?.legs?.first?.startLocation else { return }
-            guard let endLocation = result.routes?.first?.legs?.first?.endLocation else { return }
-            let cgStart = startLocation.CLLocation().cgLocation
-            let cgEnd = endLocation.CLLocation().cgLocation
-            
-            //update start, end marker location
-            self.updateStartMarkerLocation(location: cgStart)
-            self.updateEndMarkerLocation(location: cgEnd)
-            
-            guard let encodePath = result.routes?.first?.overviewPolyline?.points else {
-                return
-            }
-            guard let gmsPath = GMSPath(fromEncodedPath: encodePath) else {
-                return
-            }
-            let northeast   = result.routes!.first!.bounds!.northeast!.CLLocation()
-            let southwest   = result.routes!.first!.bounds!.southwest!.CLLocation()
-            self.drawRoute(gmsPath: gmsPath,
-                           northeast: northeast,
-                           southwest: southwest)
-            self.scaleToFit(gmsPath: gmsPath)
+        
+        let path = GMSMutablePath()
+        for location in infos {
+            path.addLatitude(location.clLocation.latitude, longitude: location.clLocation.longitude)
         }
-        GoogleMapAPIManager.getWaypoints(locations: infos, completion: completion)
+        
+        let polyline = GMSPolyline(path: path)
+        polyline.strokeColor = UIColor(hex: "03B2F2")
+        polyline.strokeWidth = 5.0
+        polyline.map = self
+        self.scaleToFit(gmsPath: path)
+//        let completion = {(result: GetDirectionResult?, error: String?) -> Void in
+//            guard let result = result else { return }
+//            guard let startLocation = result.routes?.first?.legs?.first?.startLocation else { return }
+//            guard let endLocation = result.routes?.first?.legs?.first?.endLocation else { return }
+//            let cgStart = startLocation.CLLocation().cgLocation
+//            let cgEnd = endLocation.CLLocation().cgLocation
+//
+//            //update start, end marker location
+//            self.updateStartMarkerLocation(location: cgStart)
+//            self.updateEndMarkerLocation(location: cgEnd)
+//
+//            guard let encodePath = result.routes?.first?.overviewPolyline?.points else {
+//                return
+//            }
+//            guard let gmsPath = GMSPath(fromEncodedPath: encodePath) else {
+//                return
+//            }
+//            let northeast   = result.routes!.first!.bounds!.northeast!.CLLocation()
+//            let southwest   = result.routes!.first!.bounds!.southwest!.CLLocation()
+//            self.drawRoute(gmsPath: gmsPath,
+//                           northeast: northeast,
+//                           southwest: southwest)
+//            self.scaleToFit(gmsPath: gmsPath)
+//        }
+//        GoogleMapAPIManager.getWaypoints(locations: infos, completion: completion)
     }
     
     public func updateDriversLocation(infos: [(id: String, location: CGLocation)]) {

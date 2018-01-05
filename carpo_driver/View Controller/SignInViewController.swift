@@ -36,9 +36,12 @@ class SignInViewController: BaseViewController {
         self.view.endEditing(true)
     }
     func setupView(){
+        SVProgressHUD.dismiss()
         if DataManager.isLogged() {
           slideMenuController()?.changeMainViewController(UIStoryboard.main.instantiateViewController(withIdentifier: "HomeViewController"), close: true)
         }
+        
+        
         viewCenter.alpha = 0
         viewSignIn.alpha = 1
         viewSignIn.backgroundColor = UIColor.clear
@@ -52,6 +55,7 @@ class SignInViewController: BaseViewController {
     @IBAction func signInPressed(_ sender: Any) {
         if tfPhoneNumber.hasText && tfPassword.hasText {
             SVProgressHUD.show()
+            
             viewModel.login(tfPhoneNumber.text!, tfPassword.text!)
         }
     }

@@ -15,4 +15,10 @@ extension Date {
         return dateString
     }
     
+    init(_ date: String, format: String){
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        self.init(timeInterval: 0, since: dateFormatter.date(from: date)!)
+    }
+    
 }

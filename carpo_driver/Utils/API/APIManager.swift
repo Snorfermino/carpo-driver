@@ -172,6 +172,28 @@ class ApiManager {
         }
     }
     
+    static func getInfoMemberByUserID(_ userID: String, completion: @escaping ((User?, String?) -> Void)){
+        provider.request(.getInfoMemberByUserID(userID: userID)) { (result) in
+            switch result {
+            case .success(let response):
+                print(response)
+                if(response.statusCode == 200) {
+                    do {
+                        let result = try response.mapObject(User.self)
+                        completion(result, nil)
+                    } catch {
+                        completion(nil, nil)
+                    }
+                } else {
+                    completion(nil, self.parseError(response: response))
+                }
+            case .failure(let error):
+                print(error)
+                completion(nil, error.errorDescription)
+            }
+        }
+    }
+    
     static func getUserInfo(_ userID: String, completion: @escaping ((String?,String?) -> Void)) {
         provider.request(.getInfo(id: userID)) { (result) in
             switch result {
@@ -196,30 +218,9 @@ class ApiManager {
         }
     }
     
-    static func getInfoCarByUserId(_ userID: String, completion: @escaping ((User?,String?) -> Void)) {
-        provider.request(.getCarInfoBy(userID: userID)) { (result) in
-            switch result {
-                
-            case .success(let response):
-                print(response)
-                if(response.statusCode == 200) {
-                    do {
-                        let userResponse = try response.mapObject(User.self)
-                        completion(userResponse, nil)
-                    } catch {
-                        completion(nil, nil)
-                    }
-                } else {
-                    completion(nil, self.parseError(response: response))
-                }
-            case .failure(let error):
-                print(error)
-                completion(nil, error.errorDescription)
-            }
-        }
-    }
-    static func getHistory(_ date: String, completion: @escaping ((HistoryResult?,String?) -> Void)) {
-        provider.request(.getHistory(date: date)) { (result) in
+
+    static func getHistory(_ userID: String, _ date: String, completion: @escaping ((HistoryResult?,String?) -> Void)) {
+        provider.request(.getHistory(id: userID, date: date)) { (result) in
             switch result {
             case .success(let response):
                 print(response)
@@ -273,6 +274,17 @@ class ApiManager {
         //                completion(nil, error.errorDescription)
         //            }
         //        }
+    }
+    
+    static func uploadLocation(_ user: User, _ location: CGLocation) {
+        provider.request(.trackLocation(param: user, location: location)) { (result) in
+            switch result {
+            case .success(let response):
+                print(response)
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
     
     static func changeAvatar(_ avatar: UIImage, completion: @escaping ((ChangeAvatarResult?, String?) -> Void)) {

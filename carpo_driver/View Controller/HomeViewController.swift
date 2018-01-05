@@ -12,6 +12,7 @@ import SVProgressHUD
 import JTMaterialSwitch
 import RKPieChart
 import IBAnimatable
+import CoreLocation
 class HomeViewController: BaseViewController {
     @IBOutlet weak var viewPieChart: AnimatableView!
     @IBOutlet weak var viewSwitch: UIView!
@@ -24,8 +25,17 @@ class HomeViewController: BaseViewController {
     @IBOutlet weak var lbTraveledDistanceSevenDaysAgo:UILabel!
     @IBOutlet weak var lbTotalTraveledDistanceInCurrentMonth:UILabel!
     let pieChartView = PieChartView()
+    var locationUpdateTimer: Timer!
+    let locationManager = CLLocationManager()
+    var currentLocation:CGLocation!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.locationManager.requestAlwaysAuthorization()
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+        }
         setupView()
     }
     
@@ -44,11 +54,19 @@ class HomeViewController: BaseViewController {
         pieChartView.frame = viewPieChart.bounds
     }
     func setupView(){
+        SVProgressHUD.dismiss()
         if !DataManager.isLogged() {
             slideMenuController()?.changeMainViewController(UIStoryboard.main.instantiateViewController(withIdentifier: "SignInViewController"), close: true)
         }
-        SVProgressHUD.dismiss()
-        //TO-DO: input chart data
+        guard let tokenExpiredString = Global.user?.data.tokenExpire else {
+            slideMenuController()?.changeMainViewController(UIStoryboard.main.instantiateViewController(withIdentifier: "SignInViewController"), close: true)
+            return
+        }
+        let tokenExpiredDate = Date(tokenExpiredString, format: "yyyy-MM-dd")
+        let currentDate = Date()
+        if tokenExpiredDate >= currentDate {
+            
+        }
         
         for view in viewDistanceDisplay {
             
@@ -58,21 +76,25 @@ class HomeViewController: BaseViewController {
         let gpsLabel = UILabel()
         gpsLabel.text = "GPS"
         let button = UISwitch()
+        button.addTarget(self, action: #selector(startUpdateLocation), for: .valueChanged)
         rightView.addSubview(gpsLabel)
         
         rightView.addSubview(button)
-        //        button.setImage(#imageLiteral(resourceName: "ic_back").resizeImage(newWidth: 20)?.withRenderingMode(.alwaysOriginal), for: .normal)
-        //        button.setTitle("  \(title ?? " ")", for: .normal)
-        //        button.addTarget(self, action: action, for: .touchUpInside)
         button.sizeToFit()
-        //        gpsLabel.sizeToFit()
         rightView.sizeToFit()
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: button)
         //         setupPieChart()
         getInfo()
     }
     
-    
+    @objc func startUpdateLocation(_ mySwitch: UISwitch){
+        let value = mySwitch.isOn
+        if value {
+            locationUpdateTimer = Timer(timeInterval: 5, target: self, selector: #selector(uploadLocation), userInfo: nil, repeats: true)
+        } else {
+            locationUpdateTimer.invalidate()
+        }
+    }
     func formatDistanceLabelText(_ distance: Float, label: UILabel) {
         let rawString = "\(distance)km"
         let myMutableString = NSMutableAttributedString(
@@ -156,6 +178,10 @@ class HomeViewController: BaseViewController {
         }
     }
     
+    @objc func uploadLocation(){
+        ApiManager.uploadLocation(Global.user!, currentLocation)
+    }
+    
     func getInfo(){
         SVProgressHUD.show()
         let completion = {(result: GetInfoForHomeScreenResult?, error: String?) -> Void in
@@ -177,7 +203,7 @@ class HomeViewController: BaseViewController {
     }
     
     func updateScreen(_ result: GetInfoForHomeScreenResult){
-       
+        
         formatLegendsText(field: "% đi được",
                           info: String(describing: (result.data?.totalPercentMonth)!),
                           label: lbTraveledPercentages)
@@ -203,4 +229,8 @@ extension HomeViewController: UIImagePickerControllerDelegate, UINavigationContr
         dismiss(animated: true, completion: nil)
     }
 }
-
+extension HomeViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        currentLocation = manager.location!.coordinate.cgLocation
+    }
+}

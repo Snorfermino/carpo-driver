@@ -19,10 +19,18 @@ enum MenuSection: Int {
     
     var items: [LeftMenu] {
         switch self {
-        case .first:
-            return [.home, .history, .group, .support]
-
+        default:
+            if DataManager.isLogged() {
+                guard let leaderStatus = Global.user?.data.statusLeader else { return [.home, .history, .support] }
+                switch leaderStatus {
+                case "1":
+                    return [.home, .history, .group, .support]
+                default:
+                    return [.home, .history, .support]
+                }
+            }
         }
+        return [.home, .history, .support]
     }
 }
 struct LeftMenuItem {
@@ -37,7 +45,7 @@ enum LeftMenu: Int {
     case support = 3
     var leftMenuItem: LeftMenuItem {
         let mainStoryboard = UIStoryboard.main
-
+        
         switch self {
         case .home:
             let viewController = UINavigationController(rootViewController: mainStoryboard.viewController(HomeViewController.self))
@@ -54,10 +62,10 @@ enum LeftMenu: Int {
             Global.currentScreenTitle = "Quản lý nhóm"
             let viewController = UINavigationController(rootViewController: mainStoryboard.viewController(GroupViewController.self))
             return LeftMenuItem(title: "Quản lý nhóm", viewController: viewController, icon: #imageLiteral(resourceName: "ic_gender"))
-
+            
         }
     }
-
+    
     var section: MenuSection? {
         var index = 0
         while true {
@@ -68,7 +76,7 @@ enum LeftMenu: Int {
             index += 1
         }
     }
-
+    
     func item(from leftMenuItems: [[LeftMenuItem]]) -> LeftMenuItem? {
         if let section = self.section,
             let index = section.items.index(where: { $0 == self }) {
@@ -77,7 +85,7 @@ enum LeftMenu: Int {
             return nil
         }
     }
-
+    
     func viewController(from leftMenuItems: [[LeftMenuItem]]) -> UIViewController? {
         if let item = item(from: leftMenuItems),
             let viewController = item.viewController {
@@ -109,8 +117,8 @@ class LeftMenuViewController: BaseViewController,LeftMenuProtocol {
         super.viewDidLoad()
         
         setUpLeftMenu()
-//        tableView.separatorColor = UIColor(red: 224, green: 224, blue: 224, alpha: 1)
-//        self.tableView.separatorColor = UIColor(red: 224, green: 224, blue: 224)
+        //        tableView.separatorColor = UIColor(red: 224, green: 224, blue: 224, alpha: 1)
+        //        self.tableView.separatorColor = UIColor(red: 224, green: 224, blue: 224)
         imgViewProfilePicture.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(toSignInVC(_:))))
         imgViewProfilePicture.isUserInteractionEnabled = true
         self.tableView.register(MenuCell.self, forCellReuseIdentifier: "MenuCell")
@@ -119,25 +127,26 @@ class LeftMenuViewController: BaseViewController,LeftMenuProtocol {
         tableView.isOpaque = false
         NotificationCenter.default.addObserver(self, selector: #selector(updateUIByLogin), name: NSNotification.Name(rawValue: "UserLoggedInNotification"), object: nil)
         updateUIByLogin()
-NotificationCenter.default.addObserver(self, selector: #selector(slideMenuAfterLoggedIn(_:)), name: NSNotification.Name(rawValue: "UserLoggedInNotification"), object: nil)
-//        NotificationCenter.default.rx.notification(.changeMenuTab)
-//            .subscribe(onNext: { notification in
-//                if let headerItem = notification.object as? HeaderMenuItem {
-//                    switch headerItem {
-//                    case .userProfile:
-//                        self.goToUserProfile()
-//                    case .favourite:
-//                        self.goToFavorite()
-//                    case .myWallet:
-//                        self.goToMyWallet()
-//                    }
-//                    return
-//                }
-//                guard let menu = notification.object as? LeftMenu else { return }
-//                self.changeViewController(menu)
-//                //self.tableView.selectRow(at: IndexPath(row: menu, section: 0), animated: false, scrollPosition: UITableViewScrollPosition.none)
-//            })
-//            .disposed(by: disposeBag)
+        NotificationCenter.default.addObserver(self, selector: #selector(slideMenuAfterLoggedIn(_:)), name: NSNotification.Name(rawValue: "UserLoggedInNotification"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(setUpLeftMenu), name: NSNotification.Name(rawValue: "UserLoggedInNotification"), object: nil)
+        //        NotificationCenter.default.rx.notification(.changeMenuTab)
+        //            .subscribe(onNext: { notification in
+        //                if let headerItem = notification.object as? HeaderMenuItem {
+        //                    switch headerItem {
+        //                    case .userProfile:
+        //                        self.goToUserProfile()
+        //                    case .favourite:
+        //                        self.goToFavorite()
+        //                    case .myWallet:
+        //                        self.goToMyWallet()
+        //                    }
+        //                    return
+        //                }
+        //                guard let menu = notification.object as? LeftMenu else { return }
+        //                self.changeViewController(menu)
+        //                //self.tableView.selectRow(at: IndexPath(row: menu, section: 0), animated: false, scrollPosition: UITableViewScrollPosition.none)
+        //            })
+        //            .disposed(by: disposeBag)
     }
     
     @objc func updateUIByLogin(){
@@ -156,7 +165,7 @@ NotificationCenter.default.addObserver(self, selector: #selector(slideMenuAfterL
     }
     
     @objc func toSignInVC(_ sender: UITapGestureRecognizer){
-//        self.navigationController?.pushViewController(UIStoryboard.main.instantiateViewController(withIdentifier: "SignInViewController"), animated: true)
+        //        self.navigationController?.pushViewController(UIStoryboard.main.instantiateViewController(withIdentifier: "SignInViewController"), animated: true)
         if DataManager.isLogged() {
             let viewController = UINavigationController(rootViewController: UIStoryboard.main.viewController(ProfileViewController.self))
             slideMenuController()?.changeMainViewController(viewController, close: true)
@@ -165,10 +174,10 @@ NotificationCenter.default.addObserver(self, selector: #selector(slideMenuAfterL
             let viewController = UINavigationController(rootViewController: UIStoryboard.main.viewController(SignInViewController.self))
             slideMenuController()?.changeMainViewController(viewController, close: true)
         }
-
+        
     }
     
-    func setUpLeftMenu() {
+    @objc func setUpLeftMenu() {
         leftMenuItems.removeAll()
         while true {
             guard let section = MenuSection(rawValue: leftMenuItems.count) else { break }
@@ -193,10 +202,11 @@ NotificationCenter.default.addObserver(self, selector: #selector(slideMenuAfterL
     }
     func changeViewController(_ menu: LeftMenu) {
         switch menu {
-//        case .group, .history, .home:
-//            if let viewController = menu.viewController(from: leftMenuItems) {
-//                requireLogin(ifElseGoTo: viewController)
-//            }
+            
+            //        case .group, .history, .home:
+            //            if let viewController = menu.viewController(from: leftMenuItems) {
+            //                requireLogin(ifElseGoTo: viewController)
+        //            }
         default:
             if let viewController = menu.viewController(from: leftMenuItems) {
                 slideMenuController()?.changeMainViewController(viewController, close: true)
@@ -205,11 +215,11 @@ NotificationCenter.default.addObserver(self, selector: #selector(slideMenuAfterL
     }
     
     func requireLogin(ifElseGoTo: UIViewController) {
-//        if Global.user == nil {
-//            showRequireLoginPopup()
-//        } else {
-//            slideMenuController()?.changeMainViewController(ifElseGoTo, close: true)
-//        }
+        //        if Global.user == nil {
+        //            showRequireLoginPopup()
+        //        } else {
+        //            slideMenuController()?.changeMainViewController(ifElseGoTo, close: true)
+        //        }
     }
     
     override func viewDidLayoutSubviews() {
@@ -225,7 +235,7 @@ extension LeftMenuViewController : UITableViewDelegate {
             switch menu {
             case .home, .history, .support ,.group:
                 return MenuCell.height()
-
+                
             }
         }
         return 0
@@ -233,11 +243,11 @@ extension LeftMenuViewController : UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return leftMenuItems.count
-//        if(Global.user != nil) {
-//            return leftMenuItems.count
-//        } else {
-//            return leftMenuItems.count - 1
-//        }
+        //        if(Global.user != nil) {
+        //            return leftMenuItems.count
+        //        } else {
+        //            return leftMenuItems.count - 1
+        //        }
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -251,21 +261,21 @@ extension LeftMenuViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! MenuCell
         if let menu = LeftMenu(rawValue: getRawValue(indexPath)) {
-//            if(getRawValue(indexPath) == 0 || getRawValue(indexPath) == 8) {
-//                if(getRawValue(indexPath) == 0) {
-//                    sub1 = !sub1
-//                    cell.updateMenuParentCorner(sub1)
-//                } else if (getRawValue(indexPath) == 8) {
-//                    sub2 = !sub2
-//                    cell.updateMenuParentCorner(sub2)
-//                }
-//                tableView.beginUpdates()
-//                tableView.reloadRows(at: [IndexPath(row: 1, section: 0)], with: .automatic)
-//                tableView.endUpdates()
-//            } else {
+            //            if(getRawValue(indexPath) == 0 || getRawValue(indexPath) == 8) {
+            //                if(getRawValue(indexPath) == 0) {
+            //                    sub1 = !sub1
+            //                    cell.updateMenuParentCorner(sub1)
+            //                } else if (getRawValue(indexPath) == 8) {
+            //                    sub2 = !sub2
+            //                    cell.updateMenuParentCorner(sub2)
+            //                }
+            //                tableView.beginUpdates()
+            //                tableView.reloadRows(at: [IndexPath(row: 1, section: 0)], with: .automatic)
+            //                tableView.endUpdates()
+            //            } else {
             Global.currentScreenTitle = menuTitle[indexPath.row]
-                self.changeViewController(menu)
-//            }
+            self.changeViewController(menu)
+            //            }
         }
     }
     
@@ -285,10 +295,10 @@ extension LeftMenuViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if LeftMenu(rawValue: getRawValue(indexPath)) != nil {
             let cell = Bundle.main.loadNibNamed("MenuCell", owner: self, options: nil)?.first as! MenuCell
-//            var b = false
-//            if menu == .home || menu == .termsAndConditions {
-//                b = true
-//            }
+            //            var b = false
+            //            if menu == .home || menu == .termsAndConditions {
+            //                b = true
+            //            }
             
             let item = leftMenuItems[indexPath.section][indexPath.row]
             cell.selectionStyle = .none
@@ -302,15 +312,15 @@ extension LeftMenuViewController : UITableViewDataSource {
         return UITableViewCell()
     }
     
-//    func getCornerValue(_ indexPath: IndexPath) -> MenuTableViewCellCorner {
-//        if indexPath.row == 0 {
-//            return .full
-//        } else if indexPath.row == leftMenuItems[indexPath.section].count - 1 {
-//            return .bottom
-//        } else {
-//            return .normal
-//        }
-//    }
+    //    func getCornerValue(_ indexPath: IndexPath) -> MenuTableViewCellCorner {
+    //        if indexPath.row == 0 {
+    //            return .full
+    //        } else if indexPath.row == leftMenuItems[indexPath.section].count - 1 {
+    //            return .bottom
+    //        } else {
+    //            return .normal
+    //        }
+    //    }
     
     func getRawValue(_ indexPath: IndexPath) -> Int {
         var cnt = 0

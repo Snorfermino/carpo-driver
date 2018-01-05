@@ -28,8 +28,10 @@ class GroupViewController: BaseViewController {
     @IBOutlet weak var viewGroupDriversDetail: UIView!
     @IBOutlet weak var viewGroupGeneral: UIView!
     @IBOutlet weak var viewDriverInfo: UIView!
+    @IBOutlet weak var viewMap: UIView!
+    var mapVC: MapViewController!
+    
     @IBOutlet weak var lbDriverName:UILabel!
-
     @IBOutlet weak var lbDriverPlate:UILabel!
     @IBOutlet weak var lbDriverVehicleBrand:UILabel!
     @IBOutlet weak var lbDriverVehicleColor:UILabel!
@@ -48,6 +50,7 @@ class GroupViewController: BaseViewController {
     @IBOutlet weak var lbTotalTraveledDistanceInCurrentMonth:UILabel!
     var tableViewDriversData:[GetInfoForGroupMemberDetailScreenResult.Data] = []
     var selectedIndex = 0
+    var selectedDriverID = ""
     var drivers:[Driver.Data] = []
     var state:groupScreenState = .general
     override func viewDidLoad() {
@@ -102,7 +105,7 @@ class GroupViewController: BaseViewController {
         var driverIndex:[String] = []
         var barChartDataEntries: [BarChartDataEntry] = []
         for i in 0..<values.count {
-            let dataEntry = BarChartDataEntry(x: Double(i), y: Double(values[i]))
+            let dataEntry = BarChartDataEntry(x: Double(i+1), y: Double(values[i]))
             driverIndex.append(i.description)
             barChartDataEntries.append(dataEntry)
         }
@@ -210,10 +213,6 @@ class GroupViewController: BaseViewController {
         setupPieChart((result.data?.totalPercentMonth)!)
     }
     
-    func updateDriverDetail(){
-        
-    }
-    
     func updateTableViewAndBarChart(_ result: GetInfoForGroupMemberDetailScreenResult){
         tableView.reloadData()
         var entries:[Float] = []
@@ -230,7 +229,20 @@ class GroupViewController: BaseViewController {
         viewGroupGeneral.leftToRightAnimation(duration: 0.5, completionDelegate: self)
     }
     
+    @IBAction func showOnMap(_ sender: Any){
+        self.view.bringSubview(toFront: viewMap)
+        
+        mapVC = UIStoryboard.main.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
+        mapVC.view.frame = self.viewMap.bounds
+        mapVC.userID = selectedDriverID
+//        mapVC.delegate = self
+        viewMap.addSubview(mapVC.view)
+
+//        slideMenuController()?.changeMainViewController(UIStoryboard.main.instantiateViewController(withIdentifier: "MapViewController"), close: true)
+    }
+    
     @objc func changeToGeneralScreen(_ sender: Any){
+        state = .general
         viewGroupDriversDetail.rightToLeftAnimation(duration: 0.5, completionDelegate: self)
     }
 
@@ -293,13 +305,19 @@ extension GroupViewController{
                     self.alert(title: "Lỗi", message: "Không tìm thấy thông tin tài xế")
                 } else {
                     SVProgressHUD.dismiss()
+                    self.lbDriverName.text = driver?.data.fullname!
+                    self.lbDriverPlate.text = driver?.data.licensePlate!
+                    self.lbDriverVehicleBrand.text = driver?.data.carManufacturer!
+                    self.lbDriverVehicleColor.text = driver?.data.carColor!
+                    self.lbTotalTraveledDistances.text = driver?.data.totalDistanceRunOneMonth!
+                    self.selectedDriverID = (driver?.data.id)!
                     self.viewGroupDriversDetail.leftToRightAnimation(duration: 0.5, completionDelegate: self)
                 }
             } else {
                 self.alert(title: "Lỗi", message: "Không tìm thấy kết quả")
             }
         }
-        ApiManager.getInfoCarByUserId(tableViewDriversData[selectedIndex].id!, completion: completion)
+        ApiManager.getInfoMemberByUserID(tableViewDriversData[selectedIndex].id!, completion: completion)
     }
 }
 extension GroupViewController: UITableViewDelegate, UITableViewDataSource {
@@ -311,8 +329,7 @@ extension GroupViewController: UITableViewDelegate, UITableViewDataSource {
         case 0:
             return 1
         default:
-//            return tableViewDriversData.count
-            return 5
+            return tableViewDriversData.count
         }
     }
     
@@ -324,13 +341,13 @@ extension GroupViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "DriverCell") as! DriverCell
-//            cell.lbDriverIndex.text = "\(indexPath.row + 1)"
-//            cell.lbName.text = tableViewDriversData[indexPath.row].name
-//            cell.lbMonthlyDistance.text = tableViewDriversData[indexPath.row].totalKmMonth?.description
-//            cell.selectionStyle = .none
-//            if indexPath.row % 2 == 0 {
-//                cell.contentView.backgroundColor = UIColor(hex: "DBE9F6")
-//            }
+            cell.lbDriverIndex.text = "\(indexPath.row + 1)"
+            cell.lbName.text = tableViewDriversData[indexPath.row].name
+            cell.lbMonthlyDistance.text = tableViewDriversData[indexPath.row].totalKmMonth?.description
+            cell.selectionStyle = .none
+            if indexPath.row % 2 == 0 {
+                cell.contentView.backgroundColor = UIColor(hex: "DBE9F6")
+            }
             return cell
         }
         
