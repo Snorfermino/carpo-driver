@@ -10,8 +10,9 @@ import UIKit
 
 protocol ForgotPasswordViewDelegate {
     func backPressed()
-    func confirmPressed()
+    func confirmPressed(phoneNumber: String)
     func missingParameter(_ title:String)
+    func newPwdConfirmPressed(newPWd: String, otp: Int)
 }
 class ForgotPasswordView: UIView {
     @IBOutlet weak var contentView: UIView!
@@ -23,19 +24,41 @@ class ForgotPasswordView: UIView {
     @IBOutlet weak var tfVerificationCode: UITextField!
     var delegate: ForgotPasswordViewDelegate?
     var isPhoneNumberExist: Bool = true
+    var isPromtingPhoneNumber: Bool = true
+    var otp:Int = 0
+    var phoneNumber:String = ""
     @IBAction func backPressed(_ sender: Any){
         delegate?.backPressed()
     }
     @IBAction func confirmPressed(_ sender: UIButton){
         
-        if sender.tag == 0 {
-            if tfPhoneNumber.text != nil || tfPhoneNumber.text != "" {
+//        if sender.tag == 0 {
+//            if tfPhoneNumber.text != nil || tfPhoneNumber.text != "" {
+//                moveToNewPassword()
+//            } else {
+//                self.delegate?.missingParameter("Không tìm thấy số điện thoại")
+//            }
+//        } else {
+//            delegate?.confirmPressed()
+//        }
+        
+        if isPromtingPhoneNumber {
+            if tfPhoneNumber.text != nil && tfPhoneNumber.text != "" &&  9...11 ~= (tfPhoneNumber.text?.count)! {
+                delegate?.confirmPressed(phoneNumber: tfPhoneNumber.text!)
+                phoneNumber = tfPhoneNumber.text!
                 moveToNewPassword()
             } else {
-                self.delegate?.missingParameter("Không tìm thấy số điện thoại")
+                
+                self.delegate?.missingParameter("Số điện thoại không hợp lệ")
             }
         } else {
-            delegate?.confirmPressed()
+            if !(tfNewPassword.text?.isEmpty)! &&  tfNewPassword.text! == tfConfirmNewPassword.text! && Int(tfVerificationCode.text!)! == otp {
+                delegate?.newPwdConfirmPressed(newPWd: tfNewPassword.text!, otp: otp)
+                
+            } else {
+                self.delegate?.missingParameter("Nhập lại mật khẩu mới")
+            }
+            
         }
     }
     @IBAction func resendVeriCodePressed(_ sender: Any){
@@ -65,19 +88,20 @@ class ForgotPasswordView: UIView {
     }
     
     func moveToNewPassword() {
-        
-        let completion = {(otp: String?, error: String?) -> Void in
-            if let OTP = otp {
-                if ((OTP.rangeOfCharacter(from: CharacterSet.alphanumerics)) != nil) {
-                    print("OTP: \(otp)")
-                    self.viewPhoneNumberPrompt.leftToRightAnimation(duration: 0.5, completionDelegate: self)
-                }
-            } else {
-                self.delegate?.missingParameter("Không tìm thấy số điện thoại")
-            }
-        }
-        ApiManager.getOTP(phone: tfPhoneNumber.text! , completion: completion)
-        
+//        
+//        let completion = {(otp: OTP?, error: String?) -> Void in
+//            if let OTP = otp {
+//                if ((OTP.rangeOfCharacter(from: CharacterSet.alphanumerics)) != nil) {
+//                    print("OTP: \(otp)")
+//                    self.viewPhoneNumberPrompt.leftToRightAnimation(duration: 0.5, completionDelegate: self)
+//                }
+//            } else {
+//                self.delegate?.missingParameter("Không tìm thấy số điện thoại")
+//            }
+//        }
+//        ApiManager.getOTP(tfPhoneNumber.text! , completion: completion)
+        isPromtingPhoneNumber = false
+        viewPhoneNumberPrompt.leftToRightAnimation(duration: 0.5, completionDelegate: self)
     }
     
     func backToPasswordPrompt(){

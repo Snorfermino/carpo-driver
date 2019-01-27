@@ -64,19 +64,23 @@
 		0349F3EB1FC66F1200F2BDBC /* Roboto Mono Light for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0349F3E11FC66F1100F2BDBC /* Roboto Mono Light for Powerline.ttf */; };
 		0349F3EC1FC66F1200F2BDBC /* Roboto Mono Medium Italic for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0349F3E21FC66F1100F2BDBC /* Roboto Mono Medium Italic for Powerline.ttf */; };
 		0349F3ED1FC66F1200F2BDBC /* Roboto Mono Thin for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0349F3E31FC66F1200F2BDBC /* Roboto Mono Thin for Powerline.ttf */; };
+		0351FC2D21E050B50029CCAC /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0351FC2C21E050B50029CCAC /* ReportViewController.swift */; };
+		0351FC3021E051640029CCAC /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0351FC2F21E051640029CCAC /* ReportView.swift */; };
 		0362CA181FE22C8400D846BD /* ChangeAvatarResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362CA171FE22C8400D846BD /* ChangeAvatarResult.swift */; };
 		0362CA1A1FE235D800D846BD /* GoogleMapAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362CA191FE235D800D846BD /* GoogleMapAPIManager.swift */; };
 		0362CA1F1FE261AE00D846BD /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0362CA1B1FE261A700D846BD /* Roboto-Bold.ttf */; };
 		0362CA201FE261AE00D846BD /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0362CA1C1FE261A900D846BD /* Roboto-Regular.ttf */; };
 		0362CA211FE261AE00D846BD /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0362CA1D1FE261AA00D846BD /* Roboto-Light.ttf */; };
 		0362CA221FE261AE00D846BD /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0362CA1E1FE261AC00D846BD /* Roboto-Medium.ttf */; };
+		036988CC202D4F5E00FE34F5 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036988CB202D4F5B00FE34F5 /* PhotoViewController.swift */; };
 		038AA5ED1FD1097100B17205 /* GroupResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038AA5EC1FD1097100B17205 /* GroupResult.swift */; };
-		038AA5EF1FD5023D00B17205 /* OTPResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038AA5EE1FD5023D00B17205 /* OTPResult.swift */; };
+		038AA5EF1FD5023D00B17205 /* OTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038AA5EE1FD5023D00B17205 /* OTP.swift */; };
 		038AA5F21FD50BF200B17205 /* ChangePassword.xib in Resources */ = {isa = PBXBuildFile; fileRef = 038AA5F01FD50BF000B17205 /* ChangePassword.xib */; };
 		038AA5F31FD50BF200B17205 /* ChangePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038AA5F11FD50BF200B17205 /* ChangePassword.swift */; };
 		03AB98781FE0E0C400994E6C /* GetInfoForGroupMemberDetailScreenResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AB98771FE0E0C400994E6C /* GetInfoForGroupMemberDetailScreenResult.swift */; };
 		03BB3F681FE4CBAF004EEE6A /* WrongPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BB3F671FE4CBAF004EEE6A /* WrongPassword.swift */; };
 		03BB3F6A1FE4CBC7004EEE6A /* WrongPassword.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03BB3F691FE4CBC7004EEE6A /* WrongPassword.xib */; };
+		03D059CB21199372009EA817 /* Plugins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D059CA21199372009EA817 /* Plugins.swift */; };
 		03E09ACC1FB938C100DC65AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E09ACB1FB938C100DC65AA /* AppDelegate.swift */; };
 		03E09AD11FB938C100DC65AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03E09ACF1FB938C100DC65AA /* Main.storyboard */; };
 		03E09AD31FB938C100DC65AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03E09AD21FB938C100DC65AA /* Assets.xcassets */; };
@@ -169,19 +173,23 @@
 		0349F3E11FC66F1100F2BDBC /* Roboto Mono Light for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto Mono Light for Powerline.ttf"; sourceTree = "<group>"; };
 		0349F3E21FC66F1100F2BDBC /* Roboto Mono Medium Italic for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto Mono Medium Italic for Powerline.ttf"; sourceTree = "<group>"; };
 		0349F3E31FC66F1200F2BDBC /* Roboto Mono Thin for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto Mono Thin for Powerline.ttf"; sourceTree = "<group>"; };
+		0351FC2C21E050B50029CCAC /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
+		0351FC2F21E051640029CCAC /* ReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportView.swift; sourceTree = "<group>"; };
 		0362CA171FE22C8400D846BD /* ChangeAvatarResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeAvatarResult.swift; sourceTree = "<group>"; };
 		0362CA191FE235D800D846BD /* GoogleMapAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapAPIManager.swift; sourceTree = "<group>"; };
 		0362CA1B1FE261A700D846BD /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		0362CA1C1FE261A900D846BD /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		0362CA1D1FE261AA00D846BD /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		0362CA1E1FE261AC00D846BD /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		036988CB202D4F5B00FE34F5 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		038AA5EC1FD1097100B17205 /* GroupResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupResult.swift; sourceTree = "<group>"; };
-		038AA5EE1FD5023D00B17205 /* OTPResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPResult.swift; sourceTree = "<group>"; };
+		038AA5EE1FD5023D00B17205 /* OTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTP.swift; sourceTree = "<group>"; };
 		038AA5F01FD50BF000B17205 /* ChangePassword.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangePassword.xib; sourceTree = "<group>"; };
 		038AA5F11FD50BF200B17205 /* ChangePassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePassword.swift; sourceTree = "<group>"; };
 		03AB98771FE0E0C400994E6C /* GetInfoForGroupMemberDetailScreenResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetInfoForGroupMemberDetailScreenResult.swift; sourceTree = "<group>"; };
 		03BB3F671FE4CBAF004EEE6A /* WrongPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrongPassword.swift; sourceTree = "<group>"; };
 		03BB3F691FE4CBC7004EEE6A /* WrongPassword.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WrongPassword.xib; sourceTree = "<group>"; };
+		03D059CA21199372009EA817 /* Plugins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plugins.swift; sourceTree = "<group>"; };
 		03E09AC81FB938C100DC65AA /* carpo_driver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = carpo_driver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03E09ACB1FB938C100DC65AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03E09AD01FB938C100DC65AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -199,6 +207,7 @@
 		03E09AFF1FB93C7B00DC65AA /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		03E17C541FDB842300F9A8A5 /* Myriad Pro Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Myriad Pro Bold.ttf"; sourceTree = "<group>"; };
 		03E17C551FDB842400F9A8A5 /* Myriad Pro Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Myriad Pro Regular.ttf"; sourceTree = "<group>"; };
+		03E3EFB520AAC79E000B6505 /* carpo_driver.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = carpo_driver.entitlements; sourceTree = "<group>"; };
 		03EFD7F01FDE3357000B7D5B /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
 		09FB14240F163663CE103D12 /* Pods-carpo_driver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carpo_driver.release.xcconfig"; path = "Pods/Target Support Files/Pods-carpo_driver/Pods-carpo_driver.release.xcconfig"; sourceTree = "<group>"; };
 		12352E8A831D95801AD95674 /* Pods-carpo_driverUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carpo_driverUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-carpo_driverUITests/Pods-carpo_driverUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -294,6 +303,8 @@
 				0341A4171FBBE79D00EC73A1 /* SupportViewController.swift */,
 				0341A4191FBBEBB100EC73A1 /* MapViewController.swift */,
 				0341A4501FBC163100EC73A1 /* GroupViewController.swift */,
+				036988CB202D4F5B00FE34F5 /* PhotoViewController.swift */,
+				0351FC2C21E050B50029CCAC /* ReportViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -314,7 +325,7 @@
 				03BB3F671FE4CBAF004EEE6A /* WrongPassword.swift */,
 				03BB3F691FE4CBC7004EEE6A /* WrongPassword.xib */,
 			);
-			path = "XIB	";
+			path = "XIB\t";
 			sourceTree = "<group>";
 		};
 		0341A3FF1FBAA97700EC73A1 /* Storyboard */ = {
@@ -338,7 +349,7 @@
 				03128F151FCFEEEC0062317A /* HistoryResult.swift */,
 				03128F171FCFEF0D0062317A /* Location.swift */,
 				038AA5EC1FD1097100B17205 /* GroupResult.swift */,
-				038AA5EE1FD5023D00B17205 /* OTPResult.swift */,
+				038AA5EE1FD5023D00B17205 /* OTP.swift */,
 				03EFD7F01FDE3357000B7D5B /* PieChartView.swift */,
 				0348B9991FE0C14B00DBCF4A /* GetInfoForHomeScreenResult.swift */,
 				03AB98771FE0E0C400994E6C /* GetInfoForGroupMemberDetailScreenResult.swift */,
@@ -387,6 +398,7 @@
 				0341A4471FBBF6BE00EC73A1 /* APIManager.swift */,
 				0341A4491FBBF74600EC73A1 /* MyAPI.swift */,
 				0341A44B1FBBF7E000EC73A1 /* APIConfig.swift */,
+				03D059CA21199372009EA817 /* Plugins.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -397,6 +409,14 @@
 				0341A44E1FBBF85400EC73A1 /* ErrorResponse.swift */,
 			);
 			path = Error;
+			sourceTree = "<group>";
+		};
+		0351FC2E21E051500029CCAC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0351FC2F21E051640029CCAC /* ReportView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		03E09ABF1FB938C100DC65AA = {
@@ -424,6 +444,8 @@
 		03E09ACA1FB938C100DC65AA /* carpo_driver */ = {
 			isa = PBXGroup;
 			children = (
+				0351FC2E21E051500029CCAC /* View */,
+				03E3EFB520AAC79E000B6505 /* carpo_driver.entitlements */,
 				03379FD21FC8247A0089B29C /* View Model */,
 				0341A43D1FBBF30F00EC73A1 /* Utils */,
 				0341A4121FBAFDC400EC73A1 /* Model */,
@@ -507,6 +529,7 @@
 				03E09AC61FB938C100DC65AA /* Resources */,
 				1733830575BE43FC963DECBA /* [CP] Embed Pods Frameworks */,
 				5B982EDE338A29874D688EAA /* [CP] Copy Pods Resources */,
+				035B613B20A4208C00655A21 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -525,8 +548,6 @@
 				03E09AD81FB938C200DC65AA /* Sources */,
 				03E09AD91FB938C200DC65AA /* Frameworks */,
 				03E09ADA1FB938C200DC65AA /* Resources */,
-				6C32845BD0842CF5CEAFE8FE /* [CP] Embed Pods Frameworks */,
-				CD278E1F67493633AD8E0B1C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -546,8 +567,6 @@
 				03E09AE31FB938C200DC65AA /* Sources */,
 				03E09AE41FB938C200DC65AA /* Frameworks */,
 				03E09AE51FB938C200DC65AA /* Resources */,
-				2510DE199723D1BA919E926F /* [CP] Embed Pods Frameworks */,
-				42DE9273E00EF714CD0F1CF9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -572,6 +591,11 @@
 					03E09AC71FB938C100DC65AA = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					03E09ADB1FB938C200DC65AA = {
 						CreatedOnToolsVersion = 9.1;
@@ -656,6 +680,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		035B613B20A4208C00655A21 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 8496ccfbad13d40d3cb56cf3e650319be0e0523a a017b565eaf594ba725f7496f7507a3310a97d01c77e00a6ffae3d0d49dab2bd";
+		};
 		16341733C2F8A0E6D720F639 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -704,6 +741,7 @@
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/SlideMenuControllerSwift/SlideMenuControllerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -731,6 +769,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SlideMenuControllerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -756,36 +795,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2510DE199723D1BA919E926F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-carpo_driverUITests/Pods-carpo_driverUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		42DE9273E00EF714CD0F1CF9 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-carpo_driverUITests/Pods-carpo_driverUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		5B982EDE338A29874D688EAA /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -793,47 +802,21 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-carpo_driver/Pods-carpo_driver-resources.sh",
+				"${PODS_ROOT}/AccountKit/AccountKitStrings.bundle",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle",
 				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Versions/A/Resources/GooglePlaces.bundle",
 				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccountKitStrings.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-carpo_driver/Pods-carpo_driver-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6C32845BD0842CF5CEAFE8FE /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-carpo_driverTests/Pods-carpo_driverTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CD278E1F67493633AD8E0B1C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-carpo_driverTests/Pods-carpo_driverTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F087E947BEA40322A81CD3BF /* [CP] Check Pods Manifest.lock */ = {
@@ -862,7 +845,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0341A43A1FBBF25C00EC73A1 /* UIViewExtension.swift in Sources */,
-				038AA5EF1FD5023D00B17205 /* OTPResult.swift in Sources */,
+				038AA5EF1FD5023D00B17205 /* OTP.swift in Sources */,
+				0351FC2D21E050B50029CCAC /* ReportViewController.swift in Sources */,
 				0349F3D91FC3E48C00F2BDBC /* DateExtension.swift in Sources */,
 				0341A4301FBBEF0800EC73A1 /* CGRiderMarker.swift in Sources */,
 				0341A42E1FBBEF0800EC73A1 /* CGLocation.swift in Sources */,
@@ -900,9 +884,11 @@
 				0341A3FA1FBA7C3D00EC73A1 /* HomeViewController.swift in Sources */,
 				0341A3F51FB9981600EC73A1 /* ProfileCell.swift in Sources */,
 				03379FD61FC920170089B29C /* BaseModel.swift in Sources */,
+				0351FC3021E051640029CCAC /* ReportView.swift in Sources */,
 				0341A4341FBBEF1400EC73A1 /* DriverGoogleMap.swift in Sources */,
 				03BB3F681FE4CBAF004EEE6A /* WrongPassword.swift in Sources */,
 				03379FD81FCBF8250089B29C /* DataManager.swift in Sources */,
+				03D059CB21199372009EA817 /* Plugins.swift in Sources */,
 				0341A3F21FB9918F00EC73A1 /* ProfileViewController.swift in Sources */,
 				038AA5ED1FD1097100B17205 /* GroupResult.swift in Sources */,
 				0341A4081FBAE83700EC73A1 /* MenuCell.swift in Sources */,
@@ -915,6 +901,7 @@
 				0341A4441FBBF38100EC73A1 /* GoogleMapAPI.swift in Sources */,
 				0341A4181FBBE79D00EC73A1 /* SupportViewController.swift in Sources */,
 				0341A4161FBAFE0E00EC73A1 /* User.swift in Sources */,
+				036988CC202D4F5E00FE34F5 /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1081,12 +1068,17 @@
 			baseConfigurationReference = EDF2FE58E7E7BCD9E86A99DE /* Pods-carpo_driver.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = carpo_driver/carpo_driver.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H89HCVG87V;
+				DEVELOPMENT_TEAM = CJRDS825WB;
 				INFOPLIST_FILE = carpo_driver/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "ngocdung.carpo-driver";
+				PRODUCT_BUNDLE_IDENTIFIER = next.carpo.driver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1097,12 +1089,16 @@
 			baseConfigurationReference = 09FB14240F163663CE103D12 /* Pods-carpo_driver.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = carpo_driver/carpo_driver.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H89HCVG87V;
+				DEVELOPMENT_TEAM = CJRDS825WB;
 				INFOPLIST_FILE = carpo_driver/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "ngocdung.carpo-driver";
+				PRODUCT_BUNDLE_IDENTIFIER = next.carpo.driver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

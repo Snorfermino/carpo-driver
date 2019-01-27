@@ -21,7 +21,7 @@ class HistoryViewController: BaseViewController {
 }
 extension HistoryViewController: AlertPresenting {
     @IBAction func pickDate(_ sender: UIButton){
-        showAlert(self.view, delegate: self, isDatePicker: true)
+//        showAlert(self.view, delegate: self, isDatePicker: true)
     }
 }
 extension HistoryViewController: ChartModePickerDelegate {

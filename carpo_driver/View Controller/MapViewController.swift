@@ -34,23 +34,19 @@ class MapViewController: BaseViewController {
 
 extension MapViewController: AlertPresenting, ChartModePickerDelegate {
     func chartMode(title: String, index: Int) {
-        SVProgressHUD.show()
+//        SVProgressHUD.show()
         
     }
     
     func datePicked(date: Date) {
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.dateFormat = "dd/MM/yyyy"
-//        let dateString = dateFormatter.string(from:date as Date)
-//        print(dateString)
         lbDate.text = date.format("dd/MM/yyyy")
         let completion = {(result: HistoryResult?, error: String?) -> Void in
-            print(result?.toJSON())
             if let result = result {
                 if result.status == 0 {
                     self.alert(title: "Không tìm thấy kết quả", message: "")
                     self.formatLabel(field: "Tổng hành trình", info: "0.0", label: self.lbTravelDistance)
                     self.viewGoogleMap.clearMarker()
+                    self.viewGoogleMap.clear()
                 } else {
                     var i = 0
                      var markers:[(id:String, location: CGLocation)] = []
@@ -65,18 +61,32 @@ extension MapViewController: AlertPresenting, ChartModePickerDelegate {
                        
                     }
 //                    self.viewGoogleMap.requestDrawRoute(from: (markers.first?.location)!, to: CGLocation(lat: 10.77655, long: 106.6783622))
-                    self.formatLabel(field: "Tổng hành trình", info: NSString(format: "%.2f", (result.data?.totalDistace)!).description, label: self.lbTravelDistance)
+                    self.formatLabel(field: "Tổng hành trình", info: NSString(format: "%.1f", (result.data?.totalDistace)!).description, label: self.lbTravelDistance)
                     
 //                    self.lbTravelDistance.text = "\(result.data?.totalDistace) km"
-                    for lo in locations {
-                        let newDriver = CGDriverMarker(map: self.viewGoogleMap, image: #imageLiteral(resourceName: "ic_markerActive"))
-                        newDriver.changeSize(size: 20)
-                        newDriver.map = self.viewGoogleMap
-                        newDriver.updateLocation(location: lo,
-                                                 updateRotation: true,
-                                                 useAnimation: true)
-                    }
-
+//                    for lo in locations {
+//                        let newDriver = CGDriverMarker(map: self.viewGoogleMap, image: #imageLiteral(resourceName: "ic_markerActive"))
+//                        newDriver.changeSize(size: 20)
+//                        newDriver.map = self.viewGoogleMap
+//                        newDriver.updateLocation(location: lo,
+//                                                 updateRotation: true,
+//                                                 useAnimation: true)
+//                    }
+                    let fromLocation = locations.first
+                    let fromLocationMarker = CGDriverMarker(map: self.viewGoogleMap, image: #imageLiteral(resourceName: "ic_markerActive"))
+                    fromLocationMarker.changeSize(size: 20)
+                    fromLocationMarker.map = self.viewGoogleMap
+                    fromLocationMarker.updateLocation(location: fromLocation!,
+                                             updateRotation: true,
+                                             useAnimation: true)
+                    
+                    let destination = locations.last
+                    let destinationMarker = CGDriverMarker(map: self.viewGoogleMap, image: #imageLiteral(resourceName: "ic_markerDisable"))
+                    destinationMarker.changeSize(size: 20)
+                    destinationMarker.map = self.viewGoogleMap
+                    destinationMarker.updateLocation(location: destination!,
+                                             updateRotation: true,
+                                             useAnimation: true)
                     
                     self.viewGoogleMap.updateDriversPath(infos: locations)
                 }
@@ -122,7 +132,7 @@ extension MapViewController: AlertPresenting, ChartModePickerDelegate {
     }
     
     @IBAction func lbDatePressed(_ sender: UIButton){
-        showAlert(self.view, delegate: self, isDatePicker: true)
+        showAlert(self.view, delegate: self, isDatePicker: true, date: lbDate.text!)
     }
     
 }

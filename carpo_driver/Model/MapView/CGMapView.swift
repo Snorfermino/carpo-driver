@@ -238,8 +238,9 @@ class CGMapView: GMSMapView {
             path.addLatitude(location.clLocation.latitude, longitude: location.clLocation.longitude)
         }
         
+
         let polyline = GMSPolyline(path: path)
-        polyline.strokeColor = UIColor(hex: "03B2F2")
+        polyline.strokeColor = UIColor(hex: "ff9300")
         polyline.strokeWidth = 5.0
         polyline.map = self
         self.scaleToFit(gmsPath: path)

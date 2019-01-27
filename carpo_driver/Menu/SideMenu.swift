@@ -21,16 +21,16 @@ enum MenuSection: Int {
         switch self {
         default:
             if DataManager.isLogged() {
-                guard let leaderStatus = Global.user?.data.statusLeader else { return [.home, .history, .support] }
+                guard let leaderStatus = Global.user?.data.statusLeader else { return [.home, .history, .support, .signout] }
                 switch leaderStatus {
                 case "1":
-                    return [.home, .history, .group, .support]
+                    return [.home, .history, .support, .group,.signout]
                 default:
-                    return [.home, .history, .support]
+                    return [.home, .history, .support,.signout]
                 }
             }
         }
-        return [.home, .history, .support]
+        return [.home, .history, .support, .signout]
     }
 }
 struct LeftMenuItem {
@@ -41,8 +41,9 @@ struct LeftMenuItem {
 enum LeftMenu: Int {
     case home = 0
     case history = 1
-    case group = 2
-    case support = 3
+    case group = 3
+    case support = 2
+    case signout = 4
     var leftMenuItem: LeftMenuItem {
         let mainStoryboard = UIStoryboard.main
         
@@ -62,7 +63,10 @@ enum LeftMenu: Int {
             Global.currentScreenTitle = "Quản lý nhóm"
             let viewController = UINavigationController(rootViewController: mainStoryboard.viewController(GroupViewController.self))
             return LeftMenuItem(title: "Quản lý nhóm", viewController: viewController, icon: #imageLiteral(resourceName: "ic_gender"))
-            
+        case .signout:
+            DataManager.loggedOut()
+            let viewController = UINavigationController(rootViewController: UIStoryboard.main.viewController(SignInViewController.self))
+            return LeftMenuItem(title: "Đăng Xuất", viewController: viewController, icon: #imageLiteral(resourceName: "ic_lock"))
         }
     }
     
@@ -233,7 +237,7 @@ extension LeftMenuViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if let menu = LeftMenu(rawValue: getRawValue(indexPath)) {
             switch menu {
-            case .home, .history, .support ,.group:
+            case .home, .history, .support ,.group,.signout:
                 return MenuCell.height()
                 
             }
@@ -242,7 +246,7 @@ extension LeftMenuViewController : UITableViewDelegate {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return leftMenuItems.count
+        return 1
         //        if(Global.user != nil) {
         //            return leftMenuItems.count
         //        } else {
@@ -273,8 +277,17 @@ extension LeftMenuViewController : UITableViewDelegate {
             //                tableView.reloadRows(at: [IndexPath(row: 1, section: 0)], with: .automatic)
             //                tableView.endUpdates()
             //            } else {
+            print(getRawValue(indexPath))
+            if(getRawValue(indexPath) == 4) {
+                print("Sign out")
+                DataManager.loggedOut()
+                let viewController = UINavigationController(rootViewController: UIStoryboard.main.viewController(SignInViewController.self))
+                slideMenuController()?.changeMainViewController(viewController, close: false)
+            }
+            
             Global.currentScreenTitle = menuTitle[indexPath.row]
             self.changeViewController(menu)
+            
             //            }
         }
     }

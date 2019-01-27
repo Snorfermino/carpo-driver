@@ -23,8 +23,23 @@ class SupportViewController: BaseViewController {
         setNavigationBarItem(title: Global.currentScreenTitle)
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     @IBAction func submitPressed(_ sender: UIButton){
-        
+        let completion = {(result: BaseModel?, error: String?) -> Void in
+            if let result = result {
+                if result.status == 1 {
+                    self.alert(title: "", message: "Đã gửi thành công")
+                } else {
+                    self.alert(title: "Lỗi", message: "Không thể gửi nội dung")
+                }
+            } else {
+                self.alert(title: "Lỗi", message: "Không thể gửi nội dung")
+            }
+        }
+        ApiManager.submitReport(tvReport.text, image: image, completion: completion)
     }
 
     
@@ -68,6 +83,7 @@ extension SupportViewController: UIImagePickerControllerDelegate,UINavigationCon
             let imageSize = Double(min(pickedImage.size.width, pickedImage.size.height))
             let cropImage = pickedImage.cropToBounds(width: imageSize, height: imageSize)
             self.image = cropImage
+            alert(title: "Đã thêm", message: "")
 //            imgAvatar.showIndicator()
 //            self.imgAvatar.contentMode = .scaleAspectFill
 //            self.imgAvatar.image = cropImage

@@ -143,7 +143,7 @@ class GroupViewController: BaseViewController {
         
     }
     
-    func formatDistanceLabelText(_ distance: Float, label: UILabel) {
+    func formatDistanceLabelText(_ distance: Double, label: UILabel) {
         let rawString = "\(distance)km"
         let myMutableString = NSMutableAttributedString(
             string: rawString,
@@ -203,14 +203,14 @@ class GroupViewController: BaseViewController {
         formatLegendsText(field: "% đi được",
                           info: String(describing: (result.data?.totalPercentMonth)!),
                           label: lbTraveledPercentages)
-        formatLegendsText(field: "% chưa đi được",
+        formatLegendsText(field: "% còn thiếu",
                           info: String(describing: 100 - (result.data?.totalPercentMonth)!),
                           label: lbUntraveledPercentages)
-        formatDistanceLabelText((result.data?.totalKmToday)!,label: lbTraveledDistanceToday)
-        formatDistanceLabelText((result.data?.totalKmThreeDayBefore)!,label: lbTraveledDistanceThreeDaysAgo)
-        formatDistanceLabelText((result.data?.totalKmSevenDayBefore)!,label: lbTraveledDistanceSevenDaysAgo)
-        lbTotalTraveledDistanceInCurrentMonth.text = "\(String(describing:(result.data?.totalKmMonth)!))"
-        setupPieChart((result.data?.totalPercentMonth)!)
+        formatDistanceLabelText((result.data?.totalKmToday ?? 0)!,label: lbTraveledDistanceToday)
+        formatDistanceLabelText((result.data?.totalKmThreeDayBefore ?? 0)!,label: lbTraveledDistanceThreeDaysAgo)
+        formatDistanceLabelText((result.data?.totalKmSevenDayBefore ?? 0)!,label: lbTraveledDistanceSevenDaysAgo)
+        lbTotalTraveledDistanceInCurrentMonth.text = "\(String(describing:(result.data?.totalKmMonth ?? 0)!))"
+        setupPieChart(Float((result.data?.totalPercentMonth ?? 0)!))
     }
     
     func updateTableViewAndBarChart(_ result: GetInfoForGroupMemberDetailScreenResult){
@@ -251,7 +251,7 @@ class GroupViewController: BaseViewController {
 extension GroupViewController{
     
     func getInfo(){
-        SVProgressHUD.show()
+        SVProgressHUD.show() 
         let completion = {(result: GetInfoForHomeScreenResult?, error: String?) -> Void in
             if let result = result {
                 if result.status == 0 {
@@ -306,7 +306,7 @@ extension GroupViewController{
                 } else {
                     SVProgressHUD.dismiss()
                     self.lbDriverName.text = driver?.data.fullname!
-                    self.lbDriverPlate.text = driver?.data.licensePlate!
+                     self.lbDriverPlate.text = driver?.data.licensePlate!
                     self.lbDriverVehicleBrand.text = driver?.data.carManufacturer!
                     self.lbDriverVehicleColor.text = driver?.data.carColor!
                     self.lbTotalTraveledDistances.text = driver?.data.totalDistanceRunOneMonth!

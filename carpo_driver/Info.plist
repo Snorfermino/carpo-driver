@@ -2,19 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Cập nhập vị trí tài xế trên bản đồ</string>
-	<key>NSCameraUsageDescription</key>
-	<string>Use for profile picture and proof pictures</string>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Roboto Mono Light for Powerline.ttf</string>
-		<string>Roboto Mono Medium for Powerline.ttf</string>
-	</array>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Choose Profile Picture</string>
+	<key>AccountKitClientToken</key>
+	<string>3fa72ac6acc6b12409a4bd6b23b16915</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>Carpo Driver</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -26,11 +19,51 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>0.0.4</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>ak374475319631367</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>6</string>
+	<key>Fabric</key>
+	<dict>
+		<key>APIKey</key>
+		<string>8496ccfbad13d40d3cb56cf3e650319be0e0523a</string>
+		<key>Kits</key>
+		<array>
+			<dict>
+				<key>KitInfo</key>
+				<dict/>
+				<key>KitName</key>
+				<string>Crashlytics</string>
+			</dict>
+		</array>
+	</dict>
+	<key>FacebookAppID</key>
+	<string>374475319631367</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>Use for profile picture and proof pictures</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>To smoother animation on map</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Cập nhập vị trí tài xế trên bản đồ</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>To smoother animation on map</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Choose Profile Picture</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Roboto Mono Light for Powerline.ttf</string>
+		<string>Roboto Mono Medium for Powerline.ttf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -42,7 +75,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>

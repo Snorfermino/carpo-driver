@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gBl-lJ-Hdz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gBl-lJ-Hdz">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -191,7 +192,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đính kèm tệp" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKY-C5-U4q">
-                                                <rect key="frame" x="75" y="17" width="130" height="26"/>
+                                                <rect key="frame" x="75" y="17.5" width="130" height="26"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="22"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -274,7 +275,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="grI-VQ-Ofm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1069.5999999999999" y="-819.04047976011998"/>
+            <point key="canvasLocation" x="1066" y="-817"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -287,19 +288,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_background" translatesAutoresizingMaskIntoConstraints="NO" id="Mjn-BX-uIH" userLabel="Background">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fGo-oK-XsH">
-                                <rect key="frame" x="239" y="513.5" width="116" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="fZT-Nq-HGx"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="SanFranciscoText-Regular" family="San Francisco Text" pointSize="15"/>
-                                <state key="normal" title="Quên mật khẩu ?">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="forgotPasswordPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Oh-8q-wC3"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dx6-JO-FOs">
                                 <rect key="frame" x="20" y="203.5" width="335" height="338.5"/>
                                 <subviews>
@@ -401,10 +389,10 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="signInPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n8U-1e-LyZ"/>
+                                            <action selector="signInPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="16F-3l-gfV"/>
                                         </connections>
                                     </button>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cq0-mz-AlY" userLabel="Facebook Login" customClass="AnimatableView" customModule="IBAnimatable">
+                                    <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cq0-mz-AlY" userLabel="Facebook Login" customClass="AnimatableView" customModule="IBAnimatable">
                                         <rect key="frame" x="0.0" y="195" width="335" height="50"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="44c-TQ-Do0" customClass="AnimatableView" customModule="IBAnimatable">
@@ -445,6 +433,9 @@
                                                         <real key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="loginWithFBPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sUc-QS-GJz"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -463,7 +454,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dHp-9k-K17" userLabel="Google Login" customClass="AnimatableView" customModule="IBAnimatable">
+                                    <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dHp-9k-K17" userLabel="Google Login" customClass="AnimatableView" customModule="IBAnimatable">
                                         <rect key="frame" x="0.0" y="250" width="335" height="50"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cuE-zc-6fc" customClass="AnimatableView" customModule="IBAnimatable">
@@ -546,6 +537,19 @@
                                     <constraint firstItem="u1h-1n-5Y1" firstAttribute="leading" secondItem="Dx6-JO-FOs" secondAttribute="leading" id="zIt-4m-hkZ"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fGo-oK-XsH">
+                                <rect key="frame" x="239" y="403" width="116" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="fZT-Nq-HGx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SanFranciscoText-Regular" family="San Francisco Text" pointSize="15"/>
+                                <state key="normal" title="Quên mật khẩu ?">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="forgotPasswordPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Oh-8q-wC3"/>
+                                </connections>
+                            </button>
                             <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mgr-ih-vD7">
                                 <rect key="frame" x="20" y="203.5" width="335" height="338.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -569,10 +573,10 @@
                             <constraint firstItem="Mgr-ih-vD7" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="335:375" id="M1L-Sx-nP2"/>
                             <constraint firstItem="Dx6-JO-FOs" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="335:375" id="Teg-9g-gRd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fGo-oK-XsH" secondAttribute="trailing" constant="20" id="aXy-uQ-VVV"/>
+                            <constraint firstItem="fGo-oK-XsH" firstAttribute="top" secondItem="ard-Ex-i8Q" secondAttribute="bottom" constant="10" id="bBe-bi-Ia5"/>
                             <constraint firstAttribute="trailing" secondItem="Mjn-BX-uIH" secondAttribute="trailing" id="bu2-2C-nXg"/>
                             <constraint firstItem="Mgr-ih-vD7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ic8-Ku-BQK"/>
                             <constraint firstItem="Mgr-ih-vD7" firstAttribute="top" secondItem="ebV-yE-CsW" secondAttribute="bottom" constant="-20" id="j84-4d-sRZ"/>
-                            <constraint firstItem="fGo-oK-XsH" firstAttribute="top" secondItem="dHp-9k-K17" secondAttribute="bottom" constant="10" id="of5-WU-gDH"/>
                             <constraint firstItem="ebV-yE-CsW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="10" id="rHl-iK-FhQ"/>
                             <constraint firstItem="Dx6-JO-FOs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rk0-Qx-tZd"/>
                             <constraint firstItem="Mjn-BX-uIH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="s8P-d3-ubm"/>
@@ -582,7 +586,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="V5V-Dt-7gc"/>
                     <connections>
+                        <outlet property="btnFBLogin" destination="eJU-dJ-UrE" id="gFa-a7-Efi"/>
                         <outlet property="btnForgotPassword" destination="fGo-oK-XsH" id="G0E-q1-W0g"/>
+                        <outlet property="btnGoogleLogin" destination="lDF-vZ-QRK" id="WMF-Oy-8sa"/>
                         <outlet property="tfPassword" destination="u1h-1n-5Y1" id="ZGs-0z-gMf"/>
                         <outlet property="tfPhoneNumber" destination="fmn-wI-dXv" id="ZYZ-wI-CeL"/>
                         <outlet property="viewCenter" destination="Mgr-ih-vD7" id="Cf4-9p-wZc"/>
@@ -665,11 +671,106 @@
                     <connections>
                         <outlet property="imgViewProfilePicture" destination="3Jf-wJ-97x" id="bBL-AU-srf"/>
                         <outlet property="tableView" destination="GxV-Kr-Huc" id="JkE-zH-Idu"/>
+                        <segue destination="D7O-rE-Shi" kind="show" identifier="PhotoVC" id="NCF-GD-ZcJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y9d-rE-fjJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1304.8" y="36.431784107946029"/>
+        </scene>
+        <!--Photo View Controller-->
+        <scene sceneID="6S3-8g-tp0">
+            <objects>
+                <viewController storyboardIdentifier="PhotoViewController" id="D7O-rE-Shi" customClass="PhotoViewController" customModule="carpo_driver" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o2e-zC-c0y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vGs-jw-tvi">
+                                <rect key="frame" x="20" y="40" width="335" height="210"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PTM-Uf-jnG">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="210"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="PTM-Uf-jnG" firstAttribute="leading" secondItem="vGs-jw-tvi" secondAttribute="leading" id="2nU-Q2-JPm"/>
+                                    <constraint firstAttribute="trailing" secondItem="PTM-Uf-jnG" secondAttribute="trailing" id="Cwm-0X-IAz"/>
+                                    <constraint firstAttribute="width" secondItem="vGs-jw-tvi" secondAttribute="height" multiplier="335:210" id="aBT-mk-dBg"/>
+                                    <constraint firstItem="PTM-Uf-jnG" firstAttribute="top" secondItem="vGs-jw-tvi" secondAttribute="top" id="kXL-ox-7qv"/>
+                                    <constraint firstAttribute="bottom" secondItem="PTM-Uf-jnG" secondAttribute="bottom" id="pna-bt-sj4"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TFx-t2-a6P">
+                                <rect key="frame" x="97.5" y="269" width="180" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EqF-xO-Q5B">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="60"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="17"/>
+                                        <state key="normal" title="Máy ảnh">
+                                            <color key="titleColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="useCamera:" destination="D7O-rE-Shi" eventType="touchUpInside" id="i3R-Q5-jct"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="TFx-t2-a6P" secondAttribute="height" multiplier="180:60" id="2J0-Jh-wKz"/>
+                                    <constraint firstItem="EqF-xO-Q5B" firstAttribute="top" secondItem="TFx-t2-a6P" secondAttribute="top" id="BrD-Bh-Cvu"/>
+                                    <constraint firstItem="EqF-xO-Q5B" firstAttribute="leading" secondItem="TFx-t2-a6P" secondAttribute="leading" id="RiD-VO-zPg"/>
+                                    <constraint firstAttribute="height" constant="60" id="mXP-qe-PiE"/>
+                                    <constraint firstAttribute="trailing" secondItem="EqF-xO-Q5B" secondAttribute="trailing" id="qdh-bg-T4B"/>
+                                    <constraint firstAttribute="bottom" secondItem="EqF-xO-Q5B" secondAttribute="bottom" id="sLN-ag-nfp"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iqh-sL-bhA">
+                                <rect key="frame" x="97" y="349" width="180" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vex-FZ-p8E">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="60"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="17"/>
+                                        <state key="normal" title="Thư viện">
+                                            <color key="titleColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="useGallery:" destination="D7O-rE-Shi" eventType="touchUpInside" id="YHq-yf-11E"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Vex-FZ-p8E" firstAttribute="top" secondItem="iqh-sL-bhA" secondAttribute="top" id="MVX-ep-vVE"/>
+                                    <constraint firstAttribute="bottom" secondItem="Vex-FZ-p8E" secondAttribute="bottom" id="NEn-Ds-tvv"/>
+                                    <constraint firstAttribute="width" secondItem="iqh-sL-bhA" secondAttribute="height" multiplier="180:60" id="TOG-Ue-a00"/>
+                                    <constraint firstAttribute="trailing" secondItem="Vex-FZ-p8E" secondAttribute="trailing" id="aoT-qQ-pOS"/>
+                                    <constraint firstItem="Vex-FZ-p8E" firstAttribute="leading" secondItem="iqh-sL-bhA" secondAttribute="leading" id="lxg-zb-qMT"/>
+                                    <constraint firstAttribute="height" constant="60" id="sQK-1C-dTV"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vGs-jw-tvi" firstAttribute="top" secondItem="S6f-Nf-KXf" secondAttribute="top" constant="20" id="1Hv-4j-i7u"/>
+                            <constraint firstItem="iqh-sL-bhA" firstAttribute="width" secondItem="iqh-sL-bhA" secondAttribute="height" multiplier="180:60" id="8BX-VZ-Zc5"/>
+                            <constraint firstItem="TFx-t2-a6P" firstAttribute="centerX" secondItem="o2e-zC-c0y" secondAttribute="centerX" id="OVo-K2-axe"/>
+                            <constraint firstItem="iqh-sL-bhA" firstAttribute="top" secondItem="TFx-t2-a6P" secondAttribute="bottom" constant="20" id="Q2F-P0-1LX"/>
+                            <constraint firstItem="vGs-jw-tvi" firstAttribute="leading" secondItem="S6f-Nf-KXf" secondAttribute="leading" constant="20" id="SiR-92-EMb"/>
+                            <constraint firstItem="S6f-Nf-KXf" firstAttribute="trailing" secondItem="vGs-jw-tvi" secondAttribute="trailing" constant="20" id="Xd7-ni-0Nw"/>
+                            <constraint firstItem="TFx-t2-a6P" firstAttribute="top" secondItem="vGs-jw-tvi" secondAttribute="bottom" constant="19" id="qOg-XW-zwe"/>
+                            <constraint firstItem="iqh-sL-bhA" firstAttribute="centerX" secondItem="o2e-zC-c0y" secondAttribute="centerX" id="yLt-sN-gfR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="S6f-Nf-KXf"/>
+                    </view>
+                    <connections>
+                        <outlet property="imgViewProfile" destination="PTM-Uf-jnG" id="Dep-wy-Lqi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XKi-9O-fjM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1304.8" y="766.86656671664173"/>
         </scene>
         <!--History View Controller-->
         <scene sceneID="cdx-Mh-lh1">
@@ -837,13 +938,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Họ và tên:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZXH-1y-MuX">
-                                                <rect key="frame" x="40" y="36.5" width="67.5" height="18"/>
+                                                <rect key="frame" x="40" y="36" width="67.5" height="18"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="15"/>
                                                 <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NGUYỄN VĂN A" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rmx-JW-Gc8">
-                                                <rect key="frame" x="196" y="33" width="149" height="25"/>
+                                                <rect key="frame" x="196" y="32.5" width="149" height="25"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="21"/>
                                                 <color key="textColor" red="0.9993161559" green="0.57788419719999995" blue="0.0011074217039999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -862,13 +963,13 @@
                                         <rect key="frame" x="0.0" y="90" width="375" height="55"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Biển số:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yw7-vq-0MD">
-                                                <rect key="frame" x="40" y="19" width="54" height="18"/>
+                                                <rect key="frame" x="40" y="18.5" width="54" height="18"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="15"/>
                                                 <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NGUYỄN VĂN A" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awH-MB-mA0">
-                                                <rect key="frame" x="196" y="15" width="149" height="25"/>
+                                                <rect key="frame" x="196" y="15.5" width="149" height="25"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="21"/>
                                                 <color key="textColor" red="0.9993161559" green="0.57788419719999995" blue="0.0011074217039999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -886,13 +987,13 @@
                                         <rect key="frame" x="0.0" y="145" width="375" height="90"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hiệu xe:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4a-gi-coT">
-                                                <rect key="frame" x="40" y="36" width="54.5" height="18"/>
+                                                <rect key="frame" x="40" y="36.5" width="54.5" height="18"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="15"/>
                                                 <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toyota" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ep-g0-7QP">
-                                                <rect key="frame" x="282" y="32" width="63" height="25"/>
+                                                <rect key="frame" x="282" y="32.5" width="63" height="25"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="21"/>
                                                 <color key="textColor" red="0.9993161559" green="0.57788419719999995" blue="0.0011074217039999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -908,13 +1009,13 @@
                                         <rect key="frame" x="0.0" y="235" width="375" height="55"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Màu xe:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfF-oU-IXv">
-                                                <rect key="frame" x="40" y="18" width="53" height="18"/>
+                                                <rect key="frame" x="40" y="18.5" width="53" height="18"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="15"/>
                                                 <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4lA-yF-ktN">
-                                                <rect key="frame" x="308" y="15" width="37" height="25"/>
+                                                <rect key="frame" x="308" y="15.5" width="37" height="25"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="21"/>
                                                 <color key="textColor" red="0.9993161559" green="0.57788419719999995" blue="0.0011074217039999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -947,13 +1048,13 @@
                                         <rect key="frame" x="37" y="345" width="300" height="75"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="700.000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XS6-7y-XmD">
-                                                <rect key="frame" x="58.5" y="8.5" width="184.5" height="59"/>
+                                                <rect key="frame" x="58" y="8" width="184.5" height="59"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="50"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2AS-J1-HYV">
-                                                <rect key="frame" x="250" y="8" width="26" height="20"/>
+                                                <rect key="frame" x="249.5" y="7.5" width="26" height="20"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -1253,8 +1354,8 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="69V-hz-LFc" customClass="AnimatableView" customModule="IBAnimatable">
                                                 <rect key="frame" x="0.0" y="175" width="170" height="165"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="JVL-u4-XNe">
-                                                        <rect key="frame" x="39" y="62.5" width="93.5" height="40"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JVL-u4-XNe">
+                                                        <rect key="frame" x="61.5" y="62.5" width="47" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="1fF-Fh-P7c"/>
                                                         </constraints>
@@ -1263,7 +1364,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="a2H-mX-5W7">
-                                                        <rect key="frame" x="109.5" y="45.5" width="23" height="17"/>
+                                                        <rect key="frame" x="85.5" y="45.5" width="23" height="17"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="17" id="afj-zE-EKg"/>
                                                         </constraints>
@@ -1280,10 +1381,12 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="JVL-u4-XNe" secondAttribute="trailing" constant="12" id="2A4-nl-kUH"/>
                                                     <constraint firstItem="a2H-mX-5W7" firstAttribute="top" relation="greaterThanOrEqual" secondItem="69V-hz-LFc" secondAttribute="top" constant="20" id="4Um-BC-tQE"/>
                                                     <constraint firstItem="JVL-u4-XNe" firstAttribute="centerX" secondItem="69V-hz-LFc" secondAttribute="centerX" id="BRI-dq-LwB"/>
                                                     <constraint firstItem="JVL-u4-XNe" firstAttribute="centerY" secondItem="69V-hz-LFc" secondAttribute="centerY" id="Bp5-eA-Qu3"/>
                                                     <constraint firstItem="a2H-mX-5W7" firstAttribute="trailing" secondItem="JVL-u4-XNe" secondAttribute="trailing" id="lfN-iB-jPf"/>
+                                                    <constraint firstItem="JVL-u4-XNe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="69V-hz-LFc" secondAttribute="leading" constant="12" id="ppH-W5-QTv"/>
                                                     <constraint firstItem="JVL-u4-XNe" firstAttribute="top" secondItem="a2H-mX-5W7" secondAttribute="bottom" id="xCN-RZ-Eu9"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
@@ -1326,9 +1429,9 @@
                                                         <rect key="frame" x="222" y="0.0" width="115" height="40"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dlv-2i-4IY">
-                                                                <rect key="frame" x="28" y="2" width="59.5" height="35.5"/>
+                                                                <rect key="frame" x="37.5" y="2" width="41" height="35.5"/>
                                                                 <attributedString key="attributedText">
-                                                                    <fragment content="57">
+                                                                    <fragment content="0">
                                                                         <attributes>
                                                                             <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                             <font key="NSFont" size="33" name="MyriadPro-BoldCond"/>
@@ -1439,9 +1542,9 @@
                                                         <rect key="frame" x="222" y="0.0" width="115" height="39.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kmn-2P-A3g">
-                                                                <rect key="frame" x="28" y="2" width="59.5" height="35.5"/>
+                                                                <rect key="frame" x="37.5" y="2" width="41" height="35.5"/>
                                                                 <attributedString key="attributedText">
-                                                                    <fragment content="57">
+                                                                    <fragment content="0">
                                                                         <attributes>
                                                                             <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                             <font key="NSFont" size="33" name="MyriadPro-BoldCond"/>
@@ -1552,9 +1655,9 @@
                                                         <rect key="frame" x="222" y="0.0" width="115" height="40"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ScZ-dQ-ijh">
-                                                                <rect key="frame" x="28" y="2" width="59.5" height="35.5"/>
+                                                                <rect key="frame" x="37.5" y="2" width="41" height="35.5"/>
                                                                 <attributedString key="attributedText">
-                                                                    <fragment content="57">
+                                                                    <fragment content="0">
                                                                         <attributes>
                                                                             <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                             <font key="NSFont" size="33" name="MyriadPro-BoldCond"/>
@@ -1662,7 +1765,7 @@
                                         </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tổng % đi được trong tháng" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3b-41-9nM">
-                                        <rect key="frame" x="241" y="75.5" width="119" height="34"/>
+                                        <rect key="frame" x="241" y="76" width="119" height="34"/>
                                         <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1680,7 +1783,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="155" height="41.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v9t-l7-PbL">
-                                                        <rect key="frame" x="20" y="-3.5" width="116" height="38.5"/>
+                                                        <rect key="frame" x="20" y="-3.5" width="98" height="38.5"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="% đi đ">
                                                                 <attributes>
@@ -1709,18 +1812,10 @@
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>
-                                                            <fragment content="3">
+                                                            <fragment content="0">
                                                                 <attributes>
                                                                     <color key="NSColor" red="1" green="0.57647058823529407" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <font key="NSFont" size="33" name="MyriadPro-BoldCond"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                            <fragment content="5">
-                                                                <attributes>
-                                                                    <color key="NSColor" red="1" green="0.57647058823529407" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                    <font key="NSFont" size="33" name="MyriadPro-BoldCond"/>
-                                                                    <font key="NSOriginalFont" size="33" name="MyriadPro-BoldCond"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>
@@ -1764,53 +1859,31 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UH0-nV-Mse">
                                                         <rect key="frame" x="20" y="-3.5" width="127" height="38.5"/>
                                                         <attributedString key="attributedText">
-                                                            <fragment content="% ch">
+                                                            <fragment content="% còn thi">
                                                                 <attributes>
                                                                     <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <font key="NSFont" size="12" name="MyriadPro-Regular"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>
-                                                            <fragment content="ư">
+                                                            <fragment content="ế">
                                                                 <attributes>
                                                                     <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <font key="NSFont" size="12" name="LucidaGrande"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>
-                                                            <fragment content="a đi đ">
+                                                            <fragment content="u: ">
                                                                 <attributes>
                                                                     <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <font key="NSFont" size="12" name="MyriadPro-Regular"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>
-                                                            <fragment content="ượ">
-                                                                <attributes>
-                                                                    <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                    <font key="NSFont" size="12" name="LucidaGrande"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                            <fragment content="c: ">
-                                                                <attributes>
-                                                                    <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                    <font key="NSFont" size="12" name="MyriadPro-Regular"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                            <fragment content="6">
+                                                            <fragment content="100">
                                                                 <attributes>
                                                                     <color key="NSColor" red="1" green="0.57647058823529407" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <font key="NSFont" size="33" name="MyriadPro-BoldCond"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                            <fragment content="5">
-                                                                <attributes>
-                                                                    <color key="NSColor" red="1" green="0.57647058823529407" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                    <font key="NSFont" size="33" name="MyriadPro-BoldCond"/>
-                                                                    <font key="NSOriginalFont" size="33" name="MyriadPro-BoldCond"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>
@@ -1957,9 +2030,9 @@
                                                 <rect key="frame" x="222" y="0.0" width="115" height="36.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qdz-z5-UVL">
-                                                        <rect key="frame" x="28" y="2" width="59.5" height="32.5"/>
+                                                        <rect key="frame" x="37.5" y="2" width="41" height="32.5"/>
                                                         <attributedString key="attributedText">
-                                                            <fragment content="57">
+                                                            <fragment content="0">
                                                                 <attributes>
                                                                     <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <font key="NSFont" size="33" name="MyriadPro-BoldCond"/>
@@ -2021,9 +2094,9 @@
                                                 <rect key="frame" x="222" y="0.0" width="115" height="37"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="23L-wf-E2w">
-                                                        <rect key="frame" x="28" y="2" width="59.5" height="33"/>
+                                                        <rect key="frame" x="37.5" y="2" width="41" height="33"/>
                                                         <attributedString key="attributedText">
-                                                            <fragment content="57">
+                                                            <fragment content="0">
                                                                 <attributes>
                                                                     <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <font key="NSFont" size="33" name="MyriadPro-BoldCond"/>
@@ -2085,9 +2158,9 @@
                                                 <rect key="frame" x="222" y="0.0" width="115" height="36.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zaJ-x2-3Yt">
-                                                        <rect key="frame" x="28" y="2" width="59.5" height="32.5"/>
+                                                        <rect key="frame" x="37.5" y="2" width="41" height="32.5"/>
                                                         <attributedString key="attributedText">
-                                                            <fragment content="57">
+                                                            <fragment content="0">
                                                                 <attributes>
                                                                     <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <font key="NSFont" size="33" name="MyriadPro-BoldCond"/>
@@ -2143,12 +2216,12 @@
                                         <rect key="frame" x="0.0" y="180" width="175" height="170"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rsI-Wv-c4D">
-                                                <rect key="frame" x="41" y="65" width="93.5" height="40"/>
+                                                <rect key="frame" x="76" y="65" width="23.5" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="vKD-O7-HYb"/>
                                                 </constraints>
                                                 <attributedString key="attributedText">
-                                                    <fragment content="1000">
+                                                    <fragment content="0">
                                                         <attributes>
                                                             <font key="NSFont" size="42" name="MyriadPro-Bold"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -2158,7 +2231,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="mo4-Bu-go9">
-                                                <rect key="frame" x="111.5" y="48" width="23" height="17"/>
+                                                <rect key="frame" x="76.5" y="48" width="23" height="17"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="17" id="88a-vt-kYN"/>
                                                 </constraints>
@@ -2175,8 +2248,10 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rsI-Wv-c4D" secondAttribute="trailing" constant="15" id="2sp-uP-hHj"/>
                                             <constraint firstItem="rsI-Wv-c4D" firstAttribute="centerX" secondItem="k4s-Jb-Spa" secondAttribute="centerX" id="DMl-z5-ZUk"/>
                                             <constraint firstItem="mo4-Bu-go9" firstAttribute="trailing" secondItem="rsI-Wv-c4D" secondAttribute="trailing" id="IhB-r9-Ljn"/>
+                                            <constraint firstItem="rsI-Wv-c4D" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="k4s-Jb-Spa" secondAttribute="leading" constant="15" id="JGY-mp-ezI"/>
                                             <constraint firstItem="rsI-Wv-c4D" firstAttribute="top" secondItem="mo4-Bu-go9" secondAttribute="bottom" id="PCi-2n-AJt"/>
                                             <constraint firstItem="rsI-Wv-c4D" firstAttribute="centerY" secondItem="k4s-Jb-Spa" secondAttribute="centerY" id="jGK-JT-6CA"/>
                                             <constraint firstItem="mo4-Bu-go9" firstAttribute="top" relation="greaterThanOrEqual" secondItem="k4s-Jb-Spa" secondAttribute="top" constant="20" id="m5E-bQ-jXs"/>
@@ -2210,7 +2285,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u7s-pD-FbA">
-                                                <rect key="frame" x="61" y="14.5" width="169" height="20.5"/>
+                                                <rect key="frame" x="61" y="15.5" width="169" height="20.5"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Ch">
                                                         <attributes>
@@ -2240,21 +2315,7 @@
                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
-                                                    <fragment content="nh ch">
-                                                        <attributes>
-                                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <font key="NSFont" size="17" name="MyriadPro-Regular"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                    <fragment content="ứ">
-                                                        <attributes>
-                                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <font key="NSFont" size="17" name="LucidaGrande"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                    <fragment content="ng minh">
+                                                    <fragment content="nh báo cáo">
                                                         <attributes>
                                                             <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <font key="NSFont" size="17" name="MyriadPro-Regular"/>
@@ -2341,18 +2402,10 @@
                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
-                                                    <fragment content="2">
+                                                    <fragment content="0">
                                                         <attributes>
                                                             <color key="NSColor" red="1" green="0.57647058823529407" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <font key="NSFont" size="33" name="MyriadPro-BoldCond"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                    <fragment content="5">
-                                                        <attributes>
-                                                            <color key="NSColor" red="1" green="0.57647058823529407" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            <font key="NSFont" size="33" name="MyriadPro-BoldCond"/>
-                                                            <font key="NSOriginalFont" size="33" name="MyriadPro-BoldCond"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
@@ -2396,53 +2449,31 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q01-M0-Tzs">
                                                 <rect key="frame" x="18" y="-2.5" width="149" height="38.5"/>
                                                 <attributedString key="attributedText">
-                                                    <fragment content="% ch">
+                                                    <fragment content="% còn thi">
                                                         <attributes>
                                                             <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <font key="NSFont" size="12" name="MyriadPro-Regular"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
-                                                    <fragment content="ư">
+                                                    <fragment content="ế">
                                                         <attributes>
                                                             <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <font key="NSFont" size="12" name="LucidaGrande"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
-                                                    <fragment content="a đi đ">
+                                                    <fragment content="u: ">
                                                         <attributes>
                                                             <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <font key="NSFont" size="12" name="MyriadPro-Regular"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
-                                                    <fragment content="ượ">
-                                                        <attributes>
-                                                            <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            <font key="NSFont" size="12" name="LucidaGrande"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                    <fragment content="c: ">
-                                                        <attributes>
-                                                            <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            <font key="NSFont" size="12" name="MyriadPro-Regular"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                    <fragment content="7">
+                                                    <fragment content="100">
                                                         <attributes>
                                                             <color key="NSColor" red="1" green="0.57647058823529407" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <font key="NSFont" size="33" name="MyriadPro-BoldCond"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                    <fragment content="5">
-                                                        <attributes>
-                                                            <color key="NSColor" red="1" green="0.57647058823529407" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            <font key="NSFont" size="33" name="MyriadPro-BoldCond"/>
-                                                            <font key="NSOriginalFont" size="33" name="MyriadPro-BoldCond"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
@@ -2537,6 +2568,119 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ooy-HJ-h7O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2268" y="34.632683658170919"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="2z1-ei-TJ5">
+            <objects>
+                <viewController id="KFe-ui-9B5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ayS-Tj-hcn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MgH-TF-g5t">
+                                <rect key="frame" x="209" y="85" width="120" height="120"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5hP-OB-ZVw">
+                                <rect key="frame" x="46" y="305" width="120" height="120"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Hv-xC-xLk">
+                                <rect key="frame" x="209" y="305" width="120" height="120"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EFj-kw-Xkz" customClass="AnimatableButton" customModule="IBAnimatable">
+                                <rect key="frame" x="172" y="502" width="30" height="85"/>
+                                <state key="normal" title="Gửi"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tc9-e1-sjy">
+                                <rect key="frame" x="46" y="85" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tc9-e1-sjy" secondAttribute="height" id="tf9-1d-Fz3"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đồng hồ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMK-U2-LD0">
+                                <rect key="frame" x="46" y="213" width="120" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trái" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rA1-Xz-Alz">
+                                <rect key="frame" x="209" y="213" width="120" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phải" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I63-Em-Mx5">
+                                <rect key="frame" x="46" y="433" width="120" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trước" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hM1-Ux-mRn">
+                                <rect key="frame" x="209" y="433" width="120" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JYB-ys-881" customClass="AnimatableButton" customModule="IBAnimatable">
+                                <rect key="frame" x="20" y="507" width="335" height="80"/>
+                                <color key="backgroundColor" red="0.94173574449999997" green="0.59836840629999999" blue="0.2154669911" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="26"/>
+                                <state key="normal" title="Gửi">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="submitPressed:" destination="Mlj-Es-5yJ" eventType="touchUpInside" id="iNr-53-BMG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MgH-TF-g5t" firstAttribute="width" secondItem="tc9-e1-sjy" secondAttribute="width" id="03O-tI-Ni9"/>
+                            <constraint firstItem="hM1-Ux-mRn" firstAttribute="width" secondItem="4Hv-xC-xLk" secondAttribute="width" id="0p0-cn-JNC"/>
+                            <constraint firstItem="JYB-ys-881" firstAttribute="width" secondItem="ayS-Tj-hcn" secondAttribute="width" multiplier="335:375" id="2Fp-8T-oJu"/>
+                            <constraint firstItem="4Hv-xC-xLk" firstAttribute="leading" secondItem="MgH-TF-g5t" secondAttribute="leading" id="3wu-iV-aYq"/>
+                            <constraint firstItem="I63-Em-Mx5" firstAttribute="width" secondItem="5hP-OB-ZVw" secondAttribute="width" id="5T1-UZ-czf"/>
+                            <constraint firstItem="tc9-e1-sjy" firstAttribute="leading" secondItem="ayS-Tj-hcn" secondAttribute="leadingMargin" constant="30" id="5fa-Qg-PBf"/>
+                            <constraint firstItem="JYB-ys-881" firstAttribute="centerX" secondItem="ayS-Tj-hcn" secondAttribute="centerX" id="9iO-g0-Jo2"/>
+                            <constraint firstItem="rA1-Xz-Alz" firstAttribute="leading" secondItem="MgH-TF-g5t" secondAttribute="leading" id="ABT-t0-7no"/>
+                            <constraint firstItem="JhP-dp-gRR" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="JYB-ys-881" secondAttribute="bottom" constant="50" id="AMu-Bs-BKl"/>
+                            <constraint firstItem="5hP-OB-ZVw" firstAttribute="leading" secondItem="tc9-e1-sjy" secondAttribute="leading" id="Cxc-Im-vUL"/>
+                            <constraint firstItem="hM1-Ux-mRn" firstAttribute="leading" secondItem="4Hv-xC-xLk" secondAttribute="leading" id="DDF-4L-0VF"/>
+                            <constraint firstItem="EFj-kw-Xkz" firstAttribute="top" secondItem="5hP-OB-ZVw" secondAttribute="bottom" constant="77" id="I3l-ew-0Vd"/>
+                            <constraint firstItem="EFj-kw-Xkz" firstAttribute="centerX" secondItem="ayS-Tj-hcn" secondAttribute="centerX" id="Std-rv-ZxR"/>
+                            <constraint firstItem="I63-Em-Mx5" firstAttribute="leading" secondItem="5hP-OB-ZVw" secondAttribute="leading" id="U4f-P4-Th3"/>
+                            <constraint firstItem="5hP-OB-ZVw" firstAttribute="height" secondItem="tc9-e1-sjy" secondAttribute="height" id="W7d-2Z-JmY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MgH-TF-g5t" secondAttribute="trailing" constant="30" id="Wow-zW-R8c"/>
+                            <constraint firstItem="cMK-U2-LD0" firstAttribute="width" secondItem="tc9-e1-sjy" secondAttribute="width" id="Y1E-vb-xH4"/>
+                            <constraint firstItem="JYB-ys-881" firstAttribute="width" secondItem="JYB-ys-881" secondAttribute="height" multiplier="335:80" id="YLZ-Qe-nS5"/>
+                            <constraint firstItem="MgH-TF-g5t" firstAttribute="top" secondItem="tc9-e1-sjy" secondAttribute="top" id="YsV-fM-EDW"/>
+                            <constraint firstItem="cMK-U2-LD0" firstAttribute="top" secondItem="tc9-e1-sjy" secondAttribute="bottom" constant="8" id="atK-10-tdY"/>
+                            <constraint firstItem="I63-Em-Mx5" firstAttribute="top" secondItem="5hP-OB-ZVw" secondAttribute="bottom" constant="8" id="fWl-D6-VYG"/>
+                            <constraint firstItem="4Hv-xC-xLk" firstAttribute="width" secondItem="tc9-e1-sjy" secondAttribute="width" id="gVx-sX-UNm"/>
+                            <constraint firstItem="tc9-e1-sjy" firstAttribute="width" secondItem="ayS-Tj-hcn" secondAttribute="width" multiplier="120:375" id="hJ6-Ye-WLC"/>
+                            <constraint firstItem="4Hv-xC-xLk" firstAttribute="height" secondItem="tc9-e1-sjy" secondAttribute="height" id="iUr-EV-kEa"/>
+                            <constraint firstAttribute="bottom" secondItem="EFj-kw-Xkz" secondAttribute="bottom" constant="80" id="mSz-09-g0N"/>
+                            <constraint firstItem="tc9-e1-sjy" firstAttribute="top" secondItem="ayS-Tj-hcn" secondAttribute="topMargin" constant="65" id="mdA-5V-K6c"/>
+                            <constraint firstItem="4Hv-xC-xLk" firstAttribute="centerY" secondItem="5hP-OB-ZVw" secondAttribute="centerY" id="nS1-8U-Mg8"/>
+                            <constraint firstItem="JYB-ys-881" firstAttribute="top" secondItem="4Hv-xC-xLk" secondAttribute="bottom" constant="82" id="oJv-JQ-N7p"/>
+                            <constraint firstItem="rA1-Xz-Alz" firstAttribute="width" secondItem="MgH-TF-g5t" secondAttribute="width" id="p8T-rn-BHg"/>
+                            <constraint firstItem="5hP-OB-ZVw" firstAttribute="width" secondItem="tc9-e1-sjy" secondAttribute="width" id="p8b-O6-o2g"/>
+                            <constraint firstItem="MgH-TF-g5t" firstAttribute="height" secondItem="tc9-e1-sjy" secondAttribute="height" id="rxp-3D-1qF"/>
+                            <constraint firstItem="hM1-Ux-mRn" firstAttribute="top" secondItem="4Hv-xC-xLk" secondAttribute="bottom" constant="8" id="t09-r9-JCw"/>
+                            <constraint firstItem="rA1-Xz-Alz" firstAttribute="top" secondItem="MgH-TF-g5t" secondAttribute="bottom" constant="8" id="tL6-ga-28Y"/>
+                            <constraint firstItem="cMK-U2-LD0" firstAttribute="leading" secondItem="tc9-e1-sjy" secondAttribute="leading" id="wro-ru-thp"/>
+                            <constraint firstItem="5hP-OB-ZVw" firstAttribute="top" secondItem="tc9-e1-sjy" secondAttribute="bottom" constant="100" id="zOp-f4-E8u"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JhP-dp-gRR"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s2D-gP-QRv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3232.8000000000002" y="33.733133433283363"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eoB-yk-4og">

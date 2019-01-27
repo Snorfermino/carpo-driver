@@ -41,7 +41,7 @@ class HomeViewController: BaseViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        
+                getInfo()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -72,19 +72,6 @@ class HomeViewController: BaseViewController {
             
             view.layer.cornerRadius = 5
         }
-        let rightView = UIView()
-        let gpsLabel = UILabel()
-        gpsLabel.text = "GPS"
-        let button = UISwitch()
-        button.addTarget(self, action: #selector(startUpdateLocation), for: .valueChanged)
-        rightView.addSubview(gpsLabel)
-        
-        rightView.addSubview(button)
-        button.sizeToFit()
-        rightView.sizeToFit()
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: button)
-        //         setupPieChart()
-        getInfo()
     }
     
     @objc func startUpdateLocation(_ mySwitch: UISwitch){
@@ -95,7 +82,7 @@ class HomeViewController: BaseViewController {
             locationUpdateTimer.invalidate()
         }
     }
-    func formatDistanceLabelText(_ distance: Float, label: UILabel) {
+    func formatDistanceLabelText(_ distance: Double, label: UILabel) {
         let rawString = "\(distance)km"
         let myMutableString = NSMutableAttributedString(
             string: rawString,
@@ -118,7 +105,8 @@ class HomeViewController: BaseViewController {
     }
     
     func formatLegendsText(field: String, info: String, label: UILabel) {
-        let rawString = "\(field): \(info) %"
+        let indexEndOfText = info[..<info.index(info.startIndex, offsetBy: 5)]
+        let rawString = "\(field): \(indexEndOfText) %"
         let myMutableString = NSMutableAttributedString(
             string: rawString,
             attributes: [NSAttributedStringKey.font:UIFont(
@@ -133,19 +121,21 @@ class HomeViewController: BaseViewController {
                                         size: 33.0)!,
                                      range: NSRange(
                                         location: field.count.hashValue + 2,
-                                        length: info.length))
-        myMutableString.addAttribute(.foregroundColor, value: UIColor(hex: "FF9300"), range: NSRange(
-            location:field.count.hashValue + 2,
-            length:info.length))
+                                        length: 5))
+        myMutableString.addAttribute(.foregroundColor,
+                                     value: UIColor(hex: "FF9300"),
+                                     range: NSRange(
+                                        location:field.count.hashValue + 2,
+                                        length: 5))
         myMutableString.addAttribute(NSAttributedStringKey.font,
                                      value: UIFont(
                                         name: "MyriadPro-Bold",
                                         size: 17.0)!,
                                      range: NSRange(
-                                        location: field.count.hashValue + 2 + info.count.hashValue + 1,
+                                        location: field.count.hashValue + 2 + 5 + 1,
                                         length: 1))
         myMutableString.addAttribute(.foregroundColor, value: UIColor(hex: "808080"), range: NSRange(
-            location: field.count.hashValue + 2 + info.count.hashValue + 1,
+            location: field.count.hashValue + 2 + 5 + 1,
             length: 1))
         label.attributedText = myMutableString
         
@@ -183,19 +173,19 @@ class HomeViewController: BaseViewController {
     }
     
     func getInfo(){
-        SVProgressHUD.show()
+//        SVProgressHUD.show()
         let completion = {(result: GetInfoForHomeScreenResult?, error: String?) -> Void in
             if let result = result {
                 if result.status == 0 {
                     SVProgressHUD.dismiss()
-                    self.alert(title: "Lỗi", message: "Không có kết quả")
+//                    self.alert(title: "Lỗi", message: "Không có kết quả")
                 } else {
                     SVProgressHUD.dismiss()
                     self.updateScreen(result)
                 }
             } else {
                 SVProgressHUD.dismiss()
-                self.alert(title: "Lỗi", message: "Không có kết quả")
+//                self.alert(title: "Lỗi", message: "Không có kết quả")
             }
         }
         guard let userID = Global.user?.data.id else {return}
@@ -203,26 +193,44 @@ class HomeViewController: BaseViewController {
     }
     
     func updateScreen(_ result: GetInfoForHomeScreenResult){
-        
+        guard result.error != nil else { return }
         formatLegendsText(field: "% đi được",
-                          info: String(describing: (result.data?.totalPercentMonth)!),
+                          info: String(describing: (result.data?.totalPercentMonth ?? 0)!),
                           label: lbTraveledPercentages)
-        formatLegendsText(field: "% chưa đi được",
-                          info: String(describing: 100 - (result.data?.totalPercentMonth)!),
+        formatLegendsText(field: "% còn thiếu",
+                          info: String(describing: 100 - (result.data?.totalPercentMonth ?? 0)!),
                           label: lbUntraveledPercentages)
-        formatDistanceLabelText((result.data?.totalKmToday)!,label: lbTraveledDistanceToday)
-        formatDistanceLabelText((result.data?.totalKmThreeDayBefore)!,label: lbTraveledDistanceThreeDaysAgo)
-        formatDistanceLabelText((result.data?.totalKmSevenDayBefore)!,label: lbTraveledDistanceSevenDaysAgo)
-        lbTotalTraveledDistanceInCurrentMonth.text = "\(String(describing:(result.data?.totalKmMonth)!))"
-        setupPieChart((result.data?.totalPercentMonth)!)
+        formatDistanceLabelText((result.data?.totalKmToday ?? 0)!,label: lbTraveledDistanceToday)
+        formatDistanceLabelText((result.data?.totalKmThreeDayBefore ?? 0)!,label: lbTraveledDistanceThreeDaysAgo)
+        formatDistanceLabelText((result.data?.totalKmSevenDayBefore ?? 0)!,label: lbTraveledDistanceSevenDaysAgo)
+        lbTotalTraveledDistanceInCurrentMonth.text = "\(String(describing:(result.data?.totalKmMonth ?? 0)!))"
+        setupPieChart((Float(result.data?.totalPercentMonth ?? 0)))
+    }
+    
+    func updateScreenLabels(_ data: GetInfoForHomeScreenResult.Data) {
+        
+    }
+    
+    func uploadProof(_ image: UIImage){
+        SVProgressHUD.show()
+        let completion = {(result: ChangeAvatarResult?, error: String?) -> Void in
+            if result?.status == 0 {
+                self.alert(title: "Lỗi", message: "Cập nhập hình ảnh thất bại")
+            } else {
+                self.alert(title: "Đã cập nhập", message: "")
+            }
+            SVProgressHUD.dismiss()
+        }
+        ApiManager.uploadProof(image, completion: completion)
     }
 }
 extension HomeViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage //2
-        imgViewProof.contentMode = .scaleAspectFit //3
-        imgViewProof.image = chosenImage //4
+//        imgViewProof.contentMode = .scaleAspectFit //3
+//        imgViewProof.image = chosenImage //4
         dismiss(animated:true, completion: nil) //5
+        uploadProof(chosenImage)
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {

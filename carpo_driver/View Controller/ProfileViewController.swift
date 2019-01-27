@@ -44,18 +44,21 @@ class ProfileViewController: BaseViewController {
     
     @objc func photoFromLibrary(_ sender: UITapGestureRecognizer) {
         
-        let optionMenu = UIAlertController(title: nil, message: "Take Photo From", preferredStyle: .alert)
-        let cameraAction = UIAlertAction(title: "Photo Camera", style: .default) { (UIAlertAction) in
-            self.chooseCamera()
-        }
-        let libraryAction = UIAlertAction(title: "Photo Library", style: .default) { (UIAlertAction) in
-            self.chooseLibrary()
-        }
-        
-        optionMenu.addAction(cameraAction)
-        optionMenu.addAction(libraryAction)
-        optionMenu.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
-        self.present(optionMenu, animated: true, completion: nil)
+        let viewController = UINavigationController(rootViewController: UIStoryboard.main.viewController(PhotoViewController.self))
+        //        slideMenuController()?.changeMainViewController(viewController, close: true)
+        self.performSegue(withIdentifier: "PhotoVC", sender: nil)
+//        let optionMenu = UIAlertController(title: nil, message: "Take Photo From", preferredStyle: .alert)
+//        let cameraAction = UIAlertAction(title: "Photo Camera", style: .default) { (UIAlertAction) in
+//            self.chooseCamera()
+//        }
+//        let libraryAction = UIAlertAction(title: "Photo Library", style: .default) { (UIAlertAction) in
+//            self.chooseLibrary()
+//        }
+//
+//        optionMenu.addAction(cameraAction)
+//        optionMenu.addAction(libraryAction)
+//        optionMenu.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
+//        self.present(optionMenu, animated: true, completion: nil)
     }
     
     func chooseCamera() {

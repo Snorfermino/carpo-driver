@@ -17,7 +17,6 @@ class Global {
         set {
             userInfo = newValue
             DataManager.saveUserInfo(user: newValue)
-            NotificationCenter.default.post(name: Notification.Name("UserLoggedInNotification"), object: nil)
         }
         get {
             return DataManager.getUserInfo()

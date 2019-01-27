@@ -10,8 +10,8 @@ import UIKit
 protocol AlertPresenting {}
 
 extension AlertPresenting {
-    func showAlert(_ onView: UIView, delegate: ChartModePickerDelegate, isDatePicker: Bool) {
-        let alertView = ChartModePicker(frame: onView.bounds, isDatePicker: isDatePicker)
+    func showAlert(_ onView: UIView, delegate: ChartModePickerDelegate, isDatePicker: Bool, date: String) {
+        let alertView = ChartModePicker(frame: onView.bounds, isDatePicker: isDatePicker, date: date)
         alertView.isDatePicker = isDatePicker
         alertView.translatesAutoresizingMaskIntoConstraints = false
         alertView.delegate = delegate
@@ -60,9 +60,11 @@ class ChartModePicker: UIView {
         super.init(coder: aDecoder)
         commonInit()
     }
-    init(frame: CGRect, isDatePicker: Bool){
+    var currentPickedDate:Date!
+    init(frame: CGRect, isDatePicker: Bool, date: String){
         super.init(frame: frame)
         self.isDatePicker = isDatePicker
+        currentPickedDate = Date(date, format: "dd/MM/yyyy")
         commonInit()
     }
     
@@ -83,10 +85,11 @@ class ChartModePicker: UIView {
             //            datePicker.removeFromSuperview()
                datePicker = UIDatePicker(frame: CGRect(x: 0, y: 0, width: viewCenter.bounds.width, height: viewCenter.bounds.height))
             lbTitle.text = "Chọn ngày"
-//            datePicker.addTarget(self, action: #selector(ChartModePicker.datePickerValueChanged), for: UIControlEvents.valueChanged)
-//            datePicker.datePickerMode = .date
+
             
 //            datePicker.frame = viewCenter.bounds
+            
+            testDatePicker.date = currentPickedDate
             testDatePicker.datePickerMode = .date
             testDatePicker.addTarget(self, action: #selector(ChartModePicker.datePickerValueChanged), for: UIControlEvents.valueChanged)
             modePicker.isHidden = true
@@ -104,7 +107,7 @@ class ChartModePicker: UIView {
         let dateFormatter = DateFormatter()
         
         dateFormatter.dateStyle = .medium
-        
+        dateFormatter.timeZone = TimeZone(abbreviation: "GMT+7:00")
         dateFormatter.timeStyle = .none
         //        dateFormatter.date(from: dateFormatter.string(from: sender.date))
         datePicked = dateFormatter.date(from: dateFormatter.string(from: sender.date))!
@@ -117,6 +120,7 @@ class ChartModePicker: UIView {
     @IBAction func confirmPressed(_ sender: Any){
         self.removeFromSuperview()
         if isDatePicker {
+            guard datePicked != nil else { return }
             delegate?.datePicked(date: datePicked)
         } else {
             delegate?.chartMode(title: modes[chosenIndex], index: chosenIndex)

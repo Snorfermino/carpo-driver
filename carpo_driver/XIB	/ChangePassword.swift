@@ -71,6 +71,7 @@ class ChangePassword: UIView {
         if lbNewPwd.text == lbConfirmNewPwd.text && lbCurrentPwd.text != lbNewPwd.text{
             let completion = {(status: Int?,error: String?) -> Void in
                 if status == 1 {
+                    self.removeFromSuperview()
                     self.delegate?.changePwd(isSuccess: true)
                 } else {
                     self.delegate?.changePwd(isSuccess: false)

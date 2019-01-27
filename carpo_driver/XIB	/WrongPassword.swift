@@ -8,8 +8,8 @@
 
 import UIKit
 extension AlertPresenting {
-    func showWrongPwd(_ onView: UIView) {
-        let wrongPwdView = WrongPassword(frame: onView.bounds)
+    func showWrongPwd(_ onView: UIView, _ msg: String? = "Không có phản hồi") {
+        let wrongPwdView = WrongPassword(frame: onView.bounds, msg: msg!)
         onView.addSubview(wrongPwdView)
         onView.bringSubview(toFront: wrongPwdView)
         let views = ["alert": wrongPwdView,
@@ -33,7 +33,8 @@ extension AlertPresenting {
 class WrongPassword: UIView {
 
     @IBOutlet weak var contentView: UIView!
-    
+    @IBOutlet weak var msgLabel: UILabel!
+    var msgText: String!
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -42,13 +43,22 @@ class WrongPassword: UIView {
         super.init(coder: aDecoder)
         commonInit()
     }
-    
+    init(frame: CGRect, msg: String) {
+        super.init(frame: frame)
+        msgText = msg
+        commonInit()
+    }
     func commonInit(){
         Bundle.main.loadNibNamed("WrongPassword", owner: self, options: nil)
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.backgroundColor = UIColor.gray.withAlphaComponent(0.15)
         contentView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(outterScreenTaped(_:))))
+        msgLabel.text = msgText
+    }
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        msgLabel.text = msgText
     }
     
     @objc @IBAction func outterScreenTaped(_ sender: Any){

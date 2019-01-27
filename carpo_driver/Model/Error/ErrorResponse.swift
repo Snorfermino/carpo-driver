@@ -11,7 +11,7 @@ import ObjectMapper
 struct ErrorResponse: Mappable {
     
     var invalidFields: String?
-    var errorCode: Int?
+    var errorCode: String?
     var message: String?
     
     init?(map: Map) {

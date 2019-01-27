@@ -18,12 +18,15 @@ target 'carpo_driver' do
     pod 'SDWebImage'
     pod 'Firebase/Core'
     pod 'Firebase/Messaging'
-    pod 'Moya-ObjectMapper'
-pod 'GoogleMaps', '2.2'
-pod 'GooglePlaces', '2.2'
-pod 'Pulsator'
-pod ‘JTMaterialSwitch’
-pod ‘RKPieChart’
+    pod 'GoogleMaps', '2.2'
+    pod 'GooglePlaces', '2.2'
+    pod 'Pulsator'
+    pod 'JTMaterialSwitch'
+    pod 'RKPieChart'
+    pod 'AccountKit'
+    pod 'Fabric'
+    pod 'Crashlytics'
+    pod 'SnapKit'
   target 'carpo_driverTests' do
     inherit! :search_paths
     # Pods for testing

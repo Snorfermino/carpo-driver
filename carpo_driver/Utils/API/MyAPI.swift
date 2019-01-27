@@ -20,11 +20,14 @@ enum MyAPI {
     case refreshToken(token: String)
     case register(phone: String,password: String)
     case changePassword(oldPwd: String, newPwd: String)
+    case createNewPassword(phone: String, newPassword: String, otp: Int)
     case changeAvatar(avatar: UIImage)
     case trackLocation(param: User, location: CGLocation)
     case support(message: String, image: UIImage)
     case getInfo(id:String)
+    case imageProof( image: UIImage)
     case getOTP(phone:String)
+    case checkOTP(otp: String)
     case group(id:String)
     case getHistory(id: String, date:String)
     case getCarInfoBy(userID: String)
@@ -55,7 +58,8 @@ extension MyAPI: TargetType {
     
     var baseURL: URL {
         switch self {
-            
+        case .login:
+            return APIConfiguration.qAPIURL
         default:
             return APIConfiguration.myServerAPIURL
         }
@@ -77,8 +81,12 @@ extension MyAPI: TargetType {
             return "getInfoCarByUserId"
         case .getOTP:
             return "get-otp-by-phone"
+        case .checkOTP:
+            return "check-otp-by-authorization-code"
         case .changePassword:
             return "change-password-user"
+        case .createNewPassword:
+            return "created-new-password-user"
         case .trackLocation:
             return "insert-tracking"
         case .support:
@@ -93,6 +101,8 @@ extension MyAPI: TargetType {
             return "get-info-group-member-in-month"
         case .getInfoMemberByUserID:
             return "get-info-member-by-user-id"
+        case .imageProof:
+            return "upload-photo-car-status"
         default:
             return ""
         }
@@ -100,7 +110,7 @@ extension MyAPI: TargetType {
     
     var method: Moya.Method {
         switch self {
-        case .login,.changePassword, .trackLocation, .support, .changeAvatar,.refreshToken:
+        case .login,.changePassword, .trackLocation, .support, .changeAvatar,.refreshToken, .createNewPassword, .imageProof:
             return .post
         default:
             return .get
@@ -108,7 +118,7 @@ extension MyAPI: TargetType {
     }
     
     var sampleData: Data {
-        return Data()
+        return "".data(using: String.Encoding.utf8)!
     }
     
     public var parameters: [String: Any]? {
@@ -131,6 +141,8 @@ extension MyAPI: TargetType {
             return ["user_id":Global.user?.data.id! ?? "",
                     "old_password":oldPwd,
                     "new_password":newPwd]
+        case .createNewPassword(let phone, let newPwd, let otp):
+            return ["phone":phone,"newPassword":newPwd,"otp":otp]
         case .trackLocation(let param, let location):
             return ["car_id":param.data.carId!,
                     "campaign_id":param.data.campaignId!,
@@ -145,6 +157,8 @@ extension MyAPI: TargetType {
             return ["leader_id":leaderID]
         case .getInfoMemberByUserID(let userID):
             return ["user_id": userID]
+        case .checkOTP(let otp):
+            return ["authorizationCode":otp]
         default:
             return nil
         }
@@ -164,6 +178,14 @@ extension MyAPI: TargetType {
             }
             let str64 = data.base64EncodedString()
             return .requestParameters(parameters: ["user_id": Global.user?.data.id ?? "","image":str64], encoding: encoding)
+        case .imageProof(let image):
+
+            guard let data = UIImageJPEGRepresentation(image ,0.2) else {
+                return Task.requestPlain
+            }
+            var multipartdata:[MultipartFormData] = []
+            multipartdata.append(MultipartFormData(provider: .data(data), name: "file", fileName: "avatar.jpg", mimeType: "image/jpg"))
+            return .uploadCompositeMultipart(multipartdata, urlParameters: ["user_id":  Global.user?.data.id ?? ""])
         default:
             return .requestParameters(parameters: self.parameters!, encoding: encoding)
         }
